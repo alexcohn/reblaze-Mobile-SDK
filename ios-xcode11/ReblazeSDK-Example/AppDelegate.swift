@@ -23,6 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                       header_value: "test@123.io",
                       shouldShowLogs: true)
 
+
+        //Call get hash only after Reblaze.start is called
+        do {
+            if let hash = try Reblaze.getHash(unixTimestamp: Int(Date.timeIntervalSinceReferenceDate)) {
+                print(hash)
+            }
+        } catch let error {
+            print(error)
+        }
+
         return true
     }
 

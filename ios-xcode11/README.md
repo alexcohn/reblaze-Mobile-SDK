@@ -67,6 +67,11 @@ in you "AppDelegate" and where ever you want to send a custom event.
 ```swift
 Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101bb5d41sdj4321b15asdfe4", header_name: "UserName", header_value: "test@123.io")
 ```
+
+## Send custom event
+```swift
+Reblaze.sendEvent(eventName: "SomeEventName")
+
 ## UI Tests
 The example app include a UI Test, to run it press "CMD + U" 
 to record a new test just press record button inside the test function
