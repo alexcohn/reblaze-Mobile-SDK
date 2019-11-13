@@ -18,11 +18,7 @@
 		</data>
 		<key>Headers/ReblazeSDK.h</key>
 		<data>
-		rQP6nWmOJdc6VIJK+p5rMlU9H6o=
-		</data>
-		<key>Headers/hash.hpp</key>
-		<data>
-		6JcilCexqYv9tJA8QUHuMpxw9Ms=
+		nej3UoLf/02Dsa80i8e3nJEM9YU=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -30,63 +26,63 @@
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
-		Zmpqm6VabatBPspEKO4nKl2bmxM=
+		6NsyjleBSRP/87Uc0LVG8/GmI7E=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm.swiftinterface</key>
 		<data>
-		PK5tyq4XoXPxIPzhAUQL9uLeobw=
+		yyokEb5AVxbPvc9wmfFwDPPJ8Mo=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		qDIwl/3XUThK7qPlJuZYtphmKvk=
+		ns/ipH6UHub5fpUtrxIg43Ja59Y=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		efiFoACZssEmDttp6RoW6bwrkeo=
+		oAirKbpKZbU+7CnbJkuXTGfhZag=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		KkJIscsBh9TOTwnDH0lZqGaDSSY=
+		QQg+OVkEIr5tMrfafoF9aVLpFEU=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		x8WkETrcTHG/6nLhJ7RDarTrkRk=
+		D4kB5q6W5AYb/mm6XkckTnTa/uU=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		efiFoACZssEmDttp6RoW6bwrkeo=
+		oAirKbpKZbU+7CnbJkuXTGfhZag=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		KkJIscsBh9TOTwnDH0lZqGaDSSY=
+		QQg+OVkEIr5tMrfafoF9aVLpFEU=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		x8WkETrcTHG/6nLhJ7RDarTrkRk=
+		D4kB5q6W5AYb/mm6XkckTnTa/uU=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
-		Zmpqm6VabatBPspEKO4nKl2bmxM=
+		6NsyjleBSRP/87Uc0LVG8/GmI7E=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<data>
-		PK5tyq4XoXPxIPzhAUQL9uLeobw=
+		yyokEb5AVxbPvc9wmfFwDPPJ8Mo=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		qDIwl/3XUThK7qPlJuZYtphmKvk=
+		ns/ipH6UHub5fpUtrxIg43Ja59Y=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7.swiftdoc</key>
 		<data>
-		Zmpqm6VabatBPspEKO4nKl2bmxM=
+		6NsyjleBSRP/87Uc0LVG8/GmI7E=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7.swiftinterface</key>
 		<data>
-		PK5tyq4XoXPxIPzhAUQL9uLeobw=
+		yyokEb5AVxbPvc9wmfFwDPPJ8Mo=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		qDIwl/3XUThK7qPlJuZYtphmKvk=
+		ns/ipH6UHub5fpUtrxIg43Ja59Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -132,187 +128,176 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rQP6nWmOJdc6VIJK+p5rMlU9H6o=
+			nej3UoLf/02Dsa80i8e3nJEM9YU=
 			</data>
 			<key>hash2</key>
 			<data>
-			9/wL7DDc+/O3AUOrQksWdciQtxLyhWSgCidUi3d6eqs=
-			</data>
-		</dict>
-		<key>Headers/hash.hpp</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			6JcilCexqYv9tJA8QUHuMpxw9Ms=
-			</data>
-			<key>hash2</key>
-			<data>
-			kAX60bCr24C7bAqpuIdOz3Ao65HpnrCdxt80OezqjzI=
+			gfb0MwlBEU6gEBAE8LeH3CE+4DR9PmUqxIC3S3+YVQs=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Zmpqm6VabatBPspEKO4nKl2bmxM=
+			6NsyjleBSRP/87Uc0LVG8/GmI7E=
 			</data>
 			<key>hash2</key>
 			<data>
-			YMi73LxUo4+nqdP6861tVjZZo87+MtsqKg/HsswtKIc=
+			/DEHenatUhCibeqBX1IieaJHOqsgue724h92ho80yNs=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PK5tyq4XoXPxIPzhAUQL9uLeobw=
+			yyokEb5AVxbPvc9wmfFwDPPJ8Mo=
 			</data>
 			<key>hash2</key>
 			<data>
-			m/P/6oZEi67RgDlZf9eJjvRqYEcyVCQoxlyCt81DaVg=
+			c/GO7x58x6wI2FQlA45/NKN/0vPCSJbQEvPY8RQbeN4=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qDIwl/3XUThK7qPlJuZYtphmKvk=
+			ns/ipH6UHub5fpUtrxIg43Ja59Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			xHzkt5jUzXm3dTqBTZ3R0ZO8PqXFdq+wg1QdR9sXSQs=
+			Dh1nqehu8gWVq0Snw+DzEPqtawS89IF9qu9p4HRYEXQ=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			efiFoACZssEmDttp6RoW6bwrkeo=
+			oAirKbpKZbU+7CnbJkuXTGfhZag=
 			</data>
 			<key>hash2</key>
 			<data>
-			+Bp8udbV5apjM7FHnYAdkqNrVsTJujmiPh9Uo8BtPac=
+			DxAye9okg3sxmRiwMhbVsAt0foPoGDmB39OBW75FTF4=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KkJIscsBh9TOTwnDH0lZqGaDSSY=
+			QQg+OVkEIr5tMrfafoF9aVLpFEU=
 			</data>
 			<key>hash2</key>
 			<data>
-			s/3OiC1BPediri/wqCoSZnOPhUrK79WecUkLVmQW+P0=
+			KIBZNh++EvUYhOUi2QVO6LX1ABRSTJdnF8d7ONNL7VM=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			x8WkETrcTHG/6nLhJ7RDarTrkRk=
+			D4kB5q6W5AYb/mm6XkckTnTa/uU=
 			</data>
 			<key>hash2</key>
 			<data>
-			J7AFJATVxRTOt3736ocT/15luaswOlZecHeyoNtm1xw=
+			PoTyPRmXFq9vOEoSTOZS96ESL1GbVfka21EG/wKuPRI=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			efiFoACZssEmDttp6RoW6bwrkeo=
+			oAirKbpKZbU+7CnbJkuXTGfhZag=
 			</data>
 			<key>hash2</key>
 			<data>
-			+Bp8udbV5apjM7FHnYAdkqNrVsTJujmiPh9Uo8BtPac=
+			DxAye9okg3sxmRiwMhbVsAt0foPoGDmB39OBW75FTF4=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KkJIscsBh9TOTwnDH0lZqGaDSSY=
+			QQg+OVkEIr5tMrfafoF9aVLpFEU=
 			</data>
 			<key>hash2</key>
 			<data>
-			s/3OiC1BPediri/wqCoSZnOPhUrK79WecUkLVmQW+P0=
+			KIBZNh++EvUYhOUi2QVO6LX1ABRSTJdnF8d7ONNL7VM=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			x8WkETrcTHG/6nLhJ7RDarTrkRk=
+			D4kB5q6W5AYb/mm6XkckTnTa/uU=
 			</data>
 			<key>hash2</key>
 			<data>
-			J7AFJATVxRTOt3736ocT/15luaswOlZecHeyoNtm1xw=
+			PoTyPRmXFq9vOEoSTOZS96ESL1GbVfka21EG/wKuPRI=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Zmpqm6VabatBPspEKO4nKl2bmxM=
+			6NsyjleBSRP/87Uc0LVG8/GmI7E=
 			</data>
 			<key>hash2</key>
 			<data>
-			YMi73LxUo4+nqdP6861tVjZZo87+MtsqKg/HsswtKIc=
+			/DEHenatUhCibeqBX1IieaJHOqsgue724h92ho80yNs=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PK5tyq4XoXPxIPzhAUQL9uLeobw=
+			yyokEb5AVxbPvc9wmfFwDPPJ8Mo=
 			</data>
 			<key>hash2</key>
 			<data>
-			m/P/6oZEi67RgDlZf9eJjvRqYEcyVCQoxlyCt81DaVg=
+			c/GO7x58x6wI2FQlA45/NKN/0vPCSJbQEvPY8RQbeN4=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qDIwl/3XUThK7qPlJuZYtphmKvk=
+			ns/ipH6UHub5fpUtrxIg43Ja59Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			xHzkt5jUzXm3dTqBTZ3R0ZO8PqXFdq+wg1QdR9sXSQs=
+			Dh1nqehu8gWVq0Snw+DzEPqtawS89IF9qu9p4HRYEXQ=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Zmpqm6VabatBPspEKO4nKl2bmxM=
+			6NsyjleBSRP/87Uc0LVG8/GmI7E=
 			</data>
 			<key>hash2</key>
 			<data>
-			YMi73LxUo4+nqdP6861tVjZZo87+MtsqKg/HsswtKIc=
+			/DEHenatUhCibeqBX1IieaJHOqsgue724h92ho80yNs=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PK5tyq4XoXPxIPzhAUQL9uLeobw=
+			yyokEb5AVxbPvc9wmfFwDPPJ8Mo=
 			</data>
 			<key>hash2</key>
 			<data>
-			m/P/6oZEi67RgDlZf9eJjvRqYEcyVCQoxlyCt81DaVg=
+			c/GO7x58x6wI2FQlA45/NKN/0vPCSJbQEvPY8RQbeN4=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/armv7.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qDIwl/3XUThK7qPlJuZYtphmKvk=
+			ns/ipH6UHub5fpUtrxIg43Ja59Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			xHzkt5jUzXm3dTqBTZ3R0ZO8PqXFdq+wg1QdR9sXSQs=
+			Dh1nqehu8gWVq0Snw+DzEPqtawS89IF9qu9p4HRYEXQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

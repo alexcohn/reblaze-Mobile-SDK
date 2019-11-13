@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ReblazeSDK/Hasher.h>
+#import "ReblazeSDK/Hasher.h"
 
 //! Project version number for ReblazeSDK.
 FOUNDATION_EXPORT double ReblazeSDKVersionNumber;
