@@ -6,7 +6,19 @@ This is the IOS branch where you can find the hosting app (currently including j
 
 Library code has remarks inside for each method - and ill give a quick overview of what done. Library got a main starting point to activate the SDK :
 
-Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101bb5d41sdj4321b15asdfe4", header_name: "UserName", header_value: "test@123.io")
+    Reblaze.start(
+        with: "<YOUR APPLICATION HOST>", 
+        secret: "<YOUR SECRET HERE>", 
+        header_name: "<Header Name>", 
+        header_value: "<Header Value>")
+
+For example:
+
+    Reblaze.start(
+      with: "https://api.example.com", 
+      secret: "abcd1234", 
+      header_name: "UserName", 
+      header_value: "test@123.io")
       
 url for the developer account server developer secret. unique key name unique key value.
 
