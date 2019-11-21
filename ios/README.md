@@ -6,8 +6,14 @@ This is the IOS branch where you can find the hosting app (currently including j
 
 Library code has remarks inside for each method - and ill give a quick overview of what done. Library got a main starting point to activate the SDK :
 
-Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101bb5d41sdj4321b15asdfe4", header_name: "UserName", header_value: "test@123.io")
-      
+```swift
+    Reblaze.start(
+    	with: "<YOUR-APP-DOMAIN-HERE>", 
+    	secret: "<YOUR-SECRET-HERE>", 
+    	header_name: "UserName", 
+    	header_value: "test@123.io")
+```
+
 url for the developer account server developer secret. unique key name unique key value.
 
 Best practce is to have it on AppDelegate. Keep note that reblaze class is static so you can call it from everywhere in the app.
@@ -38,7 +44,7 @@ Please make sure that you have Remove Unused Architectures Script added in your 
 ## Remove Unused Architectures
 Select the Project, Choose Target → Project Name → Select Build Phases → Press “+” → New Run Script Phase → Name the Script as “Remove Unused Architectures Script”.
 
-```
+```bash
 FRAMEWORK="TestFramework"
 FRAMEWORK_EXECUTABLE_PATH="${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/$FRAMEWORK.framework/$FRAMEWORK"
 EXTRACTED_ARCHS=()
@@ -65,7 +71,7 @@ in you "AppDelegate" and where ever you want to send a custom event.
 
 ## Start SDK
 ```swift
-Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101bb5d41sdj4321b15asdfe4", header_name: "UserName", header_value: "test@123.io")
+Reblaze.start(with: "<YOUR-APP-DOMAIN-HERE>", secret: "<YOUR-SECRET-HERE>", header_name: "UserName", header_value: "test@123.io")
 ```
 ## UI Tests
 The example app include a UI Test, to run it press "CMD + U" 

@@ -44,7 +44,7 @@ download all files from repository follow to manual linking from here : https://
         flatDir {
             dirs project(':reblaze-sdk').file('reblaze-release') // Reblaze Added line for grafle to find the compiled library
         }
-     } }   ```
+     } }```
 
   
 5. in the javascript file index.js (app) add this line : 
@@ -60,7 +60,7 @@ import reblaze from 'reblaze-sdk';
 to start the SDK :
 
 ```javascript
-reblaze.start("https://mobilesdkqa.prod2.reblaze.com/", "08679d101bb5d41sdj4321b15asdfe4", "UserName","test@123.io");
+reblaze.start("<YOUR-APP-DOMAIN-HERE>/", "<YOUR-SECRET-HERE>", "UserName","test@123.io");
 ```
 
 to send any event : 

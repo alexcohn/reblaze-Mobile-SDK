@@ -13,7 +13,12 @@ make sure you have implementation fileTree(dir: 'libs', include: ['*.jar']) insi
 
 Library got a main starting point to activate the SDK :
 
-reblaze.start(this, "https://mobilesdkqa.prod2.reblaze.com", "08679d101bb5d41sdj4321b15asdfe4", "UserName","test@123.io");
+    reblaze.start(this, 
+    	"<YOUR-APP-DOMAIN-HERE>", 
+    	"<YOUR-SECRET-HERE>", 
+    	"UserName",
+    	"test@123.io");
+
 this = the activity.
 url for the developer account server 
 developer secret.
@@ -23,7 +28,11 @@ unique key value.
 Best practce is to have it on Main Activity. Keep note that reblaze class is static so you can call it from 
 everywhere in the app. 
 
-To send custom event you can use : reblaze.sendEvent("ButtonClick") with event name.
+To send custom event you can use: 
+
+    reblaze.sendEvent("ButtonClick") 
+
+with event name.
 
 ## Testing
 

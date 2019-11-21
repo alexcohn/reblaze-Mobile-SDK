@@ -77,7 +77,7 @@ in you "AppDelegate" and where ever you want to send a custom event.
 
 ## Start SDK
 ```swift
-Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101bb5d41sdj4321b15asdfe4", header_name: "UserName", header_value: "test@123.io")
+Reblaze.start(with: "<YOUR-APP-DOMAIN-HERE>", secret: "<YOUR-SECRET-HERE>", header_name: "UserName", header_value: "test@123.io")
 ```
 
 ## Send custom event
