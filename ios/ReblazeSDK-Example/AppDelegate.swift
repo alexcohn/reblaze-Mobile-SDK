@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com",
-                      secret: "08679d101bb5d41sdj4321b15asdfe4",
+        Reblaze.start(with: "<YOUR-APP-DOMAIN-HERE>",
+                      secret: "<YOUR-SECRET-HERE>",
                       header_name: "UserName",
                       header_value: "test@123.io",
                       shouldShowLogs: true)
