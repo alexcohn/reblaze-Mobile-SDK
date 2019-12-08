@@ -184,6 +184,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreGraphics;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -201,6 +202,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="ReblazeSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+
+SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
+@interface Reblaze : NSObject
+/// Main starting point for starting SDK
++ (void)startWith:(NSString * _Nullable)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 @class UITouch;
 @class UIEvent;
@@ -403,6 +412,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreGraphics;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -420,6 +430,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="ReblazeSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+
+SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
+@interface Reblaze : NSObject
+/// Main starting point for starting SDK
++ (void)startWith:(NSString * _Nullable)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 @class UITouch;
 @class UIEvent;
