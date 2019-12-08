@@ -71,6 +71,13 @@ Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101b
 ## Send custom event
 ```swift
 Reblaze.sendEvent(eventName: "SomeEventName")
+```
+
+## get Hash 
+Use only after start.
+```swift
+Reblaze.getHash(unixTimestamp: Int)
+```
 
 ## UI Tests
 The example app include a UI Test, to run it press "CMD + U" 
