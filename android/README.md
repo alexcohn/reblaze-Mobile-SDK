@@ -49,7 +49,7 @@ The headers are:
 The value (String) for the `rbzid` header is provided by the static method `getHash`.
 
 ```java
-reblaze.getHash(this, unix_timestamp)
+reblaze.getHash(unix_timestamp)
 ```
 
 Make sure you call `getHash` only **_after_** `reblaze.start` is called.
