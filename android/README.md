@@ -29,11 +29,30 @@ unique key value.
 Best practce is to have it on Main Activity. Keep note that reblaze class is static so you can call it from 
 everywhere in the app. 
 
+## Sending Custom Events
 To send custom event you can use: 
 
     reblaze.sendEvent("ButtonClick") 
 
 with event name.
+
+## Signing your application's requests
+
+When application requests are send with the proper signature, Reblaze will mark them as human.
+Singing your application requests is done by sending three headers along with your application requests. 
+
+The headers are:
+ 1. `timestamp` – unix/epoch timestamp of current time (seconds since since Jan 01 1970).
+ 2. the session key header, e.g. `user_id` as in the above place holder.
+ 3. `rbzid` – signed value by Reblaze SDK
+
+The value (String) for the `rbzid` header is provided by the static method `getHash`.
+
+```java
+reblaze.getHash(this, unix_timestamp)
+```
+
+Make sure you call `getHash` only **_after_** `reblaze.start` is called.
 
 ## Testing
 
