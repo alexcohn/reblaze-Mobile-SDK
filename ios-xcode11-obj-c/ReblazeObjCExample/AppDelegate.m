@@ -24,7 +24,8 @@
           header_value:@"test@123.io"
         shouldShowLogs:YES];
 
-    NSString *hash = [Reblaze getHashWithUnixTimestamp:132131232];
+    NSTimeInterval timestamp = [[[NSDate alloc] init] timeIntervalSince1970];
+    NSString *hash = [Reblaze getHashWithUnixTimestamp:ceil(timestamp)];
 
     if (hash != nil) {
         NSLog(@"%@", hash);

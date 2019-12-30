@@ -16,8 +16,7 @@
 		FC13536323780AA10043B506 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13536223780AA10043B506 /* main.m */; };
 		FC13536D23780AA20043B506 /* ReblazeObjCExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13536C23780AA20043B506 /* ReblazeObjCExampleTests.m */; };
 		FC13537823780AA20043B506 /* ReblazeObjCExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13537723780AA20043B506 /* ReblazeObjCExampleUITests.m */; };
-		FCD86CA9239D0E2D00C088DC /* ReblazeSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD86CA8239D0E2D00C088DC /* ReblazeSDK.xcframework */; };
-		FCD86CAA239D0E2D00C088DC /* ReblazeSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCD86CA8239D0E2D00C088DC /* ReblazeSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		FC57476323B20F0A003CD3F4 /* ReblazeSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57476223B20F0A003CD3F4 /* ReblazeSDK.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,20 +35,6 @@
 			remoteInfo = ReblazeObjCExample;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		FCD86CA7239D0E1C00C088DC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FCD86CAA239D0E2D00C088DC /* ReblazeSDK.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FC13534D23780A9F0043B506 /* ReblazeObjCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReblazeObjCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +55,7 @@
 		FC13537323780AA20043B506 /* ReblazeObjCExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReblazeObjCExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC13537723780AA20043B506 /* ReblazeObjCExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReblazeObjCExampleUITests.m; sourceTree = "<group>"; };
 		FC13537923780AA20043B506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC57476223B20F0A003CD3F4 /* ReblazeSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ReblazeSDK.xcframework; sourceTree = "<group>"; };
 		FCD86CA8239D0E2D00C088DC /* ReblazeSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ReblazeSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCD86CA9239D0E2D00C088DC /* ReblazeSDK.xcframework in Frameworks */,
+				FC57476323B20F0A003CD3F4 /* ReblazeSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +109,7 @@
 		FC13534F23780A9F0043B506 /* ReblazeObjCExample */ = {
 			isa = PBXGroup;
 			children = (
+				FC57476223B20F0A003CD3F4 /* ReblazeSDK.xcframework */,
 				FC13535023780A9F0043B506 /* AppDelegate.h */,
 				FC13535123780A9F0043B506 /* AppDelegate.m */,
 				FC13535323780A9F0043B506 /* SceneDelegate.h */,
@@ -174,7 +161,6 @@
 				FC13534923780A9F0043B506 /* Sources */,
 				FC13534A23780A9F0043B506 /* Frameworks */,
 				FC13534B23780A9F0043B506 /* Resources */,
-				FCD86CA7239D0E1C00C088DC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
