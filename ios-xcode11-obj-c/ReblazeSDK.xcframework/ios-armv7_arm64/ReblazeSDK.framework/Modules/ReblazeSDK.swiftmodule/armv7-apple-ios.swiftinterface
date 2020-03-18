@@ -48,8 +48,7 @@ public struct URLParameterEncoder : ReblazeSDK.ParameterEncoder {
 }
 @objc @objcMembers public class Reblaze : ObjectiveC.NSObject {
   @objc public static func start(with address: Swift.String?, secret: Swift.String, header_name: Swift.String, header_value: Swift.String, shouldShowLogs: Swift.Bool = false)
-  @objc public static func getHash(unixTimestamp: Swift.Int) -> Swift.String?
-  @objc public static func sendEvent(eventName: Swift.String)
+  public static func getHash(unixTimestamp: Swift.Int) throws -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
 }

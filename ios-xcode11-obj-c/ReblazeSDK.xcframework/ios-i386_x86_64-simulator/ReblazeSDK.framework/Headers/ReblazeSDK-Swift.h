@@ -208,9 +208,6 @@ SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 @interface Reblaze : NSObject
 /// Main starting point for starting SDK
 + (void)startWith:(NSString * _Nullable)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs;
-+ (NSString * _Nullable)getHashWithUnixTimestamp:(NSInteger)unixTimestamp SWIFT_WARN_UNUSED_RESULT;
-/// Let’s the developer send cutom event
-+ (void)sendEventWithEventName:(NSString * _Nonnull)eventName;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -439,9 +436,6 @@ SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 @interface Reblaze : NSObject
 /// Main starting point for starting SDK
 + (void)startWith:(NSString * _Nullable)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs;
-+ (NSString * _Nullable)getHashWithUnixTimestamp:(NSInteger)unixTimestamp SWIFT_WARN_UNUSED_RESULT;
-/// Let’s the developer send cutom event
-+ (void)sendEventWithEventName:(NSString * _Nonnull)eventName;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

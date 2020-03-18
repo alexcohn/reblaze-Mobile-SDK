@@ -25,7 +25,8 @@
         shouldShowLogs:YES];
 
     NSTimeInterval timestamp = [[[NSDate alloc] init] timeIntervalSince1970];
-    NSString *hash = [Reblaze getHashWithUnixTimestamp:ceil(timestamp)];
+    NSError *error = nil;
+    NSString *hash = [Reblaze getHashWithUnixTimestamp:timestamp error: &error];
 
     if (hash != nil) {
         NSLog(@"%@", hash);
