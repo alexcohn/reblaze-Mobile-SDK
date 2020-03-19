@@ -45,7 +45,7 @@ Please make sure that you have Remove Unused Architectures Script added in your 
 Select the Project, Choose **Target → Project Name → Select Build Phases → Press “+” → New Run Script Phase → Name** the Script as **Remove Unused Architectures Script**.
 
 ```bash
-FRAMEWORK="TestFramework"
+FRAMEWORK="ReblazeSDK"
 FRAMEWORK_EXECUTABLE_PATH="${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/$FRAMEWORK.framework/$FRAMEWORK"
 EXTRACTED_ARCHS=()
 
