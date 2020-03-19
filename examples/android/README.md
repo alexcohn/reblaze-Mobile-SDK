@@ -7,8 +7,10 @@ To install the library in your own project you can take the `.arr` file (**rebla
 into your project libs folder. In your app gradle script add the following line in dependencies section:
 
     implementation(name:'reblaze-release', ext:'aar')
+    runtimeOnly 'com.google.android.gms:play-services-location:17.0.0'
 
-make sure you have implementation `fileTree(dir: 'libs', include: ['*.jar'])` inside the dependencies.
+make sure you have implementation `fileTree(dir: 'libs', include: ['*.jar'])
+` inside the dependencies.
 
 ## Using the library.
 
