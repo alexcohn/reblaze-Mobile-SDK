@@ -207,7 +207,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 @interface Reblaze : NSObject
 /// Main starting point for starting SDK
-+ (void)startWith:(NSString * _Nullable)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs;
++ (BOOL)startWith:(NSString * _Nullable)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs timeInterval:(NSInteger)timeInterval error:(NSError * _Nullable * _Nullable)error;
 + (NSString * _Nullable)getHashWithUnixTimestamp:(NSInteger)unixTimestamp error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Let’s the developer send cutom event
 + (void)sendEventWithEventName:(NSString * _Nonnull)eventName;
@@ -438,7 +438,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 @interface Reblaze : NSObject
 /// Main starting point for starting SDK
-+ (void)startWith:(NSString * _Nullable)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs;
++ (BOOL)startWith:(NSString * _Nullable)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs timeInterval:(NSInteger)timeInterval error:(NSError * _Nullable * _Nullable)error;
 + (NSString * _Nullable)getHashWithUnixTimestamp:(NSInteger)unixTimestamp error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Let’s the developer send cutom event
 + (void)sendEventWithEventName:(NSString * _Nonnull)eventName;
