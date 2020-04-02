@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.reblaze.sdk.Interval;
 import com.reblaze.sdk.reblaze;
 
 
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Start the SDK session for this app
-        reblaze.start(this, "https://mobilesdkqa.prod2.reblaze.com", "08679d101bb5d41sdj4321b15asdfe4", "UserName","test@123.io");
+        reblaze.start(this, "https://mobilesdkqa.prod2.reblaze.com", "08679d101bb5d41sdj4321b15asdfe4", "UserName","test@123.io", Interval.MINIMUM_INTERVAL_VALUE.getValue());
     }
 
     @Override
