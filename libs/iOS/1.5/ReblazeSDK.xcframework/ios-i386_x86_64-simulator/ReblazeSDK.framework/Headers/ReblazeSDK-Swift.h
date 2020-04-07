@@ -206,8 +206,19 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 @interface Reblaze : NSObject
-/// Main starting point for starting SDK
-+ (BOOL)startWith:(NSString * _Nullable)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs timeInterval:(NSInteger)timeInterval error:(NSError * _Nullable * _Nullable)error;
+/// \param address URL for the customer’s application server
+///
+/// \param secret Secret value issued to the customer by Reblaze
+///
+/// \param header_name The name of a field that contains a unique value for this user. (Example: UserName.)
+///
+/// \param header_value The value for the field specified above. (For example, the user’s email address.)
+///
+/// \param shouldShowLogs Value indicating will logs be printed in debug console
+///
+/// \param timeInterval Value indicating interval events will be send with. Must be in range 12…300 seconds. If value specified to -1, this means no events will be send authomatically
+///
++ (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs timeInterval:(NSInteger)timeInterval error:(NSError * _Nullable * _Nullable)error;
 + (NSString * _Nullable)getHashWithUnixTimestamp:(NSInteger)unixTimestamp error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Let’s the developer send cutom event
 + (void)sendEventWithEventName:(NSString * _Nonnull)eventName;
@@ -437,8 +448,19 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 @interface Reblaze : NSObject
-/// Main starting point for starting SDK
-+ (BOOL)startWith:(NSString * _Nullable)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs timeInterval:(NSInteger)timeInterval error:(NSError * _Nullable * _Nullable)error;
+/// \param address URL for the customer’s application server
+///
+/// \param secret Secret value issued to the customer by Reblaze
+///
+/// \param header_name The name of a field that contains a unique value for this user. (Example: UserName.)
+///
+/// \param header_value The value for the field specified above. (For example, the user’s email address.)
+///
+/// \param shouldShowLogs Value indicating will logs be printed in debug console
+///
+/// \param timeInterval Value indicating interval events will be send with. Must be in range 12…300 seconds. If value specified to -1, this means no events will be send authomatically
+///
++ (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret header_name:(NSString * _Nonnull)header_name header_value:(NSString * _Nonnull)header_value shouldShowLogs:(BOOL)shouldShowLogs timeInterval:(NSInteger)timeInterval error:(NSError * _Nullable * _Nullable)error;
 + (NSString * _Nullable)getHashWithUnixTimestamp:(NSInteger)unixTimestamp error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Let’s the developer send cutom event
 + (void)sendEventWithEventName:(NSString * _Nonnull)eventName;
