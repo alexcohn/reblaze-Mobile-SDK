@@ -1,42 +1,23 @@
-# ReblazeExampleApp
-Reblaze mobile clients example app uses Reblaze SDK.
+# Reblaze SDK (Android)
+
+The Reblaze SDK for Android is an extension for any mobile application that monitors all native events or custom events provided by you,
+all events are being sent to Reblaze every 12 seconds and can be discovered in Reblaze Console by filtering `url:/8d47`.
 
 ## Installation
+To use the source code in your project, add the SDK to the application dependencies, import the SDK, and initiate the agent with your configurations.
 
-To install the library in your own project you can take the `.arr` file (**reblaze-release.arr**) from **app/libs** folder
-into your project libs folder. In your app gradle script add the following line in dependencies section:
-
-    implementation(name:'reblaze-release', ext:'aar')
-    runtimeOnly 'com.google.android.gms:play-services-location:17.0.0'
-
-make sure you have implementation `fileTree(dir: 'libs', include: ['*.jar'])
-` inside the dependencies.
-
-## Using the library.
-
-Library got a main starting point to activate the SDK :
-
-    reblaze.start(this, 
-    	"<YOUR-APP-DOMAIN-HERE>", 
-    	"<YOUR-SECRET-HERE>", 
-    	"UserName",
-    	"test@123.io");
-
-this = the activity.
-url for the developer account server 
-developer secret.
-unique key name 
-unique key value.
-
-Best practce is to have it on Main Activity. Keep note that reblaze class is static so you can call it from 
-everywhere in the app. 
-
-## Sending Custom Events
-To send custom event you can use: 
-
-    reblaze.sendEvent("ButtonClick") 
-
-with event name.
+1. Open your project in *Android Studio*
+2. Add the dependency to the project `file > new > import library` and select the SDK library
+3. Import the SDK `import com.reblaze.sdk.reblaze;`
+4. Start the agent
+```java
+reblaze.start(this, "https://demo.reblaze.com", "xxxxxxxxxxxxx", "user_id","john@smith.name");
+```
+  * *this* - Refers to the activity/context, we highly recommend to refer to the main activity
+  * *https://demo.reblaze.com* - The application backend service URL
+  * *xxxxxxxxxxxxx* - Secret key that will be used for the encryption
+  * *foo* - Header name, the header will identive the specific user
+  * *bar* - Header value, the header will identive the specific user
 
 ## Signing your application's requests
 
@@ -56,13 +37,49 @@ reblaze.getHash(unix_timestamp)
 
 Make sure you call `getHash` only **_after_** `reblaze.start` is called.
 
-## Testing
+## Custom Events
 
-You can do testing using the unit testing or record your own esspresso test's recording using android studio.
-The esspresso test resides in **`app/src/androidTest/MainActivityTest2`.** 
+Sending custom events will help you monitor events that are unique for your application.
 
-## Some notes about the code
+To send a custom event just call the reblaze class and execute the sendEvent function with the name of your custom event
+```java
+reblaze.sendEvent("CustomEvent")
+```
 
-The Library work's with a thread sending all events gathered from app including custom events 
-to reblaze servers every 12 seconds untill calling `reblaze.Destroy()` which will end the session
-and thread. Best practice is to put it in hosting app `onDestroy()` method.
+Keep in mind that the reblaze class is static, therefore you can call it from everywhere in the application
+
+## Include location data to events
+
+By default, Reblaze SDK not required location permission and not collect device location information.
+
+To include location information into events need append these permissions to application AndroidManifest.xml
+
+```xml
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+```
+
+Also for applications with targetSdkVersion Android 6.0 (API 23) and above should be granted [Runtime Permission](https://developer.android.com/training/permissions/requesting) by application user
+
+Reblaze SDK will automatically check location permission and include location information into events if location data is available.
+
+## Include error listening
+
+To observe error events need to add OnErrorListener:
+```java
+ reblaze.addOnErrorListener(new OnErrorListener() {
+                @Override
+                public void onError(Exception e) {
+
+                }
+            });
+```
+
+## Destory
+The SDK works with a thread sending all the events triggered by the application until calling the `Destroy()` function which will end the thread,
+we highly recommend calling
+```java
+reblaze.Destroy()
+```
+function on hosting app's `onDestroy()` method

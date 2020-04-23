@@ -8,7 +8,7 @@ import Foundation
 import Swift
 import UIKit
 public enum PostApi {
-  case events(address: Swift.String?, secret: Swift.String, key: Swift.String, value: Swift.String, events: [Swift.String : Any])
+  case events(address: Swift.String, secret: Swift.String, key: Swift.String, value: Swift.String, events: [Swift.String : Any])
 }
 public typealias Parameters = [Swift.String : Any]
 public protocol ParameterEncoder {
@@ -44,11 +44,21 @@ public enum HTTPTask {
 public struct JSONParameterEncoder : ReblazeSDK.ParameterEncoder {
   public func encode(urlRequest: inout Foundation.URLRequest, with parameters: ReblazeSDK.Parameters) throws
 }
+extension NSNotification.Name {
+  public static let ReblazeErrorNotification: Foundation.Notification.Name
+}
+@objc extension NSNotification {
+  @objc public static let ReblazeErrorNotification: Foundation.Notification.Name
+}
+public struct NetworkResponseError : Swift.Error {
+  public let description: Swift.String
+  public let code: Swift.Int?
+}
 public struct URLParameterEncoder : ReblazeSDK.ParameterEncoder {
   public func encode(urlRequest: inout Foundation.URLRequest, with parameters: ReblazeSDK.Parameters) throws
 }
 @objc public class Reblaze : ObjectiveC.NSObject {
-  @objc public static func start(with address: Swift.String?, secret: Swift.String, header_name: Swift.String, header_value: Swift.String, shouldShowLogs: Swift.Bool = false)
+  @objc public static func start(with address: Swift.String, secret: Swift.String, header_name: Swift.String, header_value: Swift.String, shouldShowLogs: Swift.Bool = false, timeInterval: Swift.Int) throws
   @objc public static func getHash(unixTimestamp: Swift.Int) throws -> Swift.String
   @objc public static func sendEvent(eventName: Swift.String)
   @objc override dynamic public init()

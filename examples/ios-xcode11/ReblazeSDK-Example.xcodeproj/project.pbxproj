@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FAF65DAE242215AC002D1175 /* ReblazeSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF65DAC242215A0002D1175 /* ReblazeSDK.xcframework */; };
-		FAF65DAF242215AC002D1175 /* ReblazeSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAF65DAC242215A0002D1175 /* ReblazeSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		FAC6B602243629C1008A3625 /* ReblazeSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC6B600243629BE008A3625 /* ReblazeSDK.xcframework */; };
+		FAC6B603243629C1008A3625 /* ReblazeSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAC6B600243629BE008A3625 /* ReblazeSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FC7924DC2280472500F4CF03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7924DB2280472500F4CF03 /* AppDelegate.swift */; };
 		FC7924DE2280472500F4CF03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7924DD2280472500F4CF03 /* ViewController.swift */; };
 		FC7924E12280472500F4CF03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7924DF2280472500F4CF03 /* Main.storyboard */; };
@@ -42,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FAF65DAF242215AC002D1175 /* ReblazeSDK.xcframework in Embed Frameworks */,
+				FAC6B603243629C1008A3625 /* ReblazeSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FAF65DAC242215A0002D1175 /* ReblazeSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ReblazeSDK.xcframework; sourceTree = "<group>"; };
+		FAC6B600243629BE008A3625 /* ReblazeSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ReblazeSDK.xcframework; sourceTree = "<group>"; };
 		FC7924D82280472500F4CF03 /* ReblazeSDK-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReblazeSDK-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7924DB2280472500F4CF03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7924DD2280472500F4CF03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF65DAE242215AC002D1175 /* ReblazeSDK.xcframework in Frameworks */,
+				FAC6B602243629C1008A3625 /* ReblazeSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +95,7 @@
 		FC7924CF2280472500F4CF03 = {
 			isa = PBXGroup;
 			children = (
+				FAC6B600243629BE008A3625 /* ReblazeSDK.xcframework */,
 				FC7924DA2280472500F4CF03 /* ReblazeSDK-Example */,
 				FC7924EF2280472600F4CF03 /* ReblazeSDK-ExampleTests */,
 				FC7924FA2280472600F4CF03 /* ReblazeSDK-ExampleUITests */,
@@ -147,7 +148,6 @@
 		FC9CC7E4234B4B3B005997AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAF65DAC242215A0002D1175 /* ReblazeSDK.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,7 +163,6 @@
 				FC7924D52280472500F4CF03 /* Frameworks */,
 				FA2F54F22418FFFF00E34330 /* Embed Frameworks */,
 				FC7924D62280472500F4CF03 /* Resources */,
-				FA2F54EF2418FD0500E34330 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -282,26 +281,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		FA2F54EF2418FD0500E34330 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "FRAMEWORK=\"ReblazeSDK\"\nFRAMEWORK_EXECUTABLE_PATH=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/$FRAMEWORK.framework/$FRAMEWORK\"\nEXTRACTED_ARCHS=()\nfor ARCH in $ARCHS\ndo\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC7924D42280472500F4CF03 /* Sources */ = {
@@ -485,7 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 975W242YZ4;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReblazeSDK-Example",
@@ -509,7 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 975W242YZ4;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReblazeSDK-Example",

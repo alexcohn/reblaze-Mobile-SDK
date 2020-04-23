@@ -13,6 +13,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.ReblazeErrorNotification,
+                                               object: nil, queue: OperationQueue.main) { (notification) in
+                                                print(notification.object)
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     

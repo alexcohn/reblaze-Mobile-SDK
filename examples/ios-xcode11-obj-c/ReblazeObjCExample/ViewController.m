@@ -17,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserverForName: NSNotification.ReblazeErrorNotification object: nil queue: NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull notif) {
+
+        NSLog(@"%@", notif.object);
+    }];
     // Do any additional setup after loading the view.
 }
 

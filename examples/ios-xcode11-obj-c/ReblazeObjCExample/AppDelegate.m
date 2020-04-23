@@ -18,12 +18,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application
+    NSError *startError = nil;
     [Reblaze startWith:@"https://mobilesdkqa.prod2.reblaze.com"
                 secret:@"08679d101bb5d41sdj4321b15asdfe4"
            header_name:@"UserName"
           header_value:@"test@123.io"
-        shouldShowLogs:YES];
-
+        shouldShowLogs:YES
+          timeInterval: 15
+                 error: &startError];
+    
+    if (startError!= nil) {
+         NSLog(@"%@", startError);
+    }
+    
     NSTimeInterval timestamp = [[[NSDate alloc] init] timeIntervalSince1970];
     NSError *error = nil;
     NSString *hash = [Reblaze getHashWithUnixTimestamp:timestamp error: &error];
