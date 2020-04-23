@@ -15,6 +15,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.reblaze.sdk.Interval;
+import com.reblaze.sdk.error.OnErrorListener;
 import com.reblaze.sdk.reblaze;
 
 
@@ -58,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
         // Start the SDK session for this app
 
         try {
+            reblaze.addOnErrorListener(new OnErrorListener() {
+                @Override
+                public void onError(Exception e) {
+                    Log.d("MainActivity", "Error: " + e.getMessage());
+                }
+            });
             reblaze.start(this,
                     "https://mobilesdkqa.prod2.reblaze.com",
                     "08679d101bb5d41sdj4321b15asdfe4",
