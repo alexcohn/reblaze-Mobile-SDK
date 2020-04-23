@@ -56,6 +56,24 @@ reblaze.getHash(unix_timestamp)
 
 Make sure you call `getHash` only **_after_** `reblaze.start` is called.
 
+## Include location data to events
+
+By default, Reblaze SDK not required location permission and not collect device location information.
+
+To include location information into events need append these permissions to application AndroidManifest.xml
+
+```xml
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+ ```
+
+Also for applications with targetSdkVersion Android 6.0 (API 23) and above should be granted [Runtime Permission](https://developer.android.com/training/permissions/requesting) by application user
+
+Reblaze SDK will automatically check location permission and include location information into events if location data is available.
+
+
+
 ## Testing
 
 You can do testing using the unit testing or record your own esspresso test's recording using android studio.
