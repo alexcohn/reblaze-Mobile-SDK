@@ -14,7 +14,7 @@ Best practce is to have it on AppDelegate. Keep note that reblaze class is stati
 
 To send custom event you can use :  Reblaze.sendEvent(eventName: "Test ButtonClick") with event name.
 
-The Library work's with a thread sending all events gathered from app including custom events to reblaze servers every 12 seconds.
+The Library work's with a thread sending all events gathered from app including custom events to reblaze servers every 12 seconds.(You could set custom interval or disable this feature by passing -1)
 
 To handle network error, subscribe to notification ReblazeErrorNotification and in object you will get either NSURLErrorDomain or NetworkResponseError with error code and description
 
