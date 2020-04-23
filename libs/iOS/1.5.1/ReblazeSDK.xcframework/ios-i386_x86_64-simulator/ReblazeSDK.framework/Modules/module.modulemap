@@ -1,0 +1,11 @@
+framework module ReblazeSDK {
+  umbrella header "ReblazeSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module ReblazeSDK.Swift {
+    header "ReblazeSDK-Swift.h"
+    requires objc
+}

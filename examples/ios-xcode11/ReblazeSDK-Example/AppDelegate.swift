@@ -9,6 +9,7 @@
 import UIKit
 import ReblazeSDK
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -25,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                               header_name: "UserName",
                               header_value: "test@123.io",
                               shouldShowLogs: true,
-                              timeInterval: 50)
+                              timeInterval: 20)
             
             let hash = try Reblaze.getHash(unixTimestamp: Int(Date().timeIntervalSince1970.rounded()))
             print(hash)

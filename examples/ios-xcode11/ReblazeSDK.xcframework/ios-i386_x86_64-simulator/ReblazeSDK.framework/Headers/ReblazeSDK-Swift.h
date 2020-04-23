@@ -184,6 +184,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreGraphics;
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -202,6 +203,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="ReblazeSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+
+@interface NSNotification (SWIFT_EXTENSION(ReblazeSDK))
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _Nonnull ReblazeErrorNotification;)
++ (NSNotificationName _Nonnull)ReblazeErrorNotification SWIFT_WARN_UNUSED_RESULT;
+@end
 
 
 SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
@@ -426,6 +433,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreGraphics;
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -444,6 +452,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="ReblazeSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+
+@interface NSNotification (SWIFT_EXTENSION(ReblazeSDK))
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _Nonnull ReblazeErrorNotification;)
++ (NSNotificationName _Nonnull)ReblazeErrorNotification SWIFT_WARN_UNUSED_RESULT;
+@end
 
 
 SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
