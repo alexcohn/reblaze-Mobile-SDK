@@ -1,2 +1,4 @@
 configurations.maybeCreate("default")
 artifacts.add("default", file('reblaze-release.aar'))
+
+apply from: 'uploadLib.gradle'
