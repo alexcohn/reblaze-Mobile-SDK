@@ -21,10 +21,10 @@
     NSError *startError = nil;
     [Reblaze startWith:@"https://mobilesdkqa.prod2.reblaze.com"
                 secret:@"08679d101bb5d41sdj4321b15asdfe4"
-           header_name:@"UserName"
-          header_value:@"test@123.io"
+                   key:@"UserName"
+                   uid:@"test@123.io"
         shouldShowLogs:YES
-          timeInterval: 15
+     intervalInSeconds: 15
                  error: &startError];
     
     if (startError!= nil) {

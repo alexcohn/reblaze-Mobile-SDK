@@ -23,10 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             try Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com",
                               secret: "08679d101bb5d41sdj4321b15asdfe4",
-                              header_name: "UserName",
-                              header_value: "test@123.io",
+                              key: "UserName",
+                              uid: "test@123.io",
                               shouldShowLogs: true,
-                              timeInterval: 20)
+                              intervalInSeconds: 20)
             
             let hash = try Reblaze.getHash(unixTimestamp: Int(Date().timeIntervalSince1970.rounded()))
             print(hash)
