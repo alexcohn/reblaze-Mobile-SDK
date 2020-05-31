@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     "08679d101bb5d41sdj4321b15asdfe4",
                     "UserName",
                     "test@123.io",
+                    true,
                     Interval.MINIMUM_INTERVAL_VALUE.getValue());
         } catch (Exception e) {
             e.printStackTrace();
