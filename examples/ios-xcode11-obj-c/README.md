@@ -22,14 +22,17 @@ To handle network error, subscribe to notification ReblazeErrorNotification and 
 Reblaze example app with compiled library.
 To use the example app just download or clone it, build and run the application. 
 
-# installation process
-To install ReblazeSDK you can find "ReblazeSDK.framework" inside the example app folder.
-Instructions below. 
+# Installation process
 
-## Let’s add it into your project
-Copy/Drag the Universal Framework to this project. While coping the framework in Project Explorer, check “Copy items if needed”.
+## Using CocoaPods:
+  use_frameworks!
+  pod 'Reblaze', :git => 'https://bitbucket.org/reblaze/mobilesdk'
 
-Select the Project, Choose Target → Project Name → Select General → Scroll to “Embedded Binaries”. Press “+” and Add the framework.
+## Manually:
+* Drag /libs/iOS/ReblazeSDK.xcframework to your project in the Project Navigator.
+* Select your project and then your app target. Open the General panel.
+* In Frameworks, Libraries and Embedded Content add  ReblazeSDK.xcframework and mark as Embed and Sign
+* import ReblazeSDK whenever you want to use it
 
 # Remember
 Ee we need to remove unused architectures. 
@@ -40,14 +43,16 @@ Please make sure that you have Remove Unused Architectures Script added in your 
 Select the Project, Choose Target → Project Name → Select Build Phases → Press “+” → New Run Script Phase → Name the Script as “Remove Unused Architectures Script”.
 
 ```
-FRAMEWORK="TestFramework"
+FRAMEWORK="ReblazeSDK"
 FRAMEWORK_EXECUTABLE_PATH="${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/$FRAMEWORK.framework/$FRAMEWORK"
 EXTRACTED_ARCHS=()
+
 for ARCH in $ARCHS
 do
-lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
-EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
+    lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
+    EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
 done
+
 lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
 rm "${EXTRACTED_ARCHS[@]}"
 rm "$FRAMEWORK_EXECUTABLE_PATH"
@@ -66,7 +71,7 @@ in you "AppDelegate" and where ever you want to send a custom event.
 
 ## Start SDK
 ```swift
-Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101bb5d41sdj4321b15asdfe4", header_name: "UserName", header_value: "test@123.io")
+Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101bb5d41sdj4321b15asdfe4", uid: "test@123.io", shouldShowLogs: true, intervalInSeconds: 20)
 ```
 ## UI Tests
 The example app include a UI Test, to run it press "CMD + U" 
