@@ -7,7 +7,9 @@ all events are being sent to Reblaze every 12 seconds and can be discovered in R
 To use the source code in your project, add the SDK to the application dependencies, import the SDK, and initiate the agent with your configurations.
 
 1. Open your project in *Android Studio*
-2. Add the dependency to the project. In project build.gradle:
+2. You can add the dependency to the project manually or import from maven repo.
+    a) Manually: `file > new > import library` and select the SDK library.
+    b) Or import from maven, in project build.gradle:
 ```groovy
 allprojects {
     repositories {
