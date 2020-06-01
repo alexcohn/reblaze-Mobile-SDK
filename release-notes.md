@@ -1,5 +1,6 @@
 Version 1.6
 2020-06-01
+
 - Android AAR is now distributed via Maven repository;
 - iOS SDK is now integrated via CocoaPods and each new version contains changelog;
 - Method signatures and error messages do match between iOS and Android;
@@ -9,6 +10,7 @@ Version 1.6
 
 Version 1.5.1
 2020-04-23
+
 - Added option to set custom time interval for events sending for iOS and Android;
 - Added option to switch events sending off for iOS and Android.
 - Removed some domain artifacts for iOS and Android.
