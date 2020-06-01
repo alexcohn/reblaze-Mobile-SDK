@@ -1,4 +1,4 @@
 target 'ReblazeSDK-Example' do
   use_frameworks!
-  pod 'Reblaze', :git => 'https://bitbucket.org/reblaze/mobilesdk', :branch => 'SDK-42-cocoapods'
+  pod 'Reblaze', :git => 'https://bitbucket.org/reblaze/mobilesdk'
 end
