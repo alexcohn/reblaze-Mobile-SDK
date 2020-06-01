@@ -7,17 +7,50 @@ all events are being sent to Reblaze every 12 seconds and can be discovered in R
 To use the source code in your project, add the SDK to the application dependencies, import the SDK, and initiate the agent with your configurations.
 
 1. Open your project in *Android Studio*
-2. Add the dependency to the project `file > new > import library` and select the SDK library
+2. Add the dependency to the project. In project build.gradle:
+```groovy
+allprojects {
+    repositories {
+        maven { url "https://api.bitbucket.org/2.0/repositories/reblaze/mobilesdk/src/releases" }
+    }
+}
+```
+In the module build.gradle:
+```groovy
+    implementation 'com.reblaze.reblazeexampleapp:reblaze-release:1.6.0'
+```
 3. Import the SDK `import com.reblaze.sdk.reblaze;`
-4. Start the agent
+4. Implement runtime dependencies in build.gradle:
+```groovy
+    runtimeOnly 'com.google.android.gms:play-services-location:17.0.0'
+    runtimeOnly 'com.google.android.gms:play-services-ads-identifier:17.0.0'
+```
+5. Update onCreate method of main application with reblaze initialization:
 ```java
-reblaze.start(this, "https://demo.reblaze.com", "xxxxxxxxxxxxx", "user_id","john@smith.name");
+@Override
+    public void onCreate() {
+        super.onCreate();
+        reblaze.init(this);
+    }
+```
+6. Start the agent
+```java
+reblaze.start(this,
+    "https://demo.reblaze.com",
+    "secret",
+    "key",
+    "user_id",
+    true,
+    Interval.MINIMUM_INTERVAL_VALUE.getValue()
+);
 ```
   * *this* - Refers to the activity/context, we highly recommend to refer to the main activity
   * *https://demo.reblaze.com* - The application backend service URL
-  * *xxxxxxxxxxxxx* - Secret key that will be used for the encryption
-  * *foo* - Header name, the header will identive the specific user
-  * *bar* - Header value, the header will identive the specific user
+  * *secret* - Secret key that will be used for the encryption
+  * *key* - Header name, the header will identify the specific user
+  * *user_id* - Header value, the header will identify the specific user
+  * *true* - Value indicating will logs be printed in debug console
+  * *Interval.MINIMUM_INTERVAL_VALUE.getValue() - interval in seconds when the events will be sent*
 
 ## Signing your application's requests
 
@@ -58,7 +91,7 @@ To include location information into events need append these permissions to app
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-```
+ ```
 
 Also for applications with targetSdkVersion Android 6.0 (API 23) and above should be granted [Runtime Permission](https://developer.android.com/training/permissions/requesting) by application user
 
@@ -83,3 +116,21 @@ we highly recommend calling
 reblaze.Destroy()
 ```
 function on hosting app's `onDestroy()` method
+
+## Prevent errors of loading native libraries on some devices
+
+On some devices loading the native library may fail due to bugs like:
+```java
+java.lang.UnsatisfiedLinkError
+```
+To counter this Reblaze includes support for the ReLinker tool which will try to extract the native library manually if loading it normally fails.
+To set this up add ReLinker to your dependencies:
+
+```groovy
+implementation 'com.getkeepsafe.relinker:relinker:1.4.1'
+```
+Reblaze is calling ReLinker via reflection. If you are using ProGuard or Multidex, make sure to add keep rules so that ReLinker code is not stripped from the final app or is not in the primary dex file.
+
+## Proguard
+If you are using ProGuard make sure to add a rule to keep ReLinker classes and methods as reblaze only accesses them via reflection:
+-keep class com.getkeepsafe.relinker.** { *; }
