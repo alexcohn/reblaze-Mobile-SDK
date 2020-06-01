@@ -2,11 +2,11 @@ Version 1.6
 
 2020-06-01
 
-- Android AAR is now distributed via Maven repository and iOS SDK is now integrated via CocoaPods;
-- Method signatures and error messages do match between iOS and Android;
-- Now SDK version and device id are sent as an header on both iOS and Android;
-- Possible Android memory leak issue was fixed;
-- Android SDK Crash for paticular devices was fixed
+- Added Maven repository support for Android and CocoaPods for iOS;
+- Method signatures and error messages match between iOS and Android;
+- SDK version and device id are sent in the header on both iOS and Android;
+- Android memory leak issue fixed;
+- Android SDK crash fixed;
 
 Version 1.5.1
 
