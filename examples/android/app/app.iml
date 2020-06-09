@@ -120,7 +120,7 @@
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-android:2.3@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat:1.1.0@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.reblaze.reblazeexampleapp:reblaze-release:1.6.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: :reblaze-release:@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.getkeepsafe.relinker:relinker:1.4.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-android-core:2.3@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-object-watcher-android-androidx:2.3@aar" level="project" />
