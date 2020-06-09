@@ -21,7 +21,6 @@ allprojects {
         flatDir {
             dirs 'libs'
         }
-        maven { url "https://api.bitbucket.org/2.0/repositories/reblaze/mobilesdk/src/releases" }
     }
 }
 

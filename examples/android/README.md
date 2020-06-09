@@ -13,13 +13,13 @@ To use the source code in your project, add the SDK to the application dependenc
 ```groovy
 allprojects {
     repositories {
-        maven { url "https://api.bitbucket.org/2.0/repositories/reblaze/mobilesdk/src/releases" }
+        maven { url "https://api.bitbucket.org/2.0/repositories/reblaze/mobilesdk/src/releases/" }
     }
 }
 ```
 In the module build.gradle:
 ```groovy
-    implementation 'com.reblaze.reblazeexampleapp:reblaze-release:1.6.0'
+    implementation 'com.reblaze.sdk:mobile-sdk:1.6.0'
 ```
 3. Import the SDK `import com.reblaze.sdk.reblaze;`
 4. Implement runtime dependencies in build.gradle:
