@@ -21,12 +21,12 @@ In the module build.gradle:
 ```groovy
     implementation 'com.reblaze.sdk:mobile-sdk:1.6.0'
 ```
-3. Import the SDK `import com.reblaze.sdk.reblaze;`
-4. Implement runtime dependencies in build.gradle:
+3. Implement runtime dependencies in module build.gradle:
 ```groovy
     runtimeOnly 'com.google.android.gms:play-services-location:17.0.0'
     runtimeOnly 'com.google.android.gms:play-services-ads-identifier:17.0.0'
 ```
+4. Import the SDK `import com.reblaze.sdk.reblaze;`
 5. Update onCreate method of main application with reblaze initialization:
 ```java
 @Override
