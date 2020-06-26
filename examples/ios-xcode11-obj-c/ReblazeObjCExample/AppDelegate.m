@@ -25,6 +25,8 @@
                    uid:@"test@123.io"
         shouldShowLogs:YES
      intervalInSeconds: 15
+             userAgent: @"Test User Agent"
+        reportLocation: false
                  error: &startError];
     
     if (startError!= nil) {

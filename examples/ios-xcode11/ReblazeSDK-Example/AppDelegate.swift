@@ -26,7 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                               key: "UserName",
                               uid: "test@123.io",
                               shouldShowLogs: true,
-                              intervalInSeconds: 20)
+                              intervalInSeconds: 20,
+                              userAgent: "Test User Agent",
+                              reportLocation: false)
             
             let hash = try Reblaze.getHash(unixTimestamp: Int(Date().timeIntervalSince1970.rounded()))
             print(hash)
