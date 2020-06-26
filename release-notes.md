@@ -1,3 +1,18 @@
+Version 1.7
+
+2020-06-26
+
+- User agent string argument in SDK init/start method was added for iOS and Android;
+- ios-xcode11 example app was fixed;
+- SDK provides logging via os_log for iOS;
+- Added detailed documentation for possible error throwing in methods Reblaze.start and getHash for iOS and Android;
+- Cocoapods and Maven distribution documentation was updated;
+- reportLocation parameter was added iOS and Android;
+- doublecheck was added that native library loaded in start() method for Android;
+- An issue on getting the location (isUseLocationPermission) was fixed for Android;
+- iOS SDK can accept correct values for interval now;
+
+
 Version 1.6
 
 2020-06-01
