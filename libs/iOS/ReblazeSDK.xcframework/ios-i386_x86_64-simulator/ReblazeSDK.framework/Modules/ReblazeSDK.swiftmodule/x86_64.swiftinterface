@@ -1,14 +1,16 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
-// swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ReblazeSDK
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ReblazeSDK
 import CommonCrypto
 import CoreLocation
 import Foundation
 @_exported import ReblazeSDK
 import Swift
 import UIKit
+import os.log
+import os
 public enum PostApi {
-  case events(address: Swift.String, secret: Swift.String, key: Swift.String, value: Swift.String, deviceId: Swift.String?, events: [Swift.String : Any])
+  case events(address: Swift.String, secret: Swift.String, key: Swift.String, value: Swift.String, userAgent: Swift.String, deviceId: Swift.String?, events: [Swift.String : Any])
 }
 public typealias Parameters = [Swift.String : Any]
 public protocol ParameterEncoder {
@@ -63,6 +65,7 @@ public enum StartError : Foundation.LocalizedError {
   case emptyKey
   case emptyUId
   case emptySecret
+  case emptyUserAgent
   public var errorDescription: Swift.String? {
     get
   }
@@ -83,8 +86,8 @@ public enum TimerError : Foundation.LocalizedError {
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
-@objc public class Reblaze : ObjectiveC.NSObject {
-  @objc public static func start(with address: Swift.String, secret: Swift.String, key: Swift.String, uid: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int) throws
+@_inheritsConvenienceInitializers @objc public class Reblaze : ObjectiveC.NSObject {
+  @objc public static func start(with address: Swift.String, secret: Swift.String, key: Swift.String, uid: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, userAgent: Swift.String, reportLocation: Swift.Bool = false) throws
   @objc public static func getHash(unixTimestamp: Swift.Int) throws -> Swift.String
   @objc public static func sendEvent(eventName: Swift.String)
   @objc override dynamic public init()

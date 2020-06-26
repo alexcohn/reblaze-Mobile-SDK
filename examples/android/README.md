@@ -19,7 +19,7 @@ allprojects {
 ```
 In the module build.gradle:
 ```groovy
-    implementation 'com.reblaze.sdk:mobile-sdk:1.6.0'
+    implementation 'com.reblaze.sdk:mobile-sdk:1.7.0'
 ```
 3. Implement runtime dependencies in module build.gradle:
 ```groovy
@@ -42,8 +42,10 @@ reblaze.start(this,
     "secret",
     "key",
     "user_id",
-    true,
-    Interval.MINIMUM_INTERVAL_VALUE.getValue()
+    shouldShowLogs,
+    Interval.MINIMUM_INTERVAL_VALUE.getValue(),
+    reportLocation,
+    "user_agent"
 );
 ```
   * *this* - Refers to the activity/context, we highly recommend to refer to the main activity
@@ -51,8 +53,18 @@ reblaze.start(this,
   * *secret* - Secret key that will be used for the encryption
   * *key* - Header name, the header will identify the specific user
   * *user_id* - Header value, the header will identify the specific user
-  * *true* - Value indicating will logs be printed in debug console
+  * *shouldShowLogs* - Value indicating will logs be printed in debug console
   * *Interval.MINIMUM_INTERVAL_VALUE.getValue() - interval in seconds when the events will be sent*
+  * *reportLocation* - Value indicating will location be sent
+  * *userAgent* - Custom user agent will be send in requests
+  
+Throws *IllegalArgumentException*:
+* If *mainActivity* is null
+* If *address* is empty or null
+* If *secret* is empty or null
+* If *key* is empty or null
+* If *uidValue* header is empty or null
+* If *intervalInSeconds* is out of range 12..300 seconds
 
 ## Signing your application's requests
 
@@ -69,6 +81,9 @@ The value (String) for the `rbzid` header is provided by the static method `getH
 ```java
 reblaze.getHash(unix_timestamp)
 ```
+Trows *IllegalArgumentException*:
+* If *secret* is empty or null
+* If *uidValue* header is empty or null
 
 Make sure you call `getHash` only **_after_** `reblaze.start` is called.
 
@@ -90,7 +105,6 @@ By default, Reblaze SDK not required location permission and not collect device 
 To include location information into events need append these permissions to application AndroidManifest.xml
 
 ```xml
-        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
  ```
