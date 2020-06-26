@@ -71,7 +71,9 @@ public class MainActivity extends AppCompatActivity {
                     "UserName",
                     "test@123.io",
                     true,
-                    Interval.MINIMUM_INTERVAL_VALUE.getValue());
+                    Interval.MINIMUM_INTERVAL_VALUE.getValue(),
+                    true,
+                    "Android");
         } catch (Exception e) {
             e.printStackTrace();
         }
