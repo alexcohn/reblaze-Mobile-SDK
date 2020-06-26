@@ -6,9 +6,25 @@ This is the IOS branch where you can find the hosting app (currently including j
 
 Library code has remarks inside for each method - and ill give a quick overview of what done. Library got a main starting point to activate the SDK :
 
-Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101bb5d41sdj4321b15asdfe4", uid: "test@123.io", shouldShowLogs: true, intervalInSeconds: 20)
-      
-url for the developer account server developer secret. unique key name unique key value.
+Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101bb5d41sdj4321b15asdfe4", header_name: "UserName", header_value: "test@123.io", shouldShowLogs: true, intervalInSeconds: 12, userAgent: "Test User Agent", reportLocation: true )
+ where
+ - address : URL for the customer's application server
+ - secret : Secret value issued to the customer by Reblaze
+ - key : The name of a field that contains a unique value for this user. (Example: UserName.)
+ - uid : The value for the field specified above. (For example, the user's email address.)
+ - shouldShowLogs : Value indicating will logs be printed in debug console
+ - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
+ - userAgent: custom user agent will be send in requests
+ - reportLocation: value indicating will location data be reported or not
+ 
+Possible errors could be thrown:
+ - didntStartSDK - means you try to call method that could be called only after reblaze was set up in start() method
+ - emptyUId - means you try to pass empty unique value for this user
+ - emptyKey - means you try to pass empty name of a field that contains a unique value for this user
+ - emptySecret - means you try to pass empty secret value issued to the customer by Reblaze
+ - emptyAddress - means you try to pass empty URL for the customer's application server
+ - emptyUserAgent - means you try to pass empty custom user agent
+ - incorrectTimeInterval - means you try to pass incorrect time interval(outside range 12...300 sec)
 
 Best practce is to have it on AppDelegate. Keep note that reblaze class is static so you can call it from everywhere in the app.
 
