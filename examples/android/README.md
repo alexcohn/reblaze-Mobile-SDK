@@ -19,7 +19,7 @@ allprojects {
 ```
 In the module build.gradle:
 ```groovy
-    implementation 'com.reblaze.sdk:mobile-sdk:1.7.0'
+    implementation 'com.reblaze.sdk:mobile-sdk:1.7.1'
 ```
 3. Implement runtime dependencies in module build.gradle:
 ```groovy
@@ -38,7 +38,7 @@ In the module build.gradle:
 6. Start the agent
 ```java
 reblaze.start(this,
-    "https://demo.reblaze.com",
+    "server_url",
     "secret",
     "key",
     "user_id",
@@ -49,15 +49,17 @@ reblaze.start(this,
 );
 ```
   * *this* - Refers to the activity/context, we highly recommend to refer to the main activity
-  * *https://demo.reblaze.com* - The application backend service URL
+  * *server_url* - The application backend service URL
   * *secret* - Secret key that will be used for the encryption
   * *key* - Header name, the header will identify the specific user
   * *user_id* - Header value, the header will identify the specific user
   * *shouldShowLogs* - Value indicating will logs be printed in debug console
   * *Interval.MINIMUM_INTERVAL_VALUE.getValue() - interval in seconds when the events will be sent*
   * *reportLocation* - Value indicating will location be sent
-  * *userAgent* - Custom user agent will be send in requests
+  * *user_agent* - Custom user agent will be send in requests, can be null. If parameter is null there will be used default value
   
+   Please replace placeholder values with your own credenials.
+   
 Throws *IllegalArgumentException*:
 * If *mainActivity* is null
 * If *address* is empty or null

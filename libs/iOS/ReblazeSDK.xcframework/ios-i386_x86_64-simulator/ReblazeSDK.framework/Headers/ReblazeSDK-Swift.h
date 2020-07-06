@@ -227,7 +227,7 @@ SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 ///        - uid : The value for the field specified above. (For example, the user's email address.)
 ///        - shouldShowLogs : Value indicating will logs be printed in debug console
 ///        - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
-///        - userAgent: custom user agent will be send in requests
+///        - userAgent: custom user agent will be send in requests (optional)
 ///        - reportLocation: value indicating will location data be reported or not
 ///        
 ///
@@ -237,7 +237,7 @@ SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 /// *
 ///
 /// \endcode
-+ (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds userAgent:(NSString * _Nonnull)userAgent reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
++ (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds userAgent:(NSString * _Nullable)userAgent reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
 /// Calculates hash based on timestamp, secret and unique value for this user
 /// \code
 ///       - Parameters:
@@ -497,7 +497,7 @@ SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 ///        - uid : The value for the field specified above. (For example, the user's email address.)
 ///        - shouldShowLogs : Value indicating will logs be printed in debug console
 ///        - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
-///        - userAgent: custom user agent will be send in requests
+///        - userAgent: custom user agent will be send in requests (optional)
 ///        - reportLocation: value indicating will location data be reported or not
 ///        
 ///
@@ -507,7 +507,7 @@ SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 /// *
 ///
 /// \endcode
-+ (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds userAgent:(NSString * _Nonnull)userAgent reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
++ (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds userAgent:(NSString * _Nullable)userAgent reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
 /// Calculates hash based on timestamp, secret and unique value for this user
 /// \code
 ///       - Parameters:

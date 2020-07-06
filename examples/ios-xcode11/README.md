@@ -6,7 +6,7 @@ This is the IOS branch where you can find the hosting app (currently including j
 
 Library code has remarks inside for each method - and ill give a quick overview of what done. Library got a main starting point to activate the SDK :
 
-Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101bb5d41sdj4321b15asdfe4", header_name: "UserName", header_value: "test@123.io", shouldShowLogs: true, intervalInSeconds: 12, userAgent: "Test User Agent", reportLocation: true )
+Reblaze.start(with: "server_url", secret: "secret", key: "user_name", uid: "user_id", shouldShowLogs: true, intervalInSeconds: 20, userAgent: "user_agent", reportLocation: false)
  where
  - address : URL for the customer's application server
  - secret : Secret value issued to the customer by Reblaze
@@ -14,8 +14,10 @@ Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com", secret: "08679d101b
  - uid : The value for the field specified above. (For example, the user's email address.)
  - shouldShowLogs : Value indicating will logs be printed in debug console
  - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
- - userAgent: custom user agent will be send in requests
+ - userAgent: custom user agent will be send in requests, optional. If parameter is nil there will be used default value
  - reportLocation: value indicating will location data be reported or not
+ 
+ Please replace placeholder values with your own credenials.
  
 Possible errors could be thrown:
  - didntStartSDK - means you try to call method that could be called only after reblaze was set up in start() method

@@ -66,14 +66,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
             reblaze.start(this,
-                    "https://mobilesdkqa.prod2.reblaze.com",
-                    "08679d101bb5d41sdj4321b15asdfe4",
-                    "UserName",
-                    "test@123.io",
+                    "server_url",
+                    "secret",
+                    "user_name",
+                    "user_id",
                     true,
                     Interval.MINIMUM_INTERVAL_VALUE.getValue(),
                     true,
-                    "Android");
+                    "user_agent");
         } catch (Exception e) {
             e.printStackTrace();
         }
