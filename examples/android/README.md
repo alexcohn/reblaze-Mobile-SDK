@@ -58,6 +58,8 @@ reblaze.start(this,
   * *reportLocation* - Value indicating will location be sent
   * *user_agent* - Custom user agent will be send in requests, can be null. If parameter is null there will be used default value
   
+   Please replace placeholder values with your own credenials.
+   
 Throws *IllegalArgumentException*:
 * If *mainActivity* is null
 * If *address* is empty or null
