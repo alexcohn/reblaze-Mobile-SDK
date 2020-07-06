@@ -19,13 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application
     NSError *startError = nil;
-    [Reblaze startWith:@"https://mobilesdkqa.prod2.reblaze.com"
-                secret:@"08679d101bb5d41sdj4321b15asdfe4"
-                   key:@"UserName"
-                   uid:@"test@123.io"
+    [Reblaze startWith:@"server_url"
+                secret:@"secret"
+                   key:@"user_name"
+                   uid:@"user_id"
         shouldShowLogs:YES
      intervalInSeconds: 15
-             userAgent: @"Test User Agent"
+             userAgent: @"user_agent"
         reportLocation: false
                  error: &startError];
     

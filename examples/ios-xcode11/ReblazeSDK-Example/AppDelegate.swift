@@ -21,13 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //Call get hash only after Reblaze.start is called
         do {
-            try Reblaze.start(with: "https://mobilesdkqa.prod2.reblaze.com",
-                              secret: "08679d101bb5d41sdj4321b15asdfe4",
-                              key: "UserName",
-                              uid: "test@123.io",
+            try Reblaze.start(with: "server_url",
+                              secret: "secret",
+                              key: "user_name",
+                              uid: "user_id",
                               shouldShowLogs: true,
                               intervalInSeconds: 20,
-                              userAgent: "Test User Agent",
+                              userAgent: "user_agent",
                               reportLocation: false)
             
             let hash = try Reblaze.getHash(unixTimestamp: Int(Date().timeIntervalSince1970.rounded()))
