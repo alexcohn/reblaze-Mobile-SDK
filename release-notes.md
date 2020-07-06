@@ -1,43 +1,93 @@
-Version 1.7
+# Version 1.7
+*2020-06-26*
 
-2020-06-26
+## What’s New
+- **Android and iOS**
+    - In the `start()` method, the client app now supplies a string containing the user agent. Reblaze will use this for reports and events.
+    - In the `start()` method, the client app now supplies a `reportLocation` parameter. This allows (or prevents) the SDK from accessing and reporting the user’s location.
+    - Added documentation of possible errors thrown by `start()` and `getHash()` methods.
 
-- User agent string argument in SDK init/start method was added for iOS and Android;
-- ios-xcode11 example app was fixed;
-- SDK provides logging via os_log for iOS;
-- Added detailed documentation for possible error throwing in methods Reblaze.start and getHash for iOS and Android;
-- Cocoapods and Maven distribution documentation was updated;
-- reportLocation parameter was added iOS and Android;
-- doublecheck was added that native library loaded in start() method for Android;
-- An issue on getting the location (isUseLocationPermission) was fixed for Android;
-- iOS SDK can accept correct values for interval now;
+- **Android**
+    - Updated documentation for Maven distribution.
+
+- **iOS**  
+    - The SDK now sends log messages to os_log.
+    - Updated documentation for Cocoapods distribution.
 
 
-Version 1.6
+## Fixes
 
-2020-06-01
+- **Android**
+    - Added handling for potential exception thrown by `isUseLocationPermission` method (when a weak reference to the location permission is null).
+    - Added verification that the native library is loaded in the `start()` method.
 
-- Added Maven repository support for Android and CocoaPods for iOS;
-- Method signatures and error messages match between iOS and Android;
-- SDK version and device id are sent in the header on both iOS and Android;
-- Android memory leak issue fixed;
-- Android SDK crash fixed;
+- **iOS**  
+    - Boundary values for `start()` method argument `intervalInSeconds` are now being accepted correctly.
+    - The ios-xcode11-obj-c example app is now working properly.
 
-Version 1.5.1
+    
+---
 
-2020-04-23
+# Version 1.6
+*2020-06-01*
 
-- Added option to set custom time interval for events sending for iOS and Android;
-- Added option to switch events sending off for iOS and Android.
-- Removed some domain artifacts for iOS and Android.
-- Fixed Reblaze SDK is not asking for location permissions for Android
+## What’s New
 
-Version 1.4
+- **Android and iOS**
+    - Method signatures and error messages are now the same for both SDK versions.
+    - Sent requests now include the SDK version and device ID.
 
-2020-03-23
+- **Android**
+    - Added integration with Maven.
+
+- **iOS**  
+    - Added integration with CocoaPods.
+
+
+## Fixes
+
+- **Android**
+    - Fixed a memory leak that occurred when a new main screen instance was created.
+    - Added ReLinker support to fix a `java.lanq.UnsatisfiedLinkError`. More info: https://app.gitbook.com/@reblaze-2/s/product-manual/v/v2.14/using-the-product/reblaze-api-1/mobile-sdk#android 
+    
+---
+
+# Version 1.5.1
+*2020-04-23*
+
+## What’s New
+
+- **Android and iOS**
+    - Added option to set custom time interval for sending events.
+    - Added option to turn off the sending of events.
+
+## Fixes
+
+- **Android and iOS**
+    - Fixed an issue where the SDK was reverting to a default domain if the domain specified by the host application was not available. Now the SDK produces an error instead.
+
+- **Android**
+    - Fixed an issue where the SDK was incorrectly requesting location permissions.
+
+    
+---
+
+# Version 1.4
+*2020-03-23*
+
+## What’s New
+
+- **Android and iOS**
+    - Host application can now indicate if it has permission to use location services.
+    - Added reporting of battery level and charging mode.
+    - Added reporting of whether app is running in an emulator or an actual device.
+
+## Fixes
+
+- **Android**
+    - Fixed a HostnameVerifier error when uploading an Android app.
+
+- **iOS**
+    - Fixed an issue where the `sendEvent()` method was unavailable in Swift.
  
-- Indication whether application is running in emulator or real device was added for iOS and Android;
-- Battery level report were added for iOS and Android;
-- Location used flag was added for iOS and Android;
-- HostnameVerifier error when uploading Android app using Reblaze SDK was fixed;
-- sendEvent method is fixed in iOS version of SDK.
+---
