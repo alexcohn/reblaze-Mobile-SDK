@@ -56,7 +56,7 @@ reblaze.start(this,
   * *shouldShowLogs* - Value indicating will logs be printed in debug console
   * *Interval.MINIMUM_INTERVAL_VALUE.getValue() - interval in seconds when the events will be sent*
   * *reportLocation* - Value indicating will location be sent
-  * *userAgent* - Custom user agent will be send in requests
+  * *user_agent* - Custom user agent will be send in requests, can be null. If parameter is null there will be used default value
   
 Throws *IllegalArgumentException*:
 * If *mainActivity* is null
