@@ -38,7 +38,7 @@ In the module build.gradle:
 6. Start the agent
 ```java
 reblaze.start(this,
-    "https://demo.reblaze.com",
+    "server_url",
     "secret",
     "key",
     "user_id",
