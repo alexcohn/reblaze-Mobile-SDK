@@ -49,7 +49,7 @@ reblaze.start(this,
 );
 ```
   * *this* - Refers to the activity/context, we highly recommend to refer to the main activity
-  * *https://demo.reblaze.com* - The application backend service URL
+  * *server_url* - The application backend service URL
   * *secret* - Secret key that will be used for the encryption
   * *key* - Header name, the header will identify the specific user
   * *user_id* - Header value, the header will identify the specific user
