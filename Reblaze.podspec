@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Reblaze'
-  s.version          = '1.7'
+  s.version          = '1.7.1'
   s.summary          = 'Reblaze is a cloud-based platform that provides a comprehensive, dynamic, machine-intelligent security and control solution for web platforms.'
  
   s.authors 	     = { 'Reblaze' => 'mobile-sdk-dev@reblaze.com' }
@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'libs/iOS/ReblazeSDK.xcframework'
   s.platform = :ios
   s.swift_version = '4.2'
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
   s.frameworks = 'UIKit'
 end
