@@ -54,11 +54,24 @@ reblaze.start(this,
   * *key* - Header name, the header will identify the specific user
   * *user_id* - Header value, the header will identify the specific user
   * *shouldShowLogs* - Value indicating will logs be printed in debug console
-  * *Interval.MINIMUM_INTERVAL_VALUE.getValue() - interval in seconds when the events will be sent*
+  * *Interval.MINIMUM_INTERVAL_VALUE.getValue()* - interval in seconds when the events will be sent
   * *reportLocation* - Value indicating will location be sent
-  * *user_agent* - Custom user agent will be send in requests, can be null. If parameter is null there will be used default value
-  
-   Please replace placeholder values with your own credenials.
+  * *user_agent* - Custom user agent will be send in requests
+   
+   Or you can start without user agent, there will be used default value:
+```java
+reblaze.start(this,
+       "server_url",
+       "secret",
+       "key",
+       "user_id",
+       shouldShowLogs,
+       Interval.MINIMUM_INTERVAL_VALUE.getValue(),
+       reportLocation
+ );
+```
+
+Please replace placeholder values with your own credenials.
    
 Throws *IllegalArgumentException*:
 * If *mainActivity* is null
@@ -67,6 +80,7 @@ Throws *IllegalArgumentException*:
 * If *key* is empty or null
 * If *uidValue* header is empty or null
 * If *intervalInSeconds* is out of range 12..300 seconds
+* If *user_agent* is empty or null
 
 ## Signing your application's requests
 
