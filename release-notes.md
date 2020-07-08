@@ -1,10 +1,10 @@
-# Version 1.7.1
+# Version 1.7.2
 *2020-07-08*
 
 ## What’s New
 
 - **Android and iOS**
-    - In the `start()` method, the `userAgent` string argument is now optional. If it is null, a default value will be used. 
+    - In the `start()` method, the `userAgent` string argument is now optional. If it was not passed, a default value will be used. 
 
 ## Fixes
 
