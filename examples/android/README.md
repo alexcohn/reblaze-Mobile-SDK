@@ -19,7 +19,7 @@ allprojects {
 ```
 In the module build.gradle:
 ```groovy
-    implementation 'com.reblaze.sdk:mobile-sdk:1.7.1'
+    implementation 'com.reblaze.sdk:mobile-sdk:1.7.2'
 ```
 3. Implement runtime dependencies in module build.gradle:
 ```groovy
