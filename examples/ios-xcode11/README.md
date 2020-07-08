@@ -17,6 +17,10 @@ Reblaze.start(with: "server_url", secret: "secret", key: "user_name", uid: "user
  - userAgent: custom user agent will be send in requests, optional. If parameter is nil there will be used default value
  - reportLocation: value indicating will location data be reported or not
  
+ Or you can start without user agent, there will be used default value:
+ 
+Reblaze.start(with: "server_url", secret: "secret", key: "user_name", uid: "user_id", shouldShowLogs: true, intervalInSeconds: 20, reportLocation: false)
+ 
  Please replace placeholder values with your own credenials.
  
 Possible errors could be thrown:

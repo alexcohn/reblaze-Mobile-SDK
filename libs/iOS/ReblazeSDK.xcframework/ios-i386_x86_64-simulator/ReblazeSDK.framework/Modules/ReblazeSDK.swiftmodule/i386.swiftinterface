@@ -86,6 +86,7 @@ public enum TimerError : Foundation.LocalizedError {
   public func hash(into hasher: inout Swift.Hasher)
 }
 @_inheritsConvenienceInitializers @objc public class Reblaze : ObjectiveC.NSObject {
+  @objc public static func start(with address: Swift.String, secret: Swift.String, key: Swift.String, uid: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, reportLocation: Swift.Bool = false) throws
   @objc public static func start(with address: Swift.String, secret: Swift.String, key: Swift.String, uid: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, userAgent: Swift.String? = nil, reportLocation: Swift.Bool = false) throws
   @objc public static func getHash(unixTimestamp: Swift.Int) throws -> Swift.String
   @objc public static func sendEvent(eventName: Swift.String)
