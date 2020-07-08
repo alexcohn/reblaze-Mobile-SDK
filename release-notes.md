@@ -1,3 +1,23 @@
+# Version 1.7.1
+*2020-07-08*
+
+## What’s New
+
+- **Android and iOS**
+    - In the `start()` method, the `userAgent` string argument is now optional. If it is null, a default value will be used. 
+
+## Fixes
+
+- **Android and iOS**
+    - Updated code samples and documentation, removing the default use of Reblaze's QA servers.
+    - Updated documentation to clarify that in the `start()` method, the `userAgent` argument can be used however the customer wants.
+
+- **iOS**
+    - Fixed an issue with `getHash()`; the method was not returning consistent signatures when the same timestamp was submitted.
+
+
+---
+
 # Version 1.7
 *2020-06-26*
 
