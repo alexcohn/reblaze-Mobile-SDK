@@ -218,61 +218,89 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _
 
 SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 @interface Reblaze : NSObject
-/// Main starting point for starting SDK
+/// <ul>
+///   <li>
+///     Parameters:
+///   </li>
+///   <li>
+///     secret : Secret value issued to the customer by Reblaze
+///   </li>
+///   <li>
+///     uid : The value for the field specified above. (For example, the user’s email address.)
+///   </li>
+/// </ul>
+///
+/// throws:
+/// An error of type <code>StartError</code>
++ (BOOL)configureWithSecret:(NSString * _Nonnull)secret uid:(NSString * _Nonnull)uid error:(NSError * _Nullable * _Nullable)error;
+/// <ul>
+///   <li>
+///     Parameters:
+///   </li>
+///   <li>
+///     address : URL for the customer’s application server
+///   </li>
+///   <li>
+///     secret : Secret value issued to the customer by Reblaze
+///   </li>
+///   <li>
+///     key : The name of a field that contains a unique value for this user. (Example: UserName.)
+///   </li>
+///   <li>
+///     uid : The value for the field specified above. (For example, the user’s email address.)
+///   </li>
+///   <li>
+///     shouldShowLogs : Value indicating will logs be printed in debug console
+///   </li>
+///   <li>
+///     intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12…300 seconds. If value specified to -1, this means no events will be send authomatically
+///   </li>
+///   <li>
+///     reportLocation: value indicating will location data be reported or not
+///   </li>
+/// </ul>
+///
+/// throws:
+/// An error of type <code>StartError</code> or  <code>TimerError</code>
++ (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
+/// SDK configuration. Could be called multiple times. Optional method for sending events
 /// \code
-///    - Parameters:
-///        - address : URL for the customer's application server
-///        - secret : Secret value issued to the customer by Reblaze
-///        - key : The name of a field that contains a unique value for this user. (Example: UserName.)
-///        - uid : The value for the field specified above. (For example, the user's email address.)
-///        - shouldShowLogs : Value indicating will logs be printed in debug console
-///        - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
-///        - userAgent: custom user agent will be send in requests (optional)
-///        - reportLocation: value indicating will location data be reported or not
-///        
+/// - Parameters:
+/// - address : URL for the customer's application server
+/// - secret : Secret value issued to the customer by Reblaze
+/// - key : The name of a field that contains a unique value for this user. (Example: UserName.)
+/// - uid : The value for the field specified above. (For example, the user's email address.)
+/// - shouldShowLogs : Value indicating will logs be printed in debug console
+/// - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
+/// - userAgent: custom user agent will be send in requests (optional)
+/// - reportLocation: value indicating will location data be reported or not
 ///
 ///
-///     - Throws: An error of type `StartError` or  `TimerError`
+///
+/// - Throws: An error of type `StartError` or  `TimerError`
 /// *
 /// *
 ///
 /// \endcode
-+ (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
-/// Main starting point for starting SDK
-/// \code
-///   - Parameters:
-///       - address : URL for the customer's application server
-///       - secret : Secret value issued to the customer by Reblaze
-///       - key : The name of a field that contains a unique value for this user. (Example: UserName.)
-///       - uid : The value for the field specified above. (For example, the user's email address.)
-///       - shouldShowLogs : Value indicating will logs be printed in debug console
-///       - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
-///       - userAgent: custom user agent will be send in requests (optional)
-///       - reportLocation: value indicating will location data be reported or not
-///
-///
-///
-///    - Throws: An error of type `StartError` or  `TimerError`
-///
-/// \endcode<ul>
-///   <li>
-///   </li>
-///   <li>
-///   </li>
-/// </ul>
 + (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds userAgent:(NSString * _Nullable)userAgent reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
+/// Stops events sending.
++ (void)stop;
 /// Calculates hash based on timestamp, secret and unique value for this user
 /// \code
-///       - Parameters:
-///           - timestamp : timestamp based on which hash will be calculated based on
-///        - Throws: An error of type `StartError`
-///    *
-///    *
+/// - Parameters:
+/// - timestamp : timestamp based on which hash will be calculated based on
+/// - Throws: An error of type `StartError`
+/// *
+/// *
 ///
 /// \endcode
 + (NSString * _Nullable)getHashWithUnixTimestamp:(NSInteger)unixTimestamp error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Let’s the developer send cutom event
-+ (void)sendEventWithEventName:(NSString * _Nonnull)eventName;
+/// <ul>
+///   <li>
+///     Let’s the developer send cutom event
+///   </li>
+/// </ul>
++ (BOOL)sendEventWithEventName:(NSString * _Nonnull)eventName error:(NSError * _Nullable * _Nullable)error;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -511,61 +539,89 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _
 
 SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 @interface Reblaze : NSObject
-/// Main starting point for starting SDK
+/// <ul>
+///   <li>
+///     Parameters:
+///   </li>
+///   <li>
+///     secret : Secret value issued to the customer by Reblaze
+///   </li>
+///   <li>
+///     uid : The value for the field specified above. (For example, the user’s email address.)
+///   </li>
+/// </ul>
+///
+/// throws:
+/// An error of type <code>StartError</code>
++ (BOOL)configureWithSecret:(NSString * _Nonnull)secret uid:(NSString * _Nonnull)uid error:(NSError * _Nullable * _Nullable)error;
+/// <ul>
+///   <li>
+///     Parameters:
+///   </li>
+///   <li>
+///     address : URL for the customer’s application server
+///   </li>
+///   <li>
+///     secret : Secret value issued to the customer by Reblaze
+///   </li>
+///   <li>
+///     key : The name of a field that contains a unique value for this user. (Example: UserName.)
+///   </li>
+///   <li>
+///     uid : The value for the field specified above. (For example, the user’s email address.)
+///   </li>
+///   <li>
+///     shouldShowLogs : Value indicating will logs be printed in debug console
+///   </li>
+///   <li>
+///     intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12…300 seconds. If value specified to -1, this means no events will be send authomatically
+///   </li>
+///   <li>
+///     reportLocation: value indicating will location data be reported or not
+///   </li>
+/// </ul>
+///
+/// throws:
+/// An error of type <code>StartError</code> or  <code>TimerError</code>
++ (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
+/// SDK configuration. Could be called multiple times. Optional method for sending events
 /// \code
-///    - Parameters:
-///        - address : URL for the customer's application server
-///        - secret : Secret value issued to the customer by Reblaze
-///        - key : The name of a field that contains a unique value for this user. (Example: UserName.)
-///        - uid : The value for the field specified above. (For example, the user's email address.)
-///        - shouldShowLogs : Value indicating will logs be printed in debug console
-///        - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
-///        - userAgent: custom user agent will be send in requests (optional)
-///        - reportLocation: value indicating will location data be reported or not
-///        
+/// - Parameters:
+/// - address : URL for the customer's application server
+/// - secret : Secret value issued to the customer by Reblaze
+/// - key : The name of a field that contains a unique value for this user. (Example: UserName.)
+/// - uid : The value for the field specified above. (For example, the user's email address.)
+/// - shouldShowLogs : Value indicating will logs be printed in debug console
+/// - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
+/// - userAgent: custom user agent will be send in requests (optional)
+/// - reportLocation: value indicating will location data be reported or not
 ///
 ///
-///     - Throws: An error of type `StartError` or  `TimerError`
+///
+/// - Throws: An error of type `StartError` or  `TimerError`
 /// *
 /// *
 ///
 /// \endcode
-+ (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
-/// Main starting point for starting SDK
-/// \code
-///   - Parameters:
-///       - address : URL for the customer's application server
-///       - secret : Secret value issued to the customer by Reblaze
-///       - key : The name of a field that contains a unique value for this user. (Example: UserName.)
-///       - uid : The value for the field specified above. (For example, the user's email address.)
-///       - shouldShowLogs : Value indicating will logs be printed in debug console
-///       - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
-///       - userAgent: custom user agent will be send in requests (optional)
-///       - reportLocation: value indicating will location data be reported or not
-///
-///
-///
-///    - Throws: An error of type `StartError` or  `TimerError`
-///
-/// \endcode<ul>
-///   <li>
-///   </li>
-///   <li>
-///   </li>
-/// </ul>
 + (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds userAgent:(NSString * _Nullable)userAgent reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
+/// Stops events sending.
++ (void)stop;
 /// Calculates hash based on timestamp, secret and unique value for this user
 /// \code
-///       - Parameters:
-///           - timestamp : timestamp based on which hash will be calculated based on
-///        - Throws: An error of type `StartError`
-///    *
-///    *
+/// - Parameters:
+/// - timestamp : timestamp based on which hash will be calculated based on
+/// - Throws: An error of type `StartError`
+/// *
+/// *
 ///
 /// \endcode
 + (NSString * _Nullable)getHashWithUnixTimestamp:(NSInteger)unixTimestamp error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Let’s the developer send cutom event
-+ (void)sendEventWithEventName:(NSString * _Nonnull)eventName;
+/// <ul>
+///   <li>
+///     Let’s the developer send cutom event
+///   </li>
+/// </ul>
++ (BOOL)sendEventWithEventName:(NSString * _Nonnull)eventName error:(NSError * _Nullable * _Nullable)error;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

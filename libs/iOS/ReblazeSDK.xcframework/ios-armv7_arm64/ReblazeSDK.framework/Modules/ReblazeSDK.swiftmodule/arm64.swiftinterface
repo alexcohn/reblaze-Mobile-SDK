@@ -61,6 +61,9 @@ public struct URLParameterEncoder : ReblazeSDK.ParameterEncoder {
 }
 public enum StartError : Foundation.LocalizedError {
   case didntStartSDK
+  case alreadyStarted
+  case didntStartSDKEmptyHeader
+  case didntStartSDKEmptySecret
   case emptyAddress
   case emptyKey
   case emptyUId
@@ -86,10 +89,17 @@ public enum TimerError : Foundation.LocalizedError {
   public func hash(into hasher: inout Swift.Hasher)
 }
 @_inheritsConvenienceInitializers @objc public class Reblaze : ObjectiveC.NSObject {
+  public static let shared: ReblazeSDK.Reblaze
+  @objc public static func configure(secret: Swift.String, uid: Swift.String) throws
   @objc public static func start(with address: Swift.String, secret: Swift.String, key: Swift.String, uid: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, reportLocation: Swift.Bool = false) throws
-  @objc public static func start(with address: Swift.String, secret: Swift.String, key: Swift.String, uid: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, userAgent: Swift.String? = nil, reportLocation: Swift.Bool = false) throws
+  @objc public static func start(with address: Swift.String, secret: Swift.String, key: Swift.String, uid: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, userAgent: Swift.String?, reportLocation: Swift.Bool = false) throws
+  @objc public static func stop()
   @objc public static func getHash(unixTimestamp: Swift.Int) throws -> Swift.String
-  @objc public static func sendEvent(eventName: Swift.String)
+  @objc public static func sendEvent(eventName: Swift.String) throws
+  public func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  public func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  public func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  public func getEvent(_ point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?, view: UIKit.UIView?)
   @objc override dynamic public init()
   @objc deinit
 }
