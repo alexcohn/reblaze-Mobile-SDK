@@ -55,35 +55,34 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-        // Start the SDK session for this app
-
-        try {
-            reblaze.addOnErrorListener(new OnErrorListener() {
-                @Override
-                public void onError(Exception e) {
-                    Log.d("MainActivity", "Error: " + e.getMessage());
-                }
-            });
-            reblaze.start(this,
-                    "server_url",
-                    "secret",
-                    "user_name",
-                    "user_id",
-                    true,
-                    Interval.MINIMUM_INTERVAL_VALUE.getValue(),
-                    true,
-                    "user_agent");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     @Override
-    public void onDestroy() {
+    protected void onStart() {
+        super.onStart();
+        // Start the SDK session for this app
+        reblaze.addOnErrorListener(new OnErrorListener() {
+            @Override
+            public void onError(Exception e) {
+                Log.d("MainActivity", "Error: " + e.getMessage());
+            }
+        });
+        reblaze.start(this,
+                "server_url",
+                "secret",
+                "user_name",
+                "user_id",
+                true,
+                Interval.MINIMUM_INTERVAL_VALUE.getValue(),
+                true,
+                "user_agent");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
         // End SDK Session.
-        reblaze.Destroy();
-        super.onDestroy();
+        reblaze.stop();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
