@@ -18,7 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        do {
+            try Reblaze.configure(secret: "08679d101bb5d41sdj4321b15asdfe8", uid: "test@123.io")
 
+        } catch let error {
+            print((error as? LocalizedError)?.errorDescription as Any)
+        }
+        
         //Call get hash only after Reblaze.start is called
         do {
             try Reblaze.start(with: "server_url",

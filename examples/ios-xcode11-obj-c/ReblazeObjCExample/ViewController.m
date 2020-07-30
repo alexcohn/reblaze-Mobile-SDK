@@ -25,7 +25,7 @@
 }
 
 - (IBAction)sendTestEvent:(id)sender {
-    [Reblaze sendEventWithEventName:@"Test Event"];
+    [Reblaze sendEventWithEventName:@"Test Event" error: nil];
 }
 
 @end

@@ -21,8 +21,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sendTestEvent(_ sender: Any) {
-        Reblaze.sendEvent(eventName: "Test Custom Event")
+        do {
+            try  Reblaze.sendEvent(eventName: "Test Custom Event")
+        } catch let error {
+            print((error as? LocalizedError)?.errorDescription)
+        }
     }
-
 }
 
