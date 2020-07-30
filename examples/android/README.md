@@ -19,7 +19,7 @@ allprojects {
 ```
 In the module build.gradle:
 ```groovy
-    implementation 'com.reblaze.sdk:mobile-sdk:1.7.2'
+    implementation 'com.reblaze.sdk:mobile-sdk:1.8.0'
 ```
 3. Implement runtime dependencies in module build.gradle:
 ```groovy
@@ -27,15 +27,36 @@ In the module build.gradle:
     runtimeOnly 'com.google.android.gms:play-services-ads-identifier:17.0.0'
 ```
 4. Import the SDK `import com.reblaze.sdk.reblaze;`
-5. Update onCreate method of main application with reblaze initialization:
+
+## Start the agent
+
+1. Update `onCreate()` method of application class with initialization method `configure()`:
 ```java
-@Override
+ @Override
     public void onCreate() {
         super.onCreate();
-        reblaze.init(this);
+        try {
+            reblaze.configure(this, "user_id", "secret");
+        } catch (SDKConfigureException e) {
+            e.printStackTrace();
+        }
     }
 ```
-6. Start the agent
+  * *this* - Refers to the context
+  * *user_id* - Header value, the header will identify the specific user
+  * *secret* - Secret key that will be used for the encryption
+  
+  Please replace placeholder values with your own credentials.
+  
+  Throws *IllegalArgumentException*:
+  * If *secret* is empty or null
+  * If *user_id* is empty or null
+  
+  Throws *SDKConfigureException*:
+  * If SDK was previously configured without calling after *stop()* method 
+  
+2. Start SDK, we recommend to start SDK on hosting activity's `onStart()` method
+
 ```java
 reblaze.start(this,
     "server_url",
@@ -48,16 +69,6 @@ reblaze.start(this,
     "user_agent"
 );
 ```
-  * *this* - Refers to the activity/context, we highly recommend to refer to the main activity
-  * *server_url* - The application backend service URL
-  * *secret* - Secret key that will be used for the encryption
-  * *key* - Header name, the header will identify the specific user
-  * *user_id* - Header value, the header will identify the specific user
-  * *shouldShowLogs* - Value indicating will logs be printed in debug console
-  * *Interval.MINIMUM_INTERVAL_VALUE.getValue()* - interval in seconds when the events will be sent
-  * *reportLocation* - Value indicating will location be sent
-  * *user_agent* - Custom user agent will be send in requests
-   
    Or you can start without user agent, there will be used default value:
 ```java
 reblaze.start(this,
@@ -71,7 +82,17 @@ reblaze.start(this,
  );
 ```
 
-Please replace placeholder values with your own credenials.
+  * *this* - Refers to the activity/context, we highly recommend to refer to the main activity
+  * *server_url* - The application backend service URL
+  * *secret* - Secret key that will be used for the encryption
+  * *key* - Header name, the header will identify the specific user
+  * *user_id* - Header value, the header will identify the specific user
+  * *shouldShowLogs* - Value indicating will logs be printed in debug console
+  * *Interval.MINIMUM_INTERVAL_VALUE.getValue()* - interval in seconds when the events will be sent
+  * *reportLocation* - Value indicating will location be sent
+  * *user_agent* - Custom user agent will be send in requests
+  
+   Please replace placeholder values with your own credentials.
    
 Throws *IllegalArgumentException*:
 * If *mainActivity* is null
@@ -97,11 +118,9 @@ The value (String) for the `rbzid` header is provided by the static method `getH
 ```java
 reblaze.getHash(unix_timestamp)
 ```
-Trows *IllegalArgumentException*:
-* If *secret* is empty or null
-* If *uidValue* header is empty or null
-
-Make sure you call `getHash` only **_after_** `reblaze.start` is called.
+Throws *SDKConfigureException*:
+* If *start()* or *configure()* method was not called previously
+Make sure you call `getHash()` only **_after_** `reblaze.start()` or `reblaze.configure()` is called.
 
 ## Custom Events
 
@@ -131,7 +150,7 @@ Reblaze SDK will automatically check location permission and include location in
 
 ## Include error listening
 
-To observe error events need to add OnErrorListener:
+To observe error events need to add OnErrorListener, we recommend to add Error listener on hosting activity's `onStart()` method:
 ```java
  reblaze.addOnErrorListener(new OnErrorListener() {
                 @Override
@@ -141,13 +160,13 @@ To observe error events need to add OnErrorListener:
             });
 ```
 
-## Destory
-The SDK works with a thread sending all the events triggered by the application until calling the `Destroy()` function which will end the thread,
+## Stop
+The SDK works with a thread sending all the events triggered by the application until calling the `stop()` function which will end the thread,
 we highly recommend calling
 ```java
-reblaze.Destroy()
+reblaze.stop()
 ```
-function on hosting app's `onDestroy()` method
+function on hosting app's `onStop()` method
 
 ## Prevent errors of loading native libraries on some devices
 
