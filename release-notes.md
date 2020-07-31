@@ -1,3 +1,33 @@
+# Version 1.8
+*2020-07-30*
+
+## What’s New
+
+- **Android and iOS**
+
+    - Secret keys are now stored using OS-specific secure storage.
+    
+    - SDK initialization is now done with two methods (instead of using `start()`, as was done previously):
+    
+         - For authenticating client requests without sending biometric events, the new `configure()` method should be used.
+       
+         - If biometric events are also desired, both `configure()` and `start()` should be called.
+      
+## Fixes
+
+- **Android and iOS**
+    
+    - Fixed an issue where a thread kept running when the user did not close the application, but merely suspended/backgrounded it. 
+
+- **Android**
+    
+    - Removed a memory leak.
+    
+    - Fixed an issue where the SDK was not collecting/reporting user events after the Activity was recreated.
+
+
+---
+
 # Version 1.7.2
 *2020-07-08*
 
