@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.reblaze.sdk.Interval;
 import com.reblaze.sdk.error.OnErrorListener;
+import com.reblaze.sdk.error.SDKConfigurationException;
 import com.reblaze.sdk.reblaze;
 
 
@@ -67,15 +68,17 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("MainActivity", "Error: " + e.getMessage());
             }
         });
-        reblaze.start(this,
-                "server_url",
-                "secret",
-                "user_name",
-                "user_id",
-                true,
-                Interval.MINIMUM_INTERVAL_VALUE.getValue(),
-                true,
-                "user_agent");
+        try {
+            reblaze.start(this,
+                    "server_url",
+                    "user_name",
+                    true,
+                    Interval.MINIMUM_INTERVAL_VALUE.getValue(),
+                    true,
+                    "user_agent");
+        } catch (SDKConfigurationException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
