@@ -1,6 +1,6 @@
 {
   "name": "Reblaze",
-  "version": "1.6",
+  "version": "1.8.1",
   "summary": "Reblaze is a cloud-based platform that provides a comprehensive, dynamic, machine-intelligent security and control solution for web platforms.",
   "authors": {
     "Reblaze": "mobile-sdk-dev@reblaze.com"
@@ -8,11 +8,11 @@
   "homepage": "https://www.reblaze.com/",
   "source": {
     "git": "https://bitbucket.org/reblaze/mobilesdk/src/master/libs/iOS/",
-    "tag": "1.6"
+    "tag": "1.8.1"
   },
   "vendored_frameworks": "libs/iOS/ReblazeSDK.xcframework",
   "platforms": {
-    "ios": "9.0"
+    "ios": "10.0"
   },
   "swift_versions": "4.2",
   "frameworks": "UIKit",
