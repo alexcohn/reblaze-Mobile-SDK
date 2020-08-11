@@ -283,6 +283,41 @@ SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 ///
 /// \endcode
 + (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds userAgent:(NSString * _Nullable)userAgent reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
+/// SDK configuration. Could be called multiple times. Optional method for sending events
+/// \code
+///   - Parameters:
+///   - address : URL for the customer's application server
+///   - key : The name of a field that contains a unique value for this user. (Example: UserName.)
+///   - shouldShowLogs : Value indicating will logs be printed in debug console
+///   - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
+///   - userAgent: custom user agent will be send in requests (optional)
+///   - reportLocation: value indicating will location data be reported or not
+///
+///
+///
+///   - Throws: An error of type `StartError` or  `TimerError`
+///   *
+///   *
+///
+/// \endcode
++ (BOOL)startWith:(NSString * _Nonnull)address key:(NSString * _Nonnull)key shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds userAgent:(NSString * _Nullable)userAgent reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
+/// SDK configuration. Could be called multiple times. Optional method for sending events
+/// \code
+///   - Parameters:
+///   - address : URL for the customer's application server
+///   - key : The name of a field that contains a unique value for this user. (Example: UserName.)
+///   - shouldShowLogs : Value indicating will logs be printed in debug console
+///   - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
+///   - reportLocation: value indicating will location data be reported or not
+///
+///
+///
+///   - Throws: An error of type `StartError` or  `TimerError`
+///   *
+///   *
+///
+/// \endcode
++ (BOOL)startWith:(NSString * _Nonnull)address key:(NSString * _Nonnull)key shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
 /// Stops events sending.
 + (void)stop;
 /// Calculates hash based on timestamp, secret and unique value for this user
@@ -604,6 +639,41 @@ SWIFT_CLASS("_TtC10ReblazeSDK7Reblaze")
 ///
 /// \endcode
 + (BOOL)startWith:(NSString * _Nonnull)address secret:(NSString * _Nonnull)secret key:(NSString * _Nonnull)key uid:(NSString * _Nonnull)uid shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds userAgent:(NSString * _Nullable)userAgent reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
+/// SDK configuration. Could be called multiple times. Optional method for sending events
+/// \code
+///   - Parameters:
+///   - address : URL for the customer's application server
+///   - key : The name of a field that contains a unique value for this user. (Example: UserName.)
+///   - shouldShowLogs : Value indicating will logs be printed in debug console
+///   - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
+///   - userAgent: custom user agent will be send in requests (optional)
+///   - reportLocation: value indicating will location data be reported or not
+///
+///
+///
+///   - Throws: An error of type `StartError` or  `TimerError`
+///   *
+///   *
+///
+/// \endcode
++ (BOOL)startWith:(NSString * _Nonnull)address key:(NSString * _Nonnull)key shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds userAgent:(NSString * _Nullable)userAgent reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
+/// SDK configuration. Could be called multiple times. Optional method for sending events
+/// \code
+///   - Parameters:
+///   - address : URL for the customer's application server
+///   - key : The name of a field that contains a unique value for this user. (Example: UserName.)
+///   - shouldShowLogs : Value indicating will logs be printed in debug console
+///   - intervalInSeconds : interval in seconds when the events will be sent. Must be in range 12...300 seconds. If value specified to -1, this means no events will be send authomatically
+///   - reportLocation: value indicating will location data be reported or not
+///
+///
+///
+///   - Throws: An error of type `StartError` or  `TimerError`
+///   *
+///   *
+///
+/// \endcode
++ (BOOL)startWith:(NSString * _Nonnull)address key:(NSString * _Nonnull)key shouldShowLogs:(BOOL)shouldShowLogs intervalInSeconds:(NSInteger)intervalInSeconds reportLocation:(BOOL)reportLocation error:(NSError * _Nullable * _Nullable)error;
 /// Stops events sending.
 + (void)stop;
 /// Calculates hash based on timestamp, secret and unique value for this user

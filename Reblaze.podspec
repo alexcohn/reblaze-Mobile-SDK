@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Reblaze'
-  s.version          = '1.8.0'
+  s.version          = '1.8.1'
   s.summary          = 'Reblaze is a cloud-based platform that provides a comprehensive, dynamic, machine-intelligent security and control solution for web platforms.'
  
   s.authors 	     = { 'Reblaze' => 'mobile-sdk-dev@reblaze.com' }

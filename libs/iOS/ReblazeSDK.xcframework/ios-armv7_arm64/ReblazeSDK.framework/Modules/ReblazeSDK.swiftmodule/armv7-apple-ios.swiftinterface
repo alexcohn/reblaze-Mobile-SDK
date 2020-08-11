@@ -93,6 +93,8 @@ public enum TimerError : Foundation.LocalizedError {
   @objc public static func configure(secret: Swift.String, uid: Swift.String) throws
   @objc public static func start(with address: Swift.String, secret: Swift.String, key: Swift.String, uid: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, reportLocation: Swift.Bool = false) throws
   @objc public static func start(with address: Swift.String, secret: Swift.String, key: Swift.String, uid: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, userAgent: Swift.String?, reportLocation: Swift.Bool = false) throws
+  @objc public static func start(with address: Swift.String, key: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, userAgent: Swift.String?, reportLocation: Swift.Bool = false) throws
+  @objc public static func start(with address: Swift.String, key: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, reportLocation: Swift.Bool = false) throws
   @objc public static func stop()
   @objc public static func getHash(unixTimestamp: Swift.Int) throws -> Swift.String
   @objc public static func sendEvent(eventName: Swift.String) throws
