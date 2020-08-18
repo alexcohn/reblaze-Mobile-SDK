@@ -1,3 +1,24 @@
+# Version 1.8.1
+*2020-08-11*
+
+## What’s New
+
+- **Android and iOS**
+    
+    - SDK initialization now supports the earlier (before v1.8) configuration procedure which called the `start()` method without calling `configure()`. The options are now as follows:
+    
+         - For authenticating client requests without sending biometric events, the `configure()` method should be called.
+       
+         - If client authentication and biometric events are desired, then any one of these three approaches can be used:
+         
+              - Call `start()` with all parameters. (_This is the approach from before v1.8, and is now being supported again as of v1.8.1._) 
+              
+              - Call `configure()` first, then call `start()` with all parameters. (_This approach was added in v1.8._)
+              
+              - Call `configure()` first, then call `start()` without the parameters that are supplied in the call to `configure()`. (_This option is new for v1.8.1._)
+              
+---
+
 # Version 1.8
 *2020-07-30*
 
