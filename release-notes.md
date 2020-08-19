@@ -1,3 +1,14 @@
+# Version 1.8.2
+*2020-08-13*
+
+## Fixes
+    
+- **iOS**
+
+    - Fixed a crash that could occur when calling `sendEvent()`.
+
+---
+
 # Version 1.8.1
 *2020-08-11*
 
