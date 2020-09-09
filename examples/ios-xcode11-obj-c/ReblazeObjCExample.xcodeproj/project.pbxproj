@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA29E7E624818B4C00883E04 /* Pods_ReblazeObjCExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886E886F29A81D9480D4B2F1 /* Pods_ReblazeObjCExample.framework */; };
-		FA29E7E724818B4C00883E04 /* Pods_ReblazeObjCExample.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 886E886F29A81D9480D4B2F1 /* Pods_ReblazeObjCExample.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABA8187243FF121EF9338C51 /* Pods_ReblazeObjCExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B8FEB14A3CBE870ECC9EB /* Pods_ReblazeObjCExample.framework */; };
+		FA29E7E724818B4C00883E04 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC13535223780A9F0043B506 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13535123780A9F0043B506 /* AppDelegate.m */; };
 		FC13535523780A9F0043B506 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13535423780A9F0043B506 /* SceneDelegate.m */; };
 		FC13535823780A9F0043B506 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13535723780A9F0043B506 /* ViewController.m */; };
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA29E7E724818B4C00883E04 /* Pods_ReblazeObjCExample.framework in Embed Frameworks */,
+				FA29E7E724818B4C00883E04 /* BuildFile in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,9 +52,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4E588E6FD0A3FB20D369C571 /* Pods-ReblazeObjCExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReblazeObjCExample.release.xcconfig"; path = "Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample.release.xcconfig"; sourceTree = "<group>"; };
-		886E886F29A81D9480D4B2F1 /* Pods_ReblazeObjCExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReblazeObjCExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA2D008EB8DA91850A47D36A /* Pods-ReblazeObjCExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReblazeObjCExample.debug.xcconfig"; path = "Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample.debug.xcconfig"; sourceTree = "<group>"; };
+		71574A5BA0933A78D932ED16 /* Pods-ReblazeObjCExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReblazeObjCExample.release.xcconfig"; path = "Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample.release.xcconfig"; sourceTree = "<group>"; };
+		950B8FEB14A3CBE870ECC9EB /* Pods_ReblazeObjCExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReblazeObjCExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4BA4D9D20578C12B414CE7E /* Pods-ReblazeObjCExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReblazeObjCExample.debug.xcconfig"; path = "Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF65DB2242215DA002D1175 /* ReblazeSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ReblazeSDK.xcframework; sourceTree = "<group>"; };
 		FC13534D23780A9F0043B506 /* ReblazeObjCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReblazeObjCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC13535023780A9F0043B506 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA29E7E624818B4C00883E04 /* Pods_ReblazeObjCExample.framework in Frameworks */,
+				ABA8187243FF121EF9338C51 /* Pods_ReblazeObjCExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +105,8 @@
 		97FDE15B3FB740DB89C2DF31 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CA2D008EB8DA91850A47D36A /* Pods-ReblazeObjCExample.debug.xcconfig */,
-				4E588E6FD0A3FB20D369C571 /* Pods-ReblazeObjCExample.release.xcconfig */,
+				A4BA4D9D20578C12B414CE7E /* Pods-ReblazeObjCExample.debug.xcconfig */,
+				71574A5BA0933A78D932ED16 /* Pods-ReblazeObjCExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF65DB2242215DA002D1175 /* ReblazeSDK.xcframework */,
-				886E886F29A81D9480D4B2F1 /* Pods_ReblazeObjCExample.framework */,
+				950B8FEB14A3CBE870ECC9EB /* Pods_ReblazeObjCExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,14 +185,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC13537C23780AA20043B506 /* Build configuration list for PBXNativeTarget "ReblazeObjCExample" */;
 			buildPhases = (
-				03DDF0CB9B28B62F7A1C7B10 /* [CP] Check Pods Manifest.lock */,
+				88C9459ED57A6C376A599BEB /* [CP] Check Pods Manifest.lock */,
 				2F3D5D1FBA793B3A077A272A /* [CP] Prepare Artifacts */,
 				FC13534923780A9F0043B506 /* Sources */,
 				FC13534A23780A9F0043B506 /* Frameworks */,
 				FC13534B23780A9F0043B506 /* Resources */,
 				FA6ACD01242CDCD700C76481 /* ShellScript */,
-				FBD68F83C8529E553B6A1BE2 /* [CP] Embed Pods Frameworks */,
 				FA29E7E824818B4C00883E04 /* Embed Frameworks */,
+				765D01A9BAA69FB3F5A18885 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,7 +309,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03DDF0CB9B28B62F7A1C7B10 /* [CP] Check Pods Manifest.lock */ = {
+		2F3D5D1FBA793B3A077A272A /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		765D01A9BAA69FB3F5A18885 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88C9459ED57A6C376A599BEB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,23 +365,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2F3D5D1FBA793B3A077A272A /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-artifacts-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-artifacts-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-artifacts.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FA6ACD01242CDCD700C76481 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,23 +381,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\n";
-		};
-		FBD68F83C8529E553B6A1BE2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -559,7 +559,7 @@
 		};
 		FC13537D23780AA20043B506 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA2D008EB8DA91850A47D36A /* Pods-ReblazeObjCExample.debug.xcconfig */;
+			baseConfigurationReference = A4BA4D9D20578C12B414CE7E /* Pods-ReblazeObjCExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -577,7 +577,7 @@
 		};
 		FC13537E23780AA20043B506 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E588E6FD0A3FB20D369C571 /* Pods-ReblazeObjCExample.release.xcconfig */;
+			baseConfigurationReference = 71574A5BA0933A78D932ED16 /* Pods-ReblazeObjCExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -124,10 +124,10 @@ install_xcframework() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_xcframework "${PODS_ROOT}/Reblaze/libs/iOS/ReblazeSDK.xcframework" "" "true" "ios-armv7_arm64/ReblazeSDK.framework" "ios-i386_x86_64-simulator/ReblazeSDK.framework"
+  install_xcframework "${PODS_ROOT}/Reblaze/libs/iOS/ReblazeSDK.xcframework" "" "true" "ios-i386_x86_64-simulator/ReblazeSDK.framework" "ios-armv7_arm64/ReblazeSDK.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_xcframework "${PODS_ROOT}/Reblaze/libs/iOS/ReblazeSDK.xcframework" "" "true" "ios-armv7_arm64/ReblazeSDK.framework" "ios-i386_x86_64-simulator/ReblazeSDK.framework"
+  install_xcframework "${PODS_ROOT}/Reblaze/libs/iOS/ReblazeSDK.xcframework" "" "true" "ios-i386_x86_64-simulator/ReblazeSDK.framework" "ios-armv7_arm64/ReblazeSDK.framework"
 fi
 
 echo "Artifact list stored at $ARTIFACT_LIST_FILE"

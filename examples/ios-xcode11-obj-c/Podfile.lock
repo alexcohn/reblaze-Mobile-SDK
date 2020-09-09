@@ -1,22 +1,21 @@
 PODS:
-  - Reblaze (1.8.1)
+  - Reblaze (1.9)
 
 DEPENDENCIES:
-  - Reblaze (from `https://bitbucket.org/reblaze/mobilesdk`, branch `develop`)
+  - Reblaze (from `https://bitbucket.org/reblaze/mobilesdk`)
 
 EXTERNAL SOURCES:
   Reblaze:
-    :branch: develop
     :git: https://bitbucket.org/reblaze/mobilesdk
 
 CHECKOUT OPTIONS:
   Reblaze:
-    :commit: 923235bf57d661ada3157008dd5ffc007e919a67
+    :commit: 1c38ec5e8640c2641564cfa6f56d9a1ca448143d
     :git: https://bitbucket.org/reblaze/mobilesdk
 
 SPEC CHECKSUMS:
-  Reblaze: 454952da9bf33b5617cf573c692032675be72bbe
+  Reblaze: 44ebb2f2b125e4da696a506940ac4ad8dc7ff410
 
-PODFILE CHECKSUM: 572252c5947b8b9714fd2abc76be39dc3d994944
+PODFILE CHECKSUM: 1b1ecf2a86121c3d22ab84b623f1b8f46c3f5b68
 
 COCOAPODS: 1.9.3
