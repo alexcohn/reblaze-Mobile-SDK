@@ -1,3 +1,22 @@
+# Version 1.9
+*2020-09-09*
+    
+## Fixes
+
+- **Android and iOS**
+
+    - Restructured example files and folders for React Native.
+
+- **Android**
+
+    - Fixed an issue where `getHash()` was not always returning consistent signatures when the same timestamp was submitted multiple times. 
+
+- **iOS**
+
+    - Fixed an issue where the `reportLocation` parameter was not being respected if it was set multiple times.
+
+---
+
 # Version 1.8.2
 *2020-08-13*
 
