@@ -1,3 +1,14 @@
+# Version 1.9.1
+*2020-09-14*
+    
+## Fixes
+
+- **Android**
+
+    - Fixed an issue where `getHash()` was not always returning consistent signatures when the same timestamp was submitted multiple times.
+    
+---
+
 # Version 1.9
 *2020-09-09*
     
@@ -6,10 +17,6 @@
 - **Android and iOS**
 
     - Restructured example files and folders for React Native.
-
-- **Android**
-
-    - Fixed an issue where `getHash()` was not always returning consistent signatures when the same timestamp was submitted multiple times. 
 
 - **iOS**
 
