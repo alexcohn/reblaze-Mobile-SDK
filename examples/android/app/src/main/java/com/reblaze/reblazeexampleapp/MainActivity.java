@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         });
         try {
             reblaze.start(this,
-                    "server_url",
+                    "mock://qq.com",
                     "user_name",
                     true,
                     Interval.MINIMUM_INTERVAL_VALUE.getValue(),
