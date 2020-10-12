@@ -3,7 +3,7 @@
 //  ReblazeSDK-Example
 //
 //  Created by Rotem Doron on 06/05/2019.
-//  Copyright © 2019 Moblers. All rights reserved.
+//  Copyright © 2019 Reblaze. All rights reserved.
 //
 
 import UIKit
