@@ -1,0 +1,22 @@
+PODS:
+  - Reblaze (1.9.2)
+
+DEPENDENCIES:
+  - Reblaze (from `https://bitbucket.org/reblaze/mobilesdk`, tag `v1.9.2`)
+
+EXTERNAL SOURCES:
+  Reblaze:
+    :git: https://bitbucket.org/reblaze/mobilesdk
+    :tag: v1.9.2
+
+CHECKOUT OPTIONS:
+  Reblaze:
+    :git: https://bitbucket.org/reblaze/mobilesdk
+    :tag: v1.9.2
+
+SPEC CHECKSUMS:
+  Reblaze: a140a1139b69e1984bd0b43a5cb2db5da7523a8d
+
+PODFILE CHECKSUM: f4044ee282b0a0a40f58cae5f046548e6f0b393a
+
+COCOAPODS: 1.9.3
