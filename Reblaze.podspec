@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
  
   s.authors 	     = { 'Reblaze' => 'mobile-sdk-dev@reblaze.com' }
   s.homepage         = 'https://www.reblaze.com/'
-  s.source           = { :git => 'https://bitbucket.org/reblaze/mobilesdk', :tag => s.version }
+  s.source           = { :git => 'https://bitbucket.org/reblaze/mobilesdk', :tag => "v#{s.version}" }
   
   s.vendored_frameworks = 'libs/iOS/ReblazeSDK.xcframework'
   s.platform = :ios
