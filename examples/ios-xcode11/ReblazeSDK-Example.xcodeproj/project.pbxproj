@@ -196,7 +196,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = Moblers;
+				ORGANIZATIONNAME = Reblaze;
 				TargetAttributes = {
 					FC7924D72280472500F4CF03 = {
 						CreatedOnToolsVersion = 10.1;
@@ -555,7 +555,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.moblers.ReblazeSDK-ExampleTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reblaze.ReblazeSDK-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -575,7 +575,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.moblers.ReblazeSDK-ExampleTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reblaze.ReblazeSDK-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

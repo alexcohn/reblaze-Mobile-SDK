@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA29E7E724818B4C00883E04 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA29E7E724818B4C00883E04 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC13535223780A9F0043B506 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13535123780A9F0043B506 /* AppDelegate.m */; };
 		FC13535523780A9F0043B506 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13535423780A9F0043B506 /* SceneDelegate.m */; };
 		FC13535823780A9F0043B506 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13535723780A9F0043B506 /* ViewController.m */; };
@@ -35,7 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA29E7E724818B4C00883E04 /* BuildFile in Embed Frameworks */,
+				FA29E7E724818B4C00883E04 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,7 +189,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = Moblers;
+				ORGANIZATIONNAME = Reblaze;
 				TargetAttributes = {
 					FC13534C23780A9F0043B506 = {
 						CreatedOnToolsVersion = 11.0;
@@ -200,7 +200,7 @@
 				};
 			};
 			buildConfigurationList = FC13534823780A9F0043B506 /* Build configuration list for PBXProject "ReblazeObjCExample" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
