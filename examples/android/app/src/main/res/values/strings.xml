@@ -1,3 +1,7 @@
 <resources>
+    <string name="ReblazeURL">mock://reblaze.com</string>
     <string name="app_name">Reblaze Example App</string>
+    <string name="send_button">Click Me!</string>
+    <string name="mock_button">Send Mock String</string>
+    <string name="mock_string">mock string</string>
 </resources>
