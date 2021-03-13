@@ -1,1 +1,2 @@
-include ':reblaze-release'
+include ':reblaze'
+project(':reblaze').projectDir = file("../../android/reblaze")

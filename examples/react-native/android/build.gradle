@@ -6,21 +6,18 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:4.1.1'
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 30
 
     defaultConfig {
         minSdkVersion 27
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0.0"
+        targetSdkVersion 30
     }
     lintOptions {
         abortOnError false
@@ -31,13 +28,10 @@ repositories {
     mavenCentral()
     google()
     mavenLocal()
-    flatDir {
-        dirs 'reblaze-release'
-    }
 }
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation(name:'reblaze-release', ext:'aar')
+    implementation project(":reblaze")
 }
   
