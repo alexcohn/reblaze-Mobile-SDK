@@ -1,13 +1,11 @@
 
 package com.reactlibrary;
 
-import android.app.Activity;
-
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
-import com.reblaze.sdk.reblaze;
+
+import static com.reblaze.sdk.Reblaze.reblaze;
 
 public class RNReblazeReactNativeSdkModule extends ReactContextBaseJavaModule {
 
@@ -20,8 +18,9 @@ public class RNReblazeReactNativeSdkModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void start(String url, String secret, String headerName, String headerValue) {
-    Activity activity = getCurrentActivity();
-    reblaze.start(activity, url, secret, headerName, headerValue);
+    reblaze.setUidHeaderName(headerName);
+    reblaze.setUid(headerValue);
+    reblaze.setBackendUrl(url);
   }
 
   @ReactMethod
@@ -31,7 +30,6 @@ public class RNReblazeReactNativeSdkModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void Destroy() {
-    reblaze.Destroy();
   }
 
   @Override
