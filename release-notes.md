@@ -1,3 +1,26 @@
+# Version 1.9.4
+*2021-02-25*
+
+## Fixes
+
+- **Android**
+
+    - Fixed a glitch with entering ActionMode in some use cases
+    
+---
+
+# Version 1.9.3
+*2021-1-16*
+
+## Fixes
+
+- **Android**
+
+    - Fixed a rare NPE in KeyStoreWrapper.getPublicKey() on some devices
+    - Removed the call to getAdvertisingIdInfo()
+
+---
+
 # Version 1.9.2
 *2020-10-12*
 
