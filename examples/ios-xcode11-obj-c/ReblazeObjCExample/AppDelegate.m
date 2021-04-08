@@ -3,7 +3,7 @@
 //  ReblazeObjCExample
 //
 //  Created by Rotem Doron on 10/11/2019.
-//  Copyright © 2019 Reblaze. All rights reserved.
+//  Copyright © 2019-2021 Reblaze. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -19,30 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application
 
-    [Reblaze configureWithSecret:@"08679d101bb5d41sdj4321b15asdfe4"
-                                uid:@"test@123.io"
-                              error: nil];
+    [reblaze enableMock];
+    reblaze.backendUrl = @"https://www.example.com";
     
-    NSError *startError = nil;
-    [Reblaze startWith:@"server_url"
-                secret:@"secret"
-                   key:@"user_name"
-                   uid:@"user_id"
-        shouldShowLogs:YES
-     intervalInSeconds: 15
-        reportLocation: false
-                 error: &startError];
-    
-    if (startError!= nil) {
-         NSLog(@"%@", startError);
-    }
-    
-    NSTimeInterval timestamp = [[[NSDate alloc] init] timeIntervalSince1970];
-    NSError *error = nil;
-    NSString *hash = [Reblaze getHashWithUnixTimestamp:timestamp error: &error];
+    NSString *hash = [reblaze generateHash];
 
     if (hash != nil) {
-        NSLog(@"%@", hash);
+        NSLog(@"ReblazeSDK v%.2f %@", ReblazeSDKVersionNumber, hash);
     }
 
     return YES;

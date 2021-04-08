@@ -3,7 +3,7 @@
 //  ReblazeObjCExampleTests
 //
 //  Created by Rotem Doron on 10/11/2019.
-//  Copyright © 2019 Reblaze. All rights reserved.
+//  Copyright © 2019-2021 Reblaze. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
@@ -24,10 +24,12 @@
 }
 
 - (void)testExample {
-    [Reblaze configureWithSecret:@"secret"
-                                uid:@"uid"
-                              error: nil];
-    NSLog(@"hash: %@", [Reblaze getHashWithUnixTimestamp:123456 error:nil]);
+    [reblaze setUid:@"uid"];
+    NSLog(@"hash: %@", [reblaze generateHash]);
+    NSString *hash1 = [reblaze generateHash];
+    NSString *hash2 = [reblaze generateHash];
+    XCTAssertNotEqual(hash1, hash2);
+    XCTAssertEqual([hash1 substringToIndex:8], [hash2 substringToIndex:8]);
 }
 
 @end

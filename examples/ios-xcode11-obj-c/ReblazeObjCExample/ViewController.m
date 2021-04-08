@@ -3,7 +3,7 @@
 //  ReblazeObjCExample
 //
 //  Created by Rotem Doron on 10/11/2019.
-//  Copyright © 2019 Reblaze. All rights reserved.
+//  Copyright © 2019-2021 Reblaze. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -17,15 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserverForName: NSNotification.ReblazeErrorNotification object: nil queue: NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull notif) {
 
-        NSLog(@"%@", notif.object);
+    [reblaze setEventListener: ^(ReblazeSDK_Kind kind, NSString * _Nonnull message) {
+        if (kind >= ReblazeSDK_KindINFO) {
+            NSLog(@"reblaze: %ld %@", kind, message);
+        }
     }];
     // Do any additional setup after loading the view.
 }
 
 - (IBAction)sendTestEvent:(id)sender {
-    [Reblaze sendEventWithEventName:@"Test Event" error: nil];
+    [reblaze sendEvent:@"Test Event"];
 }
 
 @end
