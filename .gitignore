@@ -1,5 +1,5 @@
 .DS_Store
-._*.*
+._*
 Podfile.lock
-examples/ios-xcode11-obj-c/Pods
-examples/ios-xcode11-obj-c/ReblazeObjCExample.xcworkspace
+Pods/
+*.xcworkspace/
