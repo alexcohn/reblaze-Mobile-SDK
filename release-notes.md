@@ -1,3 +1,28 @@
+# Version 1.9.5
+*2021-06-08*
+
+## Fixes
+
+- **Android**
+    - fixed the unsecure HostnameVerifier (https://support.google.com/faqs/answer/7188426)
+
+# Version 1.9.4
+*2021-02-25*
+
+## Fixes
+
+- **Android**
+    - fixed a glitch in ActionMenu
+
+# Version 1.9.3
+*2021-01-16*
+
+## Fixes
+
+- **Android**
+    - not using Android Advertising Id (https://support.google.com/googleplay/android-developer/answer/9857753#ad-id)
+    - fixed a rare crash in KeyStoreWrapper
+
 # Version 1.9.2
 *2020-10-12*
 
