@@ -1,106 +1,82 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
-// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ReblazeSDK
-import CoreLocation
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name ReblazeSDK
 import Foundation
 @_exported import ReblazeSDK
 import Swift
 import UIKit
-import os.log
-import os
-public enum PostApi {
-  case events(address: Swift.String, secret: Swift.String, key: Swift.String, value: Swift.String, userAgent: Swift.String?, deviceId: Swift.String?, events: [Swift.String : Any])
-}
-public typealias Parameters = [Swift.String : Any]
-public protocol ParameterEncoder {
-  func encode(urlRequest: inout Foundation.URLRequest, with parameters: ReblazeSDK.Parameters) throws
-}
-public enum ParameterEncoding {
-  case urlEncoding
-  case jsonEncoding
-  case urlAndJsonEncoding
-  public func encode(urlRequest: inout Foundation.URLRequest, bodyParameters: ReblazeSDK.Parameters?, urlParameters: ReblazeSDK.Parameters?) throws
-  public static func == (a: ReblazeSDK.ParameterEncoding, b: ReblazeSDK.ParameterEncoding) -> Swift.Bool
-  public var hashValue: Swift.Int {
+@objc(ReblazeSDK_ReportCounters) public enum ReportCounters : Swift.Int, Swift.Codable {
+  case NONE
+  case ALL
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public enum NetworkError : Swift.String, Swift.Error {
   case parametersNil
   case encodingFailed
   case missingURL
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
-public typealias HTTPHeaders = [Swift.String : Swift.String]
-public enum HTTPTask {
-  case request
-  case requestParameters(bodyParameters: ReblazeSDK.Parameters?, bodyEncoding: ReblazeSDK.ParameterEncoding, urlParameters: ReblazeSDK.Parameters?)
-  case requestParametersAndHeaders(bodyParameters: ReblazeSDK.Parameters?, bodyEncoding: ReblazeSDK.ParameterEncoding, urlParameters: ReblazeSDK.Parameters?, additionHeaders: ReblazeSDK.HTTPHeaders?)
-}
-public struct JSONParameterEncoder : ReblazeSDK.ParameterEncoder {
-  public func encode(urlRequest: inout Foundation.URLRequest, with parameters: ReblazeSDK.Parameters) throws
-}
-extension NSNotification.Name {
-  public static let ReblazeErrorNotification: Foundation.Notification.Name
-}
-@objc extension NSNotification {
-  @objc public static let ReblazeErrorNotification: Foundation.Notification.Name
-}
-public struct NetworkResponseError : Swift.Error {
-  public let description: Swift.String
-  public let code: Swift.Int?
-}
-public struct URLParameterEncoder : ReblazeSDK.ParameterEncoder {
-  public func encode(urlRequest: inout Foundation.URLRequest, with parameters: ReblazeSDK.Parameters) throws
-}
-public enum StartError : Foundation.LocalizedError {
-  case didntStartSDK
-  case alreadyStarted
-  case didntStartSDKEmptyHeader
-  case didntStartSDKEmptySecret
-  case emptyAddress
-  case emptyKey
-  case emptyUId
-  case emptySecret
-  public var errorDescription: Swift.String? {
-    get
+@_inheritsConvenienceInitializers @objc public class reblaze : ObjectiveC.NSObject {
+  @objc public static let MINIMUM_INTERVAL: Swift.Int
+  @objc public static let DEFAULT_INTERVAL: Swift.Int
+  @objc(ReblazeSDK_Kind) public enum Kind : Swift.Int {
+    case VERBOSE
+    case DEBUG
+    case INFO
+    case WARN
+    case ERROR
+    public func greater(_ other: ReblazeSDK.reblaze.Kind) -> Swift.Bool
+    public func greaterOrEqual(_ other: ReblazeSDK.reblaze.Kind) -> Swift.Bool
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
   }
-  public static func == (a: ReblazeSDK.StartError, b: ReblazeSDK.StartError) -> Swift.Bool
-  public var hashValue: Swift.Int {
-    get
+  @objc public static var backendUrl: Swift.String {
+    @objc get
+    @objc set
   }
-  public func hash(into hasher: inout Swift.Hasher)
-}
-public enum TimerError : Foundation.LocalizedError {
-  case incorrectTimeInterval
-  public var errorDescription: Swift.String? {
-    get
+  @objc public static var uid: Swift.String
+  @objc public static var uidHeaderName: Swift.String {
+    @objc get
+    @objc set
   }
-  public static func == (a: ReblazeSDK.TimerError, b: ReblazeSDK.TimerError) -> Swift.Bool
-  public var hashValue: Swift.Int {
-    get
+  @available(*, deprecated)
+  @objc public static var userAgent: Swift.String? {
+    @objc get
+    @objc set
   }
-  public func hash(into hasher: inout Swift.Hasher)
-}
-@_inheritsConvenienceInitializers @objc public class Reblaze : ObjectiveC.NSObject {
-  public static let shared: ReblazeSDK.Reblaze
-  @objc public static func configure(secret: Swift.String, uid: Swift.String) throws
-  @objc public static func start(with address: Swift.String, secret: Swift.String, key: Swift.String, uid: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, reportLocation: Swift.Bool = false) throws
-  @objc public static func start(with address: Swift.String, secret: Swift.String, key: Swift.String, uid: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, userAgent: Swift.String?, reportLocation: Swift.Bool = false) throws
-  @objc public static func start(with address: Swift.String, key: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, userAgent: Swift.String?, reportLocation: Swift.Bool = false) throws
-  @objc public static func start(with address: Swift.String, key: Swift.String, shouldShowLogs: Swift.Bool = false, intervalInSeconds: Swift.Int, reportLocation: Swift.Bool = false) throws
-  @objc public static func stop()
-  @objc public static func getHash(unixTimestamp: Swift.Int) throws -> Swift.String
-  @objc public static func sendEvent(eventName: Swift.String) throws
-  public func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  public func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  public func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  public func getEvent(_ point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?, view: UIKit.UIView?)
+  @objc public static var interval: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc public static var reportCounters: ReblazeSDK.ReportCounters {
+    @objc get
+    @objc set
+  }
+  @objc public static var hashVariant: Swift.String {
+    @objc get
+  }
+  @objc public static var configurationName: Swift.String? {
+    @objc get
+  }
+  @objc public static var autoSign: Swift.Bool
+  @objc public static func generateHash() -> Swift.String
+  @objc public static func sendEvent(_ eventName: Swift.String)
+  @objc public static func enableMock()
+  @objc public static func isMockEnabled() -> Swift.Bool
+  @objc public static func setMockResponse(_ code: Swift.Int, remoteConfig: Swift.String? = nil)
+  @objc public static func setMockResponse(_ code: Swift.Int, remoteConfig: Swift.String? = nil, delay: Swift.Int)
+  @objc public static func setEventListener(_ block: ((ReblazeSDK.reblaze.Kind, Swift.String) -> Swift.Void)?)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -110,28 +86,12 @@ extension UIWindow {
   @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
   @objc override dynamic open func hitTest(_ point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
 }
-public enum HTTPMethod : Swift.String {
-  case get
-  case post
-  case put
-  case patch
-  case delete
-  public typealias RawValue = Swift.String
-  public init?(rawValue: Swift.String)
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public typealias NetworkRouterCompletion = (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> ()
-extension ReblazeSDK.ParameterEncoding : Swift.Equatable {}
-extension ReblazeSDK.ParameterEncoding : Swift.Hashable {}
+extension ReblazeSDK.ReportCounters : Swift.Equatable {}
+extension ReblazeSDK.ReportCounters : Swift.Hashable {}
+extension ReblazeSDK.ReportCounters : Swift.RawRepresentable {}
 extension ReblazeSDK.NetworkError : Swift.Equatable {}
 extension ReblazeSDK.NetworkError : Swift.Hashable {}
 extension ReblazeSDK.NetworkError : Swift.RawRepresentable {}
-extension ReblazeSDK.StartError : Swift.Equatable {}
-extension ReblazeSDK.StartError : Swift.Hashable {}
-extension ReblazeSDK.TimerError : Swift.Equatable {}
-extension ReblazeSDK.TimerError : Swift.Hashable {}
-extension ReblazeSDK.HTTPMethod : Swift.Equatable {}
-extension ReblazeSDK.HTTPMethod : Swift.Hashable {}
-extension ReblazeSDK.HTTPMethod : Swift.RawRepresentable {}
+extension ReblazeSDK.reblaze.Kind : Swift.Equatable {}
+extension ReblazeSDK.reblaze.Kind : Swift.Hashable {}
+extension ReblazeSDK.reblaze.Kind : Swift.RawRepresentable {}

@@ -1,3 +1,12 @@
+# Version 2.0
+*2021-04-08*
+
+## What’s New
+
+- **Android and iOS**
+
+Full rewrite of the SDK.
+
 # Version 1.9.4
 *2021-02-25*
 

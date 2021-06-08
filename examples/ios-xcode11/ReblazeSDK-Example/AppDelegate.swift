@@ -13,8 +13,8 @@ struct SDK_Example: App {
 
     init() {
         reblaze.setEventListener() { kind, message in
-            guard kind.greaterOrEqual(reblaze.Kind.INFO) else { return }
-            print("reblaze", kind.rawValue, message)
+            guard kind.greaterOrEqual(reblaze.Kind.INFO) else { return } // TODO: change to >= after lib upgrade
+            print("reblaze", kind.description, message)
         }
 
         reblaze.uid = "\(arc4random())" // this will be our "session token"
@@ -33,14 +33,18 @@ struct SDK_Example: App {
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button(action: {
+            reblaze.sendEvent("button pressed")
+        }, label: {
+            Text("Button")
+        })
     }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-
+#endif

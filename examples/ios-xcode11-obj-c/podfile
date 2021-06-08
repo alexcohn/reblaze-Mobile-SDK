@@ -1,6 +1,6 @@
 target 'ReblazeObjCExample' do
   use_frameworks!
-  pod 'Reblaze', :git => 'https://bitbucket.org/reblaze/mobilesdk'
+  pod 'Reblaze', :path => '../..'
 end
 
 target 'ReblazeObjCExampleTests' do

@@ -11,7 +11,6 @@
 		B53273AFBA0867B8287ED3FD /* Pods_ReblazeSDK_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55108516749F53E5E1F23A92 /* Pods_ReblazeSDK_ExampleTests.framework */; };
 		FA1706FC24810EDF0079EF5B /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC7924DC2280472500F4CF03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7924DB2280472500F4CF03 /* AppDelegate.swift */; };
-		FC7924E32280472600F4CF03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7924E22280472600F4CF03 /* Assets.xcassets */; };
 		FC7924F12280472600F4CF03 /* ReblazeSDK_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7924F02280472600F4CF03 /* ReblazeSDK_ExampleTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +48,6 @@
 		D581A962CF33BC7A75CE2600 /* Pods_ReblazeSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReblazeSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7924D82280472500F4CF03 /* ReblazeSDK-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReblazeSDK-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7924DB2280472500F4CF03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC7924E22280472600F4CF03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC7924E72280472600F4CF03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC7924EC2280472600F4CF03 /* ReblazeSDK-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReblazeSDK-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7924F02280472600F4CF03 /* ReblazeSDK_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReblazeSDK_ExampleTests.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				FC7924DB2280472500F4CF03 /* AppDelegate.swift */,
-				FC7924E22280472600F4CF03 /* Assets.xcassets */,
 				FC7924E72280472600F4CF03 /* Info.plist */,
 			);
 			path = "ReblazeSDK-Example";
@@ -223,7 +220,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC7924E32280472600F4CF03 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
