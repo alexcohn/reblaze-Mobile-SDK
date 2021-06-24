@@ -1,11 +1,19 @@
 # Version 2.0
-*2021-04-08*
+*2021-06-24*
 
 ## What’s New
 
 - **Android and iOS**
 
-Full rewrite of the SDK.
+Full rewrite of the SDK
+
+# Version 1.9.5
+*2021-06-08*
+
+## Fixes
+
+- **Android**
+    - fixed the unsecure HostnameVerifier (https://support.google.com/faqs/answer/7188426)
 
 # Version 1.9.4
 *2021-02-25*
@@ -13,6 +21,7 @@ Full rewrite of the SDK.
 ## Fixes
 
 - **Android**
+<<<<<<< HEAD
 
     - Fixed a glitch with entering ActionMode in some use cases
     
@@ -20,15 +29,26 @@ Full rewrite of the SDK.
 
 # Version 1.9.3
 *2021-1-16*
+=======
+    - fixed a glitch in ActionMenu
+
+# Version 1.9.3
+*2021-01-16*
+>>>>>>> hotfix/1.9.5
 
 ## Fixes
 
 - **Android**
+<<<<<<< HEAD
 
     - Fixed a rare NPE in KeyStoreWrapper.getPublicKey() on some devices
     - Removed the call to getAdvertisingIdInfo()
 
 ---
+=======
+    - not using Android Advertising Id (https://support.google.com/googleplay/android-developer/answer/9857753#ad-id)
+    - fixed a rare crash in KeyStoreWrapper
+>>>>>>> hotfix/1.9.5
 
 # Version 1.9.2
 *2020-10-12*
