@@ -17,9 +17,9 @@ public class RNReblazeReactNativeSdkModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void start(String url, String secret, String headerName, String headerValue) {
-    reblaze.setUidHeaderName(headerName);
-    reblaze.setUid(headerValue);
+  public void start(String url, String secret, String tokenHeaderName, String token) {
+    reblaze.setTokenHeaderName(tokenHeaderName);
+    reblaze.setToken(token);
     reblaze.setBackendUrl(url);
   }
 

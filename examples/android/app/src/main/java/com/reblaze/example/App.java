@@ -23,8 +23,7 @@ public class App extends Application implements SdkEventListener {
         Log.d("rbzsdk", reblaze.generateHash());
         reblaze.setEventListener(this);
 
-        reblaze.setUidHeaderName("session_id");
-        reblaze.setUid("123456789");
+        reblaze.setToken("123456789");
         reblaze.setInterval(Interval.MINIMUM_INTERVAL);
 
         Log.d("rbzsdk", reblaze.generateHash());
