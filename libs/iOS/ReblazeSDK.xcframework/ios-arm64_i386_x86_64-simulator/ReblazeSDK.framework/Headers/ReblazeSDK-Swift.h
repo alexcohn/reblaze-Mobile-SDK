@@ -211,11 +211,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_ReportCounters, "ReportCounters", open) {
-  ReblazeSDK_ReportCountersNONE = 0,
-  ReblazeSDK_ReportCountersALL = 1,
-};
-
 @class UITouch;
 @class UIEvent;
 @class UIView;
@@ -229,6 +224,8 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_ReportCounters, "ReportCounters",
 
 @class NSNumber;
 @class NSString;
+enum ReblazeSDK_ReportCounters : NSInteger;
+enum ReblazeSDK_AutoSign : NSInteger;
 enum ReblazeSDK_Kind : NSInteger;
 
 SWIFT_CLASS("_TtC10ReblazeSDK7reblaze")
@@ -240,13 +237,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_IN
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull backendUrl;)
 + (NSString * _Nonnull)backendUrl SWIFT_WARN_UNUSED_RESULT;
 + (void)setBackendUrl:(NSString * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull uid;)
-+ (NSString * _Nonnull)uid SWIFT_WARN_UNUSED_RESULT;
-+ (void)setUid:(NSString * _Nonnull)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull uidHeaderName;)
-+ (NSString * _Nonnull)uidHeaderName SWIFT_WARN_UNUSED_RESULT;
-+ (void)setUidHeaderName:(NSString * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable userAgent SWIFT_DEPRECATED;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull token;)
++ (NSString * _Nonnull)token SWIFT_WARN_UNUSED_RESULT;
++ (void)setToken:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull tokenHeaderName;)
++ (NSString * _Nonnull)tokenHeaderName SWIFT_WARN_UNUSED_RESULT;
++ (void)setTokenHeaderName:(NSString * _Nonnull)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable userAgent;)
 + (NSString * _Nullable)userAgent SWIFT_WARN_UNUSED_RESULT;
 + (void)setUserAgent:(NSString * _Nullable)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger interval;)
@@ -260,9 +257,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nullable configurationName;)
 + (NSString * _Nullable)configurationName SWIFT_WARN_UNUSED_RESULT;
 /// Set to sign all relevant https:// requests, including WKWebView requests
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL autoSign;)
-+ (BOOL)autoSign SWIFT_WARN_UNUSED_RESULT;
-+ (void)setAutoSign:(BOOL)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum ReblazeSDK_AutoSign autoSign;)
++ (enum ReblazeSDK_AutoSign)autoSign SWIFT_WARN_UNUSED_RESULT;
++ (void)setAutoSign:(enum ReblazeSDK_AutoSign)value;
 /// Calculates hash based on timestamp, deviceId, and possibly user id
 + (NSString * _Nonnull)generateHash SWIFT_WARN_UNUSED_RESULT;
 /// <ul>
@@ -292,12 +289,26 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL autoSign;)
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_Kind, "Kind", open) {
+typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_Kind, "Kind", closed) {
   ReblazeSDK_KindVERBOSE = 0,
   ReblazeSDK_KindDEBUG = 1,
   ReblazeSDK_KindINFO = 2,
   ReblazeSDK_KindWARN = 3,
   ReblazeSDK_KindERROR = 4,
+};
+
+
+@interface reblaze (SWIFT_EXTENSION(ReblazeSDK))
+@end
+
+typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_ReportCounters, "ReportCounters", closed) {
+  ReblazeSDK_ReportCountersNONE = 0,
+  ReblazeSDK_ReportCountersALL = 1,
+};
+
+typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_AutoSign, "AutoSign", closed) {
+  ReblazeSDK_AutoSignNONE = 0,
+  ReblazeSDK_AutoSignALL = 1,
 };
 
 #if __has_attribute(external_source_symbol)
@@ -518,11 +529,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_ReportCounters, "ReportCounters", open) {
-  ReblazeSDK_ReportCountersNONE = 0,
-  ReblazeSDK_ReportCountersALL = 1,
-};
-
 @class UITouch;
 @class UIEvent;
 @class UIView;
@@ -536,6 +542,8 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_ReportCounters, "ReportCounters",
 
 @class NSNumber;
 @class NSString;
+enum ReblazeSDK_ReportCounters : NSInteger;
+enum ReblazeSDK_AutoSign : NSInteger;
 enum ReblazeSDK_Kind : NSInteger;
 
 SWIFT_CLASS("_TtC10ReblazeSDK7reblaze")
@@ -547,13 +555,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_IN
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull backendUrl;)
 + (NSString * _Nonnull)backendUrl SWIFT_WARN_UNUSED_RESULT;
 + (void)setBackendUrl:(NSString * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull uid;)
-+ (NSString * _Nonnull)uid SWIFT_WARN_UNUSED_RESULT;
-+ (void)setUid:(NSString * _Nonnull)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull uidHeaderName;)
-+ (NSString * _Nonnull)uidHeaderName SWIFT_WARN_UNUSED_RESULT;
-+ (void)setUidHeaderName:(NSString * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable userAgent SWIFT_DEPRECATED;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull token;)
++ (NSString * _Nonnull)token SWIFT_WARN_UNUSED_RESULT;
++ (void)setToken:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull tokenHeaderName;)
++ (NSString * _Nonnull)tokenHeaderName SWIFT_WARN_UNUSED_RESULT;
++ (void)setTokenHeaderName:(NSString * _Nonnull)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable userAgent;)
 + (NSString * _Nullable)userAgent SWIFT_WARN_UNUSED_RESULT;
 + (void)setUserAgent:(NSString * _Nullable)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger interval;)
@@ -567,9 +575,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nullable configurationName;)
 + (NSString * _Nullable)configurationName SWIFT_WARN_UNUSED_RESULT;
 /// Set to sign all relevant https:// requests, including WKWebView requests
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL autoSign;)
-+ (BOOL)autoSign SWIFT_WARN_UNUSED_RESULT;
-+ (void)setAutoSign:(BOOL)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum ReblazeSDK_AutoSign autoSign;)
++ (enum ReblazeSDK_AutoSign)autoSign SWIFT_WARN_UNUSED_RESULT;
++ (void)setAutoSign:(enum ReblazeSDK_AutoSign)value;
 /// Calculates hash based on timestamp, deviceId, and possibly user id
 + (NSString * _Nonnull)generateHash SWIFT_WARN_UNUSED_RESULT;
 /// <ul>
@@ -599,12 +607,26 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL autoSign;)
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_Kind, "Kind", open) {
+typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_Kind, "Kind", closed) {
   ReblazeSDK_KindVERBOSE = 0,
   ReblazeSDK_KindDEBUG = 1,
   ReblazeSDK_KindINFO = 2,
   ReblazeSDK_KindWARN = 3,
   ReblazeSDK_KindERROR = 4,
+};
+
+
+@interface reblaze (SWIFT_EXTENSION(ReblazeSDK))
+@end
+
+typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_ReportCounters, "ReportCounters", closed) {
+  ReblazeSDK_ReportCountersNONE = 0,
+  ReblazeSDK_ReportCountersALL = 1,
+};
+
+typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_AutoSign, "AutoSign", closed) {
+  ReblazeSDK_AutoSignNONE = 0,
+  ReblazeSDK_AutoSignALL = 1,
 };
 
 #if __has_attribute(external_source_symbol)
@@ -825,11 +847,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_ReportCounters, "ReportCounters", open) {
-  ReblazeSDK_ReportCountersNONE = 0,
-  ReblazeSDK_ReportCountersALL = 1,
-};
-
 @class UITouch;
 @class UIEvent;
 @class UIView;
@@ -843,6 +860,8 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_ReportCounters, "ReportCounters",
 
 @class NSNumber;
 @class NSString;
+enum ReblazeSDK_ReportCounters : NSInteger;
+enum ReblazeSDK_AutoSign : NSInteger;
 enum ReblazeSDK_Kind : NSInteger;
 
 SWIFT_CLASS("_TtC10ReblazeSDK7reblaze")
@@ -854,13 +873,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_IN
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull backendUrl;)
 + (NSString * _Nonnull)backendUrl SWIFT_WARN_UNUSED_RESULT;
 + (void)setBackendUrl:(NSString * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull uid;)
-+ (NSString * _Nonnull)uid SWIFT_WARN_UNUSED_RESULT;
-+ (void)setUid:(NSString * _Nonnull)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull uidHeaderName;)
-+ (NSString * _Nonnull)uidHeaderName SWIFT_WARN_UNUSED_RESULT;
-+ (void)setUidHeaderName:(NSString * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable userAgent SWIFT_DEPRECATED;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull token;)
++ (NSString * _Nonnull)token SWIFT_WARN_UNUSED_RESULT;
++ (void)setToken:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull tokenHeaderName;)
++ (NSString * _Nonnull)tokenHeaderName SWIFT_WARN_UNUSED_RESULT;
++ (void)setTokenHeaderName:(NSString * _Nonnull)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable userAgent;)
 + (NSString * _Nullable)userAgent SWIFT_WARN_UNUSED_RESULT;
 + (void)setUserAgent:(NSString * _Nullable)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger interval;)
@@ -874,9 +893,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nullable configurationName;)
 + (NSString * _Nullable)configurationName SWIFT_WARN_UNUSED_RESULT;
 /// Set to sign all relevant https:// requests, including WKWebView requests
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL autoSign;)
-+ (BOOL)autoSign SWIFT_WARN_UNUSED_RESULT;
-+ (void)setAutoSign:(BOOL)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum ReblazeSDK_AutoSign autoSign;)
++ (enum ReblazeSDK_AutoSign)autoSign SWIFT_WARN_UNUSED_RESULT;
++ (void)setAutoSign:(enum ReblazeSDK_AutoSign)value;
 /// Calculates hash based on timestamp, deviceId, and possibly user id
 + (NSString * _Nonnull)generateHash SWIFT_WARN_UNUSED_RESULT;
 /// <ul>
@@ -906,12 +925,26 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL autoSign;)
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_Kind, "Kind", open) {
+typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_Kind, "Kind", closed) {
   ReblazeSDK_KindVERBOSE = 0,
   ReblazeSDK_KindDEBUG = 1,
   ReblazeSDK_KindINFO = 2,
   ReblazeSDK_KindWARN = 3,
   ReblazeSDK_KindERROR = 4,
+};
+
+
+@interface reblaze (SWIFT_EXTENSION(ReblazeSDK))
+@end
+
+typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_ReportCounters, "ReportCounters", closed) {
+  ReblazeSDK_ReportCountersNONE = 0,
+  ReblazeSDK_ReportCountersALL = 1,
+};
+
+typedef SWIFT_ENUM_NAMED(NSInteger, ReblazeSDK_AutoSign, "AutoSign", closed) {
+  ReblazeSDK_AutoSignNONE = 0,
+  ReblazeSDK_AutoSignALL = 1,
 };
 
 #if __has_attribute(external_source_symbol)
