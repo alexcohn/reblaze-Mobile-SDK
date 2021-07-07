@@ -8,20 +8,22 @@
 import SwiftUI
 import ReblazeSDK
 
+let sessionToken = "\(arc4random())"
+
 @main
 struct SDK_Example: App {
 
     init() {
         reblaze.setEventListener() { kind, message in
-            guard kind.greaterOrEqual(reblaze.Kind.INFO) else { return } // TODO: change to >= after lib upgrade
+            guard kind >= reblaze.Kind.INFO else { return }
             print("reblaze", kind.description, message)
         }
 
-        reblaze.uid = "\(arc4random())" // this will be our "session token"
+        reblaze.token = sessionToken
         print("reblaze hash", reblaze.generateHash()) // Call get hash even before backendUrl is defined
 
-        reblaze.autoSign = true
-        reblaze.backendUrl = "https://fire-gcp-lb.mobilesdkdev.d1.rbzdns.com" // TODO: not to commit to public repo
+        reblaze.autoSign = reblaze.AutoSign.ALL
+        reblaze.backendUrl = "https://fire-gcp-lb.rbzdevsdk001.dev.rbzdns.com" // TODO: not to commit to public repo
     }
     
     var body: some Scene {
@@ -32,12 +34,64 @@ struct SDK_Example: App {
 }
 
 struct ContentView: View {
+    @State private var backendUrl: String = reblaze.backendUrl
+    @State private var isEditing = false
+
     var body: some View {
-        Button(action: {
-            reblaze.sendEvent("button pressed")
-        }, label: {
-            Text("Button")
-        })
+        VStack(spacing: 10.0) {
+            HStack {
+                Text(" backendUrl")
+                TextField(
+                    "",
+                    text: $backendUrl
+                ) { isEditing in
+                    self.isEditing = isEditing
+                } onCommit: {
+                    reblaze.backendUrl = backendUrl
+                }
+                .autocapitalization(.none)
+                .keyboardType(.URL)
+                .disableAutocorrection(true)
+                .border(Color(UIColor.separator))
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            }
+            Button(action: {
+                let url = URL(string: ("\(reblaze.backendUrl)/signed"))!
+                var request = URLRequest(url: url)
+                request.setValue(reblaze.generateHash(), forHTTPHeaderField: "rbzsdk")
+                request.setValue(sessionToken, forHTTPHeaderField: "authorization")
+                let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+                    if let httpResponse = response as? HTTPURLResponse {
+                        print("Reply: \(httpResponse.statusCode)")
+                    }
+                    else {
+                        print("Reply: \(String(describing: response))")
+                    }
+                }
+                task.resume()
+            }, label: {
+                Text("send a signed network request")
+            })
+            Button(action: {
+                let url = URL(string: ("\(reblaze.backendUrl)/unsigned"))!
+                let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+                    if let httpResponse = response as? HTTPURLResponse {
+                        print("Reply: \(httpResponse.statusCode)")
+                    }
+                    else {
+                        print("Reply: \(String(describing: response))")
+                    }
+                }
+                task.resume()
+            }, label: {
+                Text("send an auto-signed network request")
+            })
+            Button(action: {
+                reblaze.sendEvent("button pressed")
+            }, label: {
+                Text("generate custom Reblaze event")
+            })
+        }
     }
 }
 
