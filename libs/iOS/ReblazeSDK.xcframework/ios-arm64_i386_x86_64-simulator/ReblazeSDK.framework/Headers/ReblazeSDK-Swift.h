@@ -249,6 +249,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable use
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger interval;)
 + (NSInteger)interval SWIFT_WARN_UNUSED_RESULT;
 + (void)setInterval:(NSInteger)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger timeslice;)
++ (NSInteger)timeslice SWIFT_WARN_UNUSED_RESULT;
++ (void)setTimeslice:(NSInteger)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum ReblazeSDK_ReportCounters reportCounters;)
 + (enum ReblazeSDK_ReportCounters)reportCounters SWIFT_WARN_UNUSED_RESULT;
 + (void)setReportCounters:(enum ReblazeSDK_ReportCounters)newValue;
@@ -567,6 +570,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable use
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger interval;)
 + (NSInteger)interval SWIFT_WARN_UNUSED_RESULT;
 + (void)setInterval:(NSInteger)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger timeslice;)
++ (NSInteger)timeslice SWIFT_WARN_UNUSED_RESULT;
++ (void)setTimeslice:(NSInteger)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum ReblazeSDK_ReportCounters reportCounters;)
 + (enum ReblazeSDK_ReportCounters)reportCounters SWIFT_WARN_UNUSED_RESULT;
 + (void)setReportCounters:(enum ReblazeSDK_ReportCounters)newValue;
@@ -885,6 +891,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable use
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger interval;)
 + (NSInteger)interval SWIFT_WARN_UNUSED_RESULT;
 + (void)setInterval:(NSInteger)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger timeslice;)
++ (NSInteger)timeslice SWIFT_WARN_UNUSED_RESULT;
++ (void)setTimeslice:(NSInteger)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum ReblazeSDK_ReportCounters reportCounters;)
 + (enum ReblazeSDK_ReportCounters)reportCounters SWIFT_WARN_UNUSED_RESULT;
 + (void)setReportCounters:(enum ReblazeSDK_ReportCounters)newValue;

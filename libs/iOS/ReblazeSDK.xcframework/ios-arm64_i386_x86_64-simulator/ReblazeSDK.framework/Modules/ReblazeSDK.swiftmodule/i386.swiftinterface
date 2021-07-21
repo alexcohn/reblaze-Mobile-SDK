@@ -5,16 +5,6 @@ import Foundation
 @_exported import ReblazeSDK
 import Swift
 import UIKit
-public enum NetworkError : Swift.String, Swift.Error {
-  case parametersNil
-  case encodingFailed
-  case missingURL
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
 extension reblaze {
   @objc(ReblazeSDK_ReportCounters) @frozen public enum ReportCounters : Swift.Int, Swift.Codable {
     case NONE
@@ -72,6 +62,10 @@ extension reblaze {
     @objc get
     @objc set
   }
+  @objc public static var timeslice: Swift.Int {
+    @objc get
+    @objc set
+  }
   @objc public static var reportCounters: ReblazeSDK.reblaze.ReportCounters {
     @objc get
     @objc set
@@ -99,9 +93,6 @@ extension UIWindow {
   @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
   @objc override dynamic open func hitTest(_ point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
 }
-extension ReblazeSDK.NetworkError : Swift.Equatable {}
-extension ReblazeSDK.NetworkError : Swift.Hashable {}
-extension ReblazeSDK.NetworkError : Swift.RawRepresentable {}
 extension ReblazeSDK.reblaze.ReportCounters : Swift.Equatable {}
 extension ReblazeSDK.reblaze.ReportCounters : Swift.Hashable {}
 extension ReblazeSDK.reblaze.ReportCounters : Swift.RawRepresentable {}
