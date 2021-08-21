@@ -93,6 +93,584 @@ extension UIWindow {
   @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
   @objc override dynamic open func hitTest(_ point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
 }
+extension String {
+  public var a: Swift.String {
+    get
+  }
+  public var b: Swift.String {
+    get
+  }
+  public var c: Swift.String {
+    get
+  }
+  public var d: Swift.String {
+    get
+  }
+  public var e: Swift.String {
+    get
+  }
+  public var f: Swift.String {
+    get
+  }
+  public var g: Swift.String {
+    get
+  }
+  public var h: Swift.String {
+    get
+  }
+  public var i: Swift.String {
+    get
+  }
+  public var j: Swift.String {
+    get
+  }
+  public var k: Swift.String {
+    get
+  }
+  public var l: Swift.String {
+    get
+  }
+  public var m: Swift.String {
+    get
+  }
+  public var n: Swift.String {
+    get
+  }
+  public var o: Swift.String {
+    get
+  }
+  public var p: Swift.String {
+    get
+  }
+  public var q: Swift.String {
+    get
+  }
+  public var r: Swift.String {
+    get
+  }
+  public var s: Swift.String {
+    get
+  }
+  public var t: Swift.String {
+    get
+  }
+  public var u: Swift.String {
+    get
+  }
+  public var v: Swift.String {
+    get
+  }
+  public var w: Swift.String {
+    get
+  }
+  public var x: Swift.String {
+    get
+  }
+  public var y: Swift.String {
+    get
+  }
+  public var z: Swift.String {
+    get
+  }
+}
+@objc extension NSMutableString {
+  @objc dynamic public var a: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var b: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var c: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var d: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var e: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var f: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var g: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var h: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var i: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var j: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var k: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var l: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var m: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var n: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var o: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var p: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var q: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var r: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var s: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var t: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var u: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var v: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var w: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var x: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var y: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var z: Foundation.NSMutableString {
+    @objc get
+  }
+}
+extension String {
+  public var A: Swift.String {
+    get
+  }
+  public var B: Swift.String {
+    get
+  }
+  public var C: Swift.String {
+    get
+  }
+  public var D: Swift.String {
+    get
+  }
+  public var E: Swift.String {
+    get
+  }
+  public var F: Swift.String {
+    get
+  }
+  public var G: Swift.String {
+    get
+  }
+  public var H: Swift.String {
+    get
+  }
+  public var I: Swift.String {
+    get
+  }
+  public var J: Swift.String {
+    get
+  }
+  public var K: Swift.String {
+    get
+  }
+  public var L: Swift.String {
+    get
+  }
+  public var M: Swift.String {
+    get
+  }
+  public var N: Swift.String {
+    get
+  }
+  public var O: Swift.String {
+    get
+  }
+  public var P: Swift.String {
+    get
+  }
+  public var Q: Swift.String {
+    get
+  }
+  public var R: Swift.String {
+    get
+  }
+  public var S: Swift.String {
+    get
+  }
+  public var T: Swift.String {
+    get
+  }
+  public var U: Swift.String {
+    get
+  }
+  public var V: Swift.String {
+    get
+  }
+  public var W: Swift.String {
+    get
+  }
+  public var X: Swift.String {
+    get
+  }
+  public var Y: Swift.String {
+    get
+  }
+  public var Z: Swift.String {
+    get
+  }
+}
+@objc extension NSMutableString {
+  @objc dynamic public var A: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var B: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var C: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var D: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var E: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var F: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var G: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var H: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var I: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var J: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var K: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var L: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var M: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var N: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var O: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var P: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var Q: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var R: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var S: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var T: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var U: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var V: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var W: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var X: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var Y: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var Z: Foundation.NSMutableString {
+    @objc get
+  }
+}
+extension String {
+  public var _1: Swift.String {
+    get
+  }
+  public var _2: Swift.String {
+    get
+  }
+  public var _3: Swift.String {
+    get
+  }
+  public var _4: Swift.String {
+    get
+  }
+  public var _5: Swift.String {
+    get
+  }
+  public var _6: Swift.String {
+    get
+  }
+  public var _7: Swift.String {
+    get
+  }
+  public var _8: Swift.String {
+    get
+  }
+  public var _9: Swift.String {
+    get
+  }
+  public var _0: Swift.String {
+    get
+  }
+}
+@objc extension NSMutableString {
+  @objc dynamic public var _1: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _2: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _3: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _4: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _5: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _6: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _7: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _8: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _9: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _0: Foundation.NSMutableString {
+    @objc get
+  }
+}
+extension String {
+  public var space: Swift.String {
+    get
+  }
+  public var point: Swift.String {
+    get
+  }
+  public var dash: Swift.String {
+    get
+  }
+  public var comma: Swift.String {
+    get
+  }
+  public var semicolon: Swift.String {
+    get
+  }
+  public var colon: Swift.String {
+    get
+  }
+  public var apostrophe: Swift.String {
+    get
+  }
+  public var quotation: Swift.String {
+    get
+  }
+  public var plus: Swift.String {
+    get
+  }
+  public var equals: Swift.String {
+    get
+  }
+  public var paren_left: Swift.String {
+    get
+  }
+  public var paren_right: Swift.String {
+    get
+  }
+  public var asterisk: Swift.String {
+    get
+  }
+  public var ampersand: Swift.String {
+    get
+  }
+  public var caret: Swift.String {
+    get
+  }
+  public var percent: Swift.String {
+    get
+  }
+  public var pound: Swift.String {
+    get
+  }
+  public var at: Swift.String {
+    get
+  }
+  public var exclamation: Swift.String {
+    get
+  }
+  public var question_mark: Swift.String {
+    get
+  }
+  public var back_slash: Swift.String {
+    get
+  }
+  public var forward_slash: Swift.String {
+    get
+  }
+  public var curly_left: Swift.String {
+    get
+  }
+  public var curly_right: Swift.String {
+    get
+  }
+  public var bracket_left: Swift.String {
+    get
+  }
+  public var bracket_right: Swift.String {
+    get
+  }
+  public var bar: Swift.String {
+    get
+  }
+  public var less_than: Swift.String {
+    get
+  }
+  public var greater_than: Swift.String {
+    get
+  }
+  public var underscore: Swift.String {
+    get
+  }
+}
+@objc extension NSMutableString {
+  @objc dynamic public var space: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var point: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var dash: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var comma: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var semicolon: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var colon: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var apostrophe: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var quotation: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var plus: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var equals: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var paren_left: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var paren_right: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var asterisk: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var ampersand: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var caret: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var percent: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var pound: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var at: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var exclamation: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var question_mark: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var back_slash: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var forward_slash: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var curly_left: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var curly_right: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var bracket_left: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var bracket_right: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var bar: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var less_than: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var greater_than: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var underscore: Foundation.NSMutableString {
+    @objc get
+  }
+}
+extension String {
+  public var dot: Swift.String {
+    get
+  }
+}
+@objc extension NSMutableString {
+  @objc dynamic public var dot: Foundation.NSMutableString {
+    @objc get
+  }
+}
 extension ReblazeSDK.reblaze.ReportCounters : Swift.Equatable {}
 extension ReblazeSDK.reblaze.ReportCounters : Swift.Hashable {}
 extension ReblazeSDK.reblaze.ReportCounters : Swift.RawRepresentable {}
