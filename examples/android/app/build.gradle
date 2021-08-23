@@ -10,6 +10,6 @@ android {
 
 dependencies {
     implementation 'com.reblaze.sdk:mobile-sdk:2.0'
-    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.getkeepsafe.relinker:relinker:1.4.3'
 }
