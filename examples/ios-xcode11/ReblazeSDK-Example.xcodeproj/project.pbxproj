@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50771ACBEB42268BB6F6531C /* Pods_ReblazeSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D157E88C3E8CB95DE0D6A2 /* Pods_ReblazeSDK_Example.framework */; };
+		E7DE1F5DF6D6A2D7A4CC2CC5 /* Pods_ReblazeSDK_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300324B0711AB6320826AA8 /* Pods_ReblazeSDK_ExampleTests.framework */; };
 		FA1706FC24810EDF0079EF5B /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC7924DC2280472500F4CF03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7924DB2280472500F4CF03 /* AppDelegate.swift */; };
 		FC7924F12280472600F4CF03 /* ReblazeSDK_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7924F02280472600F4CF03 /* ReblazeSDK_ExampleTests.swift */; };
@@ -37,7 +39,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F9F48340C39086D90731056 /* Pods-ReblazeSDK-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReblazeSDK-Example.release.xcconfig"; path = "Target Support Files/Pods-ReblazeSDK-Example/Pods-ReblazeSDK-Example.release.xcconfig"; sourceTree = "<group>"; };
 		23B526552539B6400002B5A6 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3300324B0711AB6320826AA8 /* Pods_ReblazeSDK_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReblazeSDK_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D157E88C3E8CB95DE0D6A2 /* Pods_ReblazeSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReblazeSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82D45ECA7F2AB29EF14FA2E7 /* Pods-ReblazeSDK-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReblazeSDK-ExampleTests.release.xcconfig"; path = "Target Support Files/Pods-ReblazeSDK-ExampleTests/Pods-ReblazeSDK-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		9AC0706571542F6A5237DFAE /* Pods-ReblazeSDK-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReblazeSDK-Example.debug.xcconfig"; path = "Target Support Files/Pods-ReblazeSDK-Example/Pods-ReblazeSDK-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9F9AEFCDFDBA6E0B04E66270 /* Pods-ReblazeSDK-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReblazeSDK-ExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-ReblazeSDK-ExampleTests/Pods-ReblazeSDK-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC7924D82280472500F4CF03 /* ReblazeSDK-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReblazeSDK-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7924DB2280472500F4CF03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7924E72280472600F4CF03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50771ACBEB42268BB6F6531C /* Pods_ReblazeSDK_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DE1F5DF6D6A2D7A4CC2CC5 /* Pods_ReblazeSDK_ExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +77,21 @@
 		7D28F656D27013A0FDD25ED0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				9AC0706571542F6A5237DFAE /* Pods-ReblazeSDK-Example.debug.xcconfig */,
+				0F9F48340C39086D90731056 /* Pods-ReblazeSDK-Example.release.xcconfig */,
+				9F9AEFCDFDBA6E0B04E66270 /* Pods-ReblazeSDK-ExampleTests.debug.xcconfig */,
+				82D45ECA7F2AB29EF14FA2E7 /* Pods-ReblazeSDK-ExampleTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C4B8D1ED3BD0B91131FF8913 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63D157E88C3E8CB95DE0D6A2 /* Pods_ReblazeSDK_Example.framework */,
+				3300324B0711AB6320826AA8 /* Pods_ReblazeSDK_ExampleTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FC7924CF2280472500F4CF03 = {
@@ -79,6 +102,7 @@
 				FC7924EF2280472600F4CF03 /* ReblazeSDK-ExampleTests */,
 				FC7924D92280472500F4CF03 /* Products */,
 				7D28F656D27013A0FDD25ED0 /* Pods */,
+				C4B8D1ED3BD0B91131FF8913 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,11 +140,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC7925002280472600F4CF03 /* Build configuration list for PBXNativeTarget "ReblazeSDK-Example" */;
 			buildPhases = (
+				50877991BDEC3E277152A579 /* [CP] Check Pods Manifest.lock */,
 				397E6EDFE25818ECD74415D7 /* [CP] Prepare Artifacts */,
 				FC7924D42280472500F4CF03 /* Sources */,
 				FC7924D52280472500F4CF03 /* Frameworks */,
 				FA2F54F22418FFFF00E34330 /* Embed Frameworks */,
 				FC7924D62280472500F4CF03 /* Resources */,
+				E2329E57E6CF48369F778221 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC7925032280472600F4CF03 /* Build configuration list for PBXNativeTarget "ReblazeSDK-ExampleTests" */;
 			buildPhases = (
+				C4B8E310A273169E7DF13521 /* [CP] Check Pods Manifest.lock */,
 				FC7924E82280472600F4CF03 /* Sources */,
 				FC7924E92280472600F4CF03 /* Frameworks */,
 				FC7924EA2280472600F4CF03 /* Resources */,
@@ -221,6 +248,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReblazeSDK-Example/Pods-ReblazeSDK-Example-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50877991BDEC3E277152A579 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReblazeSDK-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4B8E310A273169E7DF13521 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReblazeSDK-ExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2329E57E6CF48369F778221 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReblazeSDK-Example/Pods-ReblazeSDK-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReblazeSDK-Example/Pods-ReblazeSDK-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReblazeSDK-Example/Pods-ReblazeSDK-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -371,6 +459,7 @@
 		};
 		FC7925012280472600F4CF03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AC0706571542F6A5237DFAE /* Pods-ReblazeSDK-Example.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -394,6 +483,7 @@
 		};
 		FC7925022280472600F4CF03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F9F48340C39086D90731056 /* Pods-ReblazeSDK-Example.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -417,6 +507,7 @@
 		};
 		FC7925042280472600F4CF03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F9AEFCDFDBA6E0B04E66270 /* Pods-ReblazeSDK-ExampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
@@ -437,6 +528,7 @@
 		};
 		FC7925052280472600F4CF03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82D45ECA7F2AB29EF14FA2E7 /* Pods-ReblazeSDK-ExampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";

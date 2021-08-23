@@ -1,8 +1,7 @@
 Release notes are available here:
 
-https://bitbucket.org/reblaze/mobilesdk/src/master/release-notes.md
+[release-notes.md](release-notes.md)
 
+Complete *private* documentation for the Reblaze SDK 2.0 for iOS is available here:
 
-Complete documentation for the Reblaze SDK is available here:
-
-https://gb.docs.reblaze.com/v/mobile-sdk/
+https://reblaze.atlassian.net/l/c/5qh9xU1u
