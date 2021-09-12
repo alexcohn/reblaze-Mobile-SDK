@@ -39,6 +39,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 10.0) {
+            Text("Reblaze Mobile SDK v\(ReblazeSDKVersionNumber)")
             HStack {
                 Text(" backendUrl")
                 TextField(
