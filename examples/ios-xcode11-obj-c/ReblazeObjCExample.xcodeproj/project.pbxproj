@@ -3,17 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA29E7E724818B4C00883E04 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		23FD035726EE540A003AE449 /* EmptyLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FD035626EE540A003AE449 /* EmptyLaunchScreen.storyboard */; };
+		23FD036026EE6EC8003AE449 /* reblaze_icon_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 23FD035F26EE6EC8003AE449 /* reblaze_icon_blue.png */; };
 		FC13535223780A9F0043B506 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13535123780A9F0043B506 /* AppDelegate.m */; };
 		FC13535523780A9F0043B506 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13535423780A9F0043B506 /* SceneDelegate.m */; };
 		FC13535823780A9F0043B506 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13535723780A9F0043B506 /* ViewController.m */; };
 		FC13535B23780A9F0043B506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC13535923780A9F0043B506 /* Main.storyboard */; };
-		FC13535D23780AA10043B506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC13535C23780AA10043B506 /* Assets.xcassets */; };
-		FC13536023780AA10043B506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC13535E23780AA10043B506 /* LaunchScreen.storyboard */; };
 		FC13536323780AA10043B506 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13536223780AA10043B506 /* main.m */; };
 		FC13536D23780AA20043B506 /* ReblazeObjCExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13536C23780AA20043B506 /* ReblazeObjCExampleTests.m */; };
 /* End PBXBuildFile section */
@@ -28,21 +27,9 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		FA29E7E824818B4C00883E04 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FA29E7E724818B4C00883E04 /* BuildFile in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		23FD035626EE540A003AE449 /* EmptyLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmptyLaunchScreen.storyboard; sourceTree = "<group>"; };
+		23FD035F26EE6EC8003AE449 /* reblaze_icon_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reblaze_icon_blue.png; sourceTree = "<group>"; };
 		FC13534D23780A9F0043B506 /* ReblazeObjCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReblazeObjCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC13535023780A9F0043B506 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC13535123780A9F0043B506 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,31 +38,12 @@
 		FC13535623780A9F0043B506 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FC13535723780A9F0043B506 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FC13535A23780A9F0043B506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FC13535C23780AA10043B506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FC13535F23780AA10043B506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC13536123780AA10043B506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC13536223780AA10043B506 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC13536823780AA20043B506 /* ReblazeObjCExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReblazeObjCExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC13536C23780AA20043B506 /* ReblazeObjCExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReblazeObjCExampleTests.m; sourceTree = "<group>"; };
 		FC13536E23780AA20043B506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		FC13534A23780A9F0043B506 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC13536523780AA20043B506 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		FC13534423780A9F0043B506 = {
@@ -106,9 +74,9 @@
 				FC13535623780A9F0043B506 /* ViewController.h */,
 				FC13535723780A9F0043B506 /* ViewController.m */,
 				FC13535923780A9F0043B506 /* Main.storyboard */,
-				FC13535C23780AA10043B506 /* Assets.xcassets */,
-				FC13535E23780AA10043B506 /* LaunchScreen.storyboard */,
+				23FD035626EE540A003AE449 /* EmptyLaunchScreen.storyboard */,
 				FC13536123780AA10043B506 /* Info.plist */,
+				23FD035F26EE6EC8003AE449 /* reblaze_icon_blue.png */,
 				FC13536223780AA10043B506 /* main.m */,
 			);
 			path = ReblazeObjCExample;
@@ -130,12 +98,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC13537C23780AA20043B506 /* Build configuration list for PBXNativeTarget "ReblazeObjCExample" */;
 			buildPhases = (
-				715760948C978C4AA348C6C1 /* [CP] Prepare Artifacts */,
 				FC13534923780A9F0043B506 /* Sources */,
-				FC13534A23780A9F0043B506 /* Frameworks */,
 				FC13534B23780A9F0043B506 /* Resources */,
-				FA6ACD01242CDCD700C76481 /* ShellScript */,
-				FA29E7E824818B4C00883E04 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,7 +115,6 @@
 			buildConfigurationList = FC13537F23780AA20043B506 /* Build configuration list for PBXNativeTarget "ReblazeObjCExampleTests" */;
 			buildPhases = (
 				FC13536423780AA20043B506 /* Sources */,
-				FC13536523780AA20043B506 /* Frameworks */,
 				FC13536623780AA20043B506 /* Resources */,
 			);
 			buildRules = (
@@ -170,8 +133,6 @@
 		FC13534523780A9F0043B506 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = Reblaze;
 				TargetAttributes = {
 					FC13534C23780A9F0043B506 = {
 						CreatedOnToolsVersion = 11.0;
@@ -182,7 +143,6 @@
 				};
 			};
 			buildConfigurationList = FC13534823780A9F0043B506 /* Build configuration list for PBXProject "ReblazeObjCExample" */;
-			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -205,9 +165,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC13536023780AA10043B506 /* LaunchScreen.storyboard in Resources */,
-				FC13535D23780AA10043B506 /* Assets.xcassets in Resources */,
 				FC13535B23780A9F0043B506 /* Main.storyboard in Resources */,
+				23FD036026EE6EC8003AE449 /* reblaze_icon_blue.png in Resources */,
+				23FD035726EE540A003AE449 /* EmptyLaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,43 +179,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		715760948C978C4AA348C6C1 /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-artifacts-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-artifacts-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReblazeObjCExample/Pods-ReblazeObjCExample-artifacts.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FA6ACD01242CDCD700C76481 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC13534923780A9F0043B506 /* Sources */ = {
@@ -294,14 +217,6 @@
 				FC13535A23780A9F0043B506 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FC13535E23780AA10043B506 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC13535F23780AA10043B506 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -420,9 +335,7 @@
 		FC13537D23780AA20043B506 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ReblazeObjCExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,9 +350,7 @@
 		FC13537E23780AA20043B506 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ReblazeObjCExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

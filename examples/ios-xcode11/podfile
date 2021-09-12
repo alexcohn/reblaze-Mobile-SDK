@@ -1,6 +1,6 @@
 target 'ReblazeSDK-Example' do
   use_frameworks!
-  pod 'Reblaze', :path => '../..'
+  pod 'Reblaze', :path => '../../libs/iOS'
 end
 
 target 'ReblazeSDK-ExampleTests' do

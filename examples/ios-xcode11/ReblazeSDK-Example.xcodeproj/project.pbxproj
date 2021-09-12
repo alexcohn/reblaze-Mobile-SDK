@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23FD035326EE4A59003AE449 /* EmptyLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FD035226EE4A59003AE449 /* EmptyLaunchScreen.storyboard */; };
+		23FD035E26EE6CFD003AE449 /* reblaze_icon_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 23FD035D26EE6CFD003AE449 /* reblaze_icon_blue.png */; };
 		FC7924DC2280472500F4CF03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7924DB2280472500F4CF03 /* AppDelegate.swift */; };
 		FC7924F12280472600F4CF03 /* ReblazeSDK_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7924F02280472600F4CF03 /* ReblazeSDK_ExampleTests.swift */; };
 /* End PBXBuildFile section */
@@ -22,6 +24,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23FD035226EE4A59003AE449 /* EmptyLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmptyLaunchScreen.storyboard; sourceTree = "<group>"; };
+		23FD035D26EE6CFD003AE449 /* reblaze_icon_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reblaze_icon_blue.png; sourceTree = "<group>"; };
 		FC7924D82280472500F4CF03 /* ReblazeSDK-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReblazeSDK-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7924DB2280472500F4CF03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7924E72280472600F4CF03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 			children = (
 				FC7924DB2280472500F4CF03 /* AppDelegate.swift */,
 				FC7924E72280472600F4CF03 /* Info.plist */,
+				23FD035226EE4A59003AE449 /* EmptyLaunchScreen.storyboard */,
+				23FD035D26EE6CFD003AE449 /* reblaze_icon_blue.png */,
 			);
 			path = "ReblazeSDK-Example";
 			sourceTree = "<group>";
@@ -76,7 +82,6 @@
 			buildPhases = (
 				FC7924D42280472500F4CF03 /* Sources */,
 				FC7924D62280472500F4CF03 /* Resources */,
-				239C738F26E1719F00DB40B9 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,8 +115,6 @@
 		FC7924D02280472500F4CF03 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
 				TargetAttributes = {
 					FC7924D72280472500F4CF03 = {
 						CreatedOnToolsVersion = 10.1;
@@ -124,7 +127,6 @@
 				};
 			};
 			buildConfigurationList = FC7924D32280472500F4CF03 /* Build configuration list for PBXProject "ReblazeSDK-Example" */;
-			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -147,6 +149,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23FD035E26EE6CFD003AE449 /* reblaze_icon_blue.png in Resources */,
+				23FD035326EE4A59003AE449 /* EmptyLaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +242,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -293,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -307,14 +311,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReblazeSDK-Example",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "ReblazeSDK-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,14 +332,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReblazeSDK-Example",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "ReblazeSDK-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
