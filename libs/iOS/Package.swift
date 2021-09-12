@@ -14,6 +14,6 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ReblazeSDK",
-            path: "libs/iOS/ReblazeSDK.xcframework")
+            path: "ReblazeSDK.xcframework")
     ]
 )
