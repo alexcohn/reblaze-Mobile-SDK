@@ -1,0 +1,116 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name ReblazeSDK
+import Foundation
+@_exported import ReblazeSDK
+import Swift
+import UIKit
+@_hasMissingDesignatedInitializers public class ReblazeSDK_Report {
+  public static var SINCE: Swift.String
+  public static var CONNECTION_ERRORS: Swift.String
+  public static var TIME_IN_BACKGROUND: Swift.String
+  public static var SWITCH_ACTIVITY: Swift.String
+  public static var DEVICE_ORIENTATION: Swift.String
+  public static var BATTERY_LEVEL: Swift.String
+  public static var CHARGING_MODE: Swift.String
+  public static var MODE: Swift.String
+  public static var FG: Swift.String
+  public static var GENERATE_HASH: Swift.String
+  public static var TOUCH_MOVE: Swift.String
+  public static var TOUCH_UP: Swift.String
+  public static var TOUCH_DOWN: Swift.String
+  public static var KEY_DOWN: Swift.String
+  public static var KEY_PRESS: Swift.String
+  public static var KEY_UP: Swift.String
+  public static var GESTURE: Swift.String
+  public static var CLICK: Swift.String
+  @objc deinit
+}
+extension reblaze {
+  @objc(ReblazeSDK_ReportCounters) @frozen public enum ReportCounters : Swift.Int, Swift.Codable {
+    case NONE
+    case ALL
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc(ReblazeSDK_AutoSign) @frozen public enum AutoSign : Swift.Int, Swift.Codable {
+    case NONE
+    case ALL
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+}
+@_inheritsConvenienceInitializers @objc public class reblaze : ObjectiveC.NSObject {
+  @objc public static var MINIMUM_INTERVAL: Swift.Int
+  @objc public static var DEFAULT_INTERVAL: Swift.Int
+  @objc(ReblazeSDK_Kind) @frozen public enum Kind : Swift.Int, Swift.CustomStringConvertible {
+    case VERBOSE
+    case DEBUG
+    case INFO
+    case WARN
+    case ERROR
+    public static func > (self: ReblazeSDK.reblaze.Kind, other: ReblazeSDK.reblaze.Kind) -> Swift.Bool
+    public static func >= (self: ReblazeSDK.reblaze.Kind, other: ReblazeSDK.reblaze.Kind) -> Swift.Bool
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public static var backendUrl: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc public static var token: Swift.String
+  @objc public static var tokenHeaderName: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc public static var userAgent: Swift.String? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc public static var interval: Swift.Int {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc public static var timeslice: Swift.Int {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc public static var reportCounters: ReblazeSDK.reblaze.ReportCounters {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc public static var hashVariant: Swift.String {
+    @objc get
+  }
+  @objc public static var configurationName: Swift.String? {
+    @objc get
+  }
+  @objc public static var autoSign: ReblazeSDK.reblaze.AutoSign
+  @objc public static func generateHash() -> Swift.String
+  @objc public static func sendEvent(_ eventName: Swift.String)
+  @objc public static func enableMock()
+  @objc public static func isMockEnabled() -> Swift.Bool
+  @objc public static func setMockResponse(_ code: Swift.Int, remoteConfig: Swift.String? = nil)
+  @objc public static func setMockResponse(_ code: Swift.Int, remoteConfig: Swift.String? = nil, delay: Swift.Int)
+  @objc public static func setEventListener(_ block: ((ReblazeSDK.reblaze.Kind, Swift.String) -> Swift.Void)?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIWindow {
+  @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc override dynamic open func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc override dynamic open func hitTest(_ point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+}
