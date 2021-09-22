@@ -1,7 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:html/parser.dart' show parse;
 
 void main() {
   runApp(ReblazeExampleApp());
+}
+
+Future<String> fetch(String path) async {
+  final response = await http.get(Uri.parse('https://fire-gcp-lb.rbzdevsdk001.dev.rbzdns.com/flutter/$path'),
+      headers: {
+        'rbzid': 'test',
+      }
+  );
+  if (response.statusCode == 200) {
+    final html_doc = parse(response.body);
+    assert (html_doc.getElementsByTagName('h3')[0].innerHtml == 'Request headers');
+    final headers = html_doc.getElementsByTagName('pre')[0].innerHtml.split('\n');
+    return headers.firstWhere(
+          (header) => header.startsWith('HTTP_RBZID'),
+          orElse: () => 'QQ_RBZID => nil',
+        )
+        .split('_')[1]
+        .replaceFirst('&gt;', '>') + ' [$path]';
+  } else {
+    return '${response.statusCode}: ${response.body}';
+  }
 }
 
 class ReblazeExampleApp extends StatelessWidget {
@@ -9,9 +32,6 @@ class ReblazeExampleApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Reblaze Example',
-      // theme: ThemeData(
-      //   primarySwatch: Colors.black,
-      // ),
       home: ReblazeExamplePage(title: 'Reblaze Example Page'),
     );
   }
@@ -28,10 +48,18 @@ class ReblazeExamplePage extends StatefulWidget {
 
 class _ReblazeExamplePageState extends State<ReblazeExamplePage> {
   int _counter = 0;
+  Future<String> futureResponse;
+
+  @override
+  void initState() {
+    super.initState();
+    futureResponse = fetch('init');
+  }
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+      futureResponse = fetch(_counter.toString());
     });
   }
 
@@ -46,11 +74,20 @@ class _ReblazeExamplePageState extends State<ReblazeExamplePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'Request updates:',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            FutureBuilder<String>(
+              future: futureResponse,
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return Text(snapshot.data);
+                }
+                return const CircularProgressIndicator();
+              },
             ),
           ],
         ),
