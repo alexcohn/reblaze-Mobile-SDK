@@ -23,14 +23,23 @@ Future<String> fetch(String path) async {
   );
   if (response.statusCode == 200) {
     final html_doc = parse(response.body);
-    assert (html_doc.getElementsByTagName('h3')[0].innerHtml == 'Request headers');
-    final headers = html_doc.getElementsByTagName('pre')[0].innerHtml.split('\n');
-    return headers.firstWhere(
-          (header) => header.startsWith('HTTP_RBZID'),
-          orElse: () => 'QQ_RBZID => nil',
-        )
-        .split('_')[1]
-        .replaceFirst('&gt;', '>') + ' [$path]';
+    final h3 = html_doc.getElementsByTagName('h3');
+    if (h3 != null && h3.isNotEmpty && h3[0].innerHtml == 'Request headers') {
+      final headers = html_doc.getElementsByTagName('pre')[0].innerHtml.split(
+          '\n');
+      return headers.firstWhere(
+            (header) => header.startsWith('HTTP_ISHUMAN'),
+        orElse: () => 'HTTP_ISHUMAN =&gt; ### FALSE ###',
+      )
+          .split('_')[1]
+          .replaceFirst('&gt;', '>') + ' [$path]';
+    }
+    else {
+      final headers = html_doc.body.innerHtml.split('\n');
+      return headers.firstWhere((header) => header.startsWith('Ishuman:'),
+          orElse: () => 'ishuman: ### FALSE ###',
+      );
+    }
   } else {
     return '${response.statusCode}: ${response.body}';
   }
