@@ -104,6 +104,16 @@ class _ReblazeExamplePageState extends State<ReblazeExamplePage> {
                 return const CircularProgressIndicator();
               },
             ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 50.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'type here',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+
+            ),
           ],
         ),
       ),
