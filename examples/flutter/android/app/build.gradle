@@ -47,3 +47,7 @@ android {
 flutter {
     source '../..'
 }
+
+dependencies {
+    implementation 'com.reblaze.sdk:mobile-sdk:2.0'
+}
