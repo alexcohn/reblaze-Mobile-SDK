@@ -1,10 +1,11 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name ReblazeSDK
 import Foundation
 @_exported import ReblazeSDK
 import Swift
 import UIKit
+import _Concurrency
 @_hasMissingDesignatedInitializers public class ReblazeSDK_Report {
   public static var SINCE: Swift.String
   public static var CONNECTION_ERRORS: Swift.String
@@ -26,7 +27,7 @@ import UIKit
   public static var CLICK: Swift.String
   @objc deinit
 }
-extension reblaze {
+extension ReblazeSDK.reblaze {
   @objc(ReblazeSDK_ReportCounters) @frozen public enum ReportCounters : Swift.Int, Swift.Codable {
     case NONE
     case ALL
@@ -104,13 +105,13 @@ extension reblaze {
   @objc public static func isMockEnabled() -> Swift.Bool
   @objc public static func setMockResponse(_ code: Swift.Int, remoteConfig: Swift.String? = nil)
   @objc public static func setMockResponse(_ code: Swift.Int, remoteConfig: Swift.String? = nil, delay: Swift.Int)
-  @objc public static func setEventListener(_ block: ((ReblazeSDK.reblaze.Kind, Swift.String) -> Swift.Void)?)
+  @objc public static func setEventListener(_ block: ((_ kind: ReblazeSDK.reblaze.Kind, _ message: Swift.String) -> Swift.Void)?)
   @objc override dynamic public init()
   @objc deinit
 }
-extension UIWindow {
-  @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @objc override dynamic open func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @objc override dynamic open func hitTest(_ point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+extension UIKit.UIWindow {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func hitTest(_ point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
 }

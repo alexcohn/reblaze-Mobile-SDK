@@ -26,11 +26,11 @@
         {
           "name": "mobile-sdk-2.0.aar",
           "url": "mobile-sdk-2.0.aar",
-          "size": 952912,
-          "sha512": "65c0a1b4a5c42862d6374e9556d177425e65d4ebb6d413b7e6b689a3c553e7b8172c55f332b11fa80b3d1fbe2426b3a8a111ae73496d16675cd3b724bbf5b863",
-          "sha256": "f1d7a5d753609c3377d861dc19911f2a922cdb38b17a91c9cb6dd86bcf7de3f2",
-          "sha1": "22a35eafedc24015cf3a9b8b4c56d09bd0ffbd9b",
-          "md5": "0d8955fd663402e712f38b737d20ab94"
+          "size": 960540,
+          "sha512": "cd8e38ee77bc1b5cd7145ff7f402de61cde3b2ffc89d9c0cb4b60d79a245750526ff2e1ee9f2e086e4af4fd4abb7a2793d5b94d32d39cae54b6598aed9ddc481",
+          "sha256": "9fd0836b51ea6fa532a6fab89af7b7fea64c1cf77cc6128f895fec9bee138f3c",
+          "sha1": "80b5480a2408f27b521aed6774d6f154b7dd1348",
+          "md5": "715777f785cb0aafe30d4aa7704bd7b3"
         }
       ]
     },
@@ -76,11 +76,11 @@
         {
           "name": "mobile-sdk-2.0.aar",
           "url": "mobile-sdk-2.0.aar",
-          "size": 952912,
-          "sha512": "65c0a1b4a5c42862d6374e9556d177425e65d4ebb6d413b7e6b689a3c553e7b8172c55f332b11fa80b3d1fbe2426b3a8a111ae73496d16675cd3b724bbf5b863",
-          "sha256": "f1d7a5d753609c3377d861dc19911f2a922cdb38b17a91c9cb6dd86bcf7de3f2",
-          "sha1": "22a35eafedc24015cf3a9b8b4c56d09bd0ffbd9b",
-          "md5": "0d8955fd663402e712f38b737d20ab94"
+          "size": 960540,
+          "sha512": "cd8e38ee77bc1b5cd7145ff7f402de61cde3b2ffc89d9c0cb4b60d79a245750526ff2e1ee9f2e086e4af4fd4abb7a2793d5b94d32d39cae54b6598aed9ddc481",
+          "sha256": "9fd0836b51ea6fa532a6fab89af7b7fea64c1cf77cc6128f895fec9bee138f3c",
+          "sha1": "80b5480a2408f27b521aed6774d6f154b7dd1348",
+          "md5": "715777f785cb0aafe30d4aa7704bd7b3"
         }
       ]
     }
