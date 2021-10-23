@@ -148,4 +148,21 @@ class reblaze {
       print("Plugin sendEvent error: ${e.message}");
     }
   }
+
+  static void enableMock() async {
+    try {
+      _methodChannel.invokeMethod('enableMock');
+    } on PlatformException catch (e, stack) {
+      print("Plugin enableMock error: ${e.message}");
+    }
+  }
+
+  static void setMockResponse(int code, String remoteConfig) async {
+    try {
+      _methodChannel.invokeMethod('setMockResponse', );
+    } on PlatformException catch (e, stack) {
+      print("Plugin enableMock error: ${e.message}");
+    }
+  }
+
 }
