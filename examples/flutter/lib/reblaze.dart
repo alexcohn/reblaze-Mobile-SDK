@@ -52,6 +52,15 @@ class reblaze {
     }
   }
 
+  static Future<String> getConfigurationName() async {
+    try {
+      return _methodChannel.invokeMethod('getConfigurationName');
+    } on PlatformException catch (e, stack) {
+      print("Plugin getConfigurationName error: ${e.message}");
+      return Future.error("getConfigurationName failed.", stack);
+    }
+  }
+
   static Future<String> getToken() async {
     try {
       return _methodChannel.invokeMethod('getToken');
