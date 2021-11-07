@@ -8,27 +8,26 @@ import com.reblaze.sdk.SdkEventListener;
 
 import static com.reblaze.sdk.Reblaze.reblaze;
 
-public class App extends Application {
+public class App extends Application implements SdkEventListener {
 
-    private final SdkEventListener printAll = new SdkEventListener() {
-        @Override
-        public void onSdkEvent(Kind kind, String message) {
-            Log.println(kind.getValue(), "SDK event", message);
-            Log.d("SDK param", "userAgent=\"" + reblaze.getUserAgent() + "\", backendUrl=\"" + reblaze.getBackendUrl() + "\"");
-        }
-    };
+    @Override
+    public void onSdkEvent(Kind kind, String message) {
+        Log.println(kind.getValue(), "SDK event", message);
+        Log.d("SDK param", "interval=\"" + reblaze.getInterval() + "\", backendUrl=\"" + reblaze.getBackendUrl() + "\"");
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
 
         Log.d("rbzsdk", reblaze.generateHash());
-        reblaze.setEventListener(printAll);
+        reblaze.setEventListener(this);
 
-        reblaze.setUidHeaderName("session_id");
-        reblaze.setUid("123456789");
+        reblaze.setToken("123456789");
         reblaze.setInterval(Interval.MINIMUM_INTERVAL);
-        reblaze.setUserAgent(getString(R.string.app_name));
+        reblaze.enableMock();
+        reblaze.setMockResponse(200, "{\"name\":\"mock\", \"interval\":12}");
+        reblaze.setBackendUrl("https://example.com");
 
         Log.d("rbzsdk", reblaze.generateHash());
     }

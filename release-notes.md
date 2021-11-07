@@ -1,12 +1,51 @@
+# Version 2.0
+*2021-08-22*
+
+## What’s New
+
+- **Android and iOS**
+
+    - Obfuscated SDK binaries.
+    - Accumulate and publish the event counters in C++.
+    - Changed encryption salt (breaking compatibility with older backend version).
+    - Send timestamp with ms accuracy.
+    - Add timesliced event reporting.
+
+- **iOS**
+
+    - Support **autoSign**.
+
+---
+
+# Version 2α (not distributed)
+*2021-06-24*
+
+## What’s New
+
+- **Android and iOS**
+
+    Full rewrite of the SDK, requires backend version 2.16 or higher.
+
+---
+
+# Version 1.9.5
+*2021-06-08*
+
+## Fixes
+
+- **Android**
+    - Fixed the unsecure HostnameVerifier (https://support.google.com/faqs/answer/7188426).
+
+---
+
 # Version 1.9.4
 *2021-02-25*
 
 ## Fixes
 
 - **Android**
+    - Fixed a glitch with entering ActionMode in some use cases.
 
-    - Fixed a glitch with entering ActionMode in some use cases
-    
 ---
 
 # Version 1.9.3
@@ -15,9 +54,8 @@
 ## Fixes
 
 - **Android**
-
-    - Fixed a rare NPE in KeyStoreWrapper.getPublicKey() on some devices
-    - Removed the call to getAdvertisingIdInfo()
+    - Fixed a rare NPE in KeyStoreWrapper.getPublicKey() on some devices.
+    - Not using Android Advertising Id (https://support.google.com/googleplay/android-developer/answer/9857753#ad-id).
 
 ---
 
@@ -170,7 +208,7 @@
 - **Android**
     - Updated documentation for Maven distribution.
 
-- **iOS**  
+- **iOS**
     - The SDK now sends log messages to os_log.
     - Updated documentation for Cocoapods distribution.
 
@@ -181,7 +219,7 @@
     - Added handling for potential exception thrown by `isUseLocationPermission` method (when a weak reference to the location permission is null).
     - Added verification that the native library is loaded in the `start()` method.
 
-- **iOS**  
+- **iOS**
     - Boundary values for `start()` method argument `intervalInSeconds` are now being accepted correctly.
     - The ios-xcode11-obj-c example app is now working properly.
 
@@ -200,7 +238,7 @@
 - **Android**
     - Added integration with Maven.
 
-- **iOS**  
+- **iOS**
     - Added integration with CocoaPods.
 
 

@@ -4,93 +4,89 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/Hasher.h</key>
-		<data>
-		0vSwIn8sPNpInRWNPF6xqX7XhaQ=
-		</data>
 		<key>Headers/ReblazeSDK-Swift.h</key>
 		<data>
-		rImTT2TQ6+bCxudtasyOUpCNwLw=
+		5oWj+qvDl9CYf/IGPG+NDPn6vuk=
 		</data>
 		<key>Headers/ReblazeSDK.h</key>
 		<data>
-		3qvJyBas2s4QOezicMeFLZY/SZo=
+		KxgGGpNrYTTok2Sd7LxZJKz/zTM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		GvxJaG/+wthdalBKZIC8sJ0sQh4=
+		UGgOZ/t/aQg64DxlWClPhEk6tjk=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		uyn62TmHESDKC7xhK2uwh1SUexk=
+		Nc2uABU4zJ68J/cPOHxFV1qTsME=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		87npXgh1vqCzN3d/1mOdcPtNjHk=
+		KXwjPHLdLRZfcFq7lIBf8Xn+iRA=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qpK6N/IwLOLn+DppGcJ0wyR9zg8=
+		pGTYCS7cmH0Yno1fXPF67IpO+P8=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		uyn62TmHESDKC7xhK2uwh1SUexk=
+		Nc2uABU4zJ68J/cPOHxFV1qTsME=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		87npXgh1vqCzN3d/1mOdcPtNjHk=
+		KXwjPHLdLRZfcFq7lIBf8Xn+iRA=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		qpK6N/IwLOLn+DppGcJ0wyR9zg8=
+		pGTYCS7cmH0Yno1fXPF67IpO+P8=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
-		CPQxlgqQUzx61YrPZUhUk6NlYkg=
+		mprnBiJk7lbFn9XJ9EwCm3mRzr4=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
-		kw8fX4wxh7eVEpiIzi9X9nVeVY0=
+		kvB65HAws1P9PwUT/CxHwDEDc4U=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		8j3Revvg75C+Nj23kxnf7C7MzR8=
+		zarT6OUD9CHvmExdb3LCnxx7rXY=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/i386.swiftdoc</key>
 		<data>
-		CPQxlgqQUzx61YrPZUhUk6NlYkg=
+		mprnBiJk7lbFn9XJ9EwCm3mRzr4=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/i386.swiftinterface</key>
 		<data>
-		kw8fX4wxh7eVEpiIzi9X9nVeVY0=
+		kvB65HAws1P9PwUT/CxHwDEDc4U=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/i386.swiftmodule</key>
 		<data>
-		8j3Revvg75C+Nj23kxnf7C7MzR8=
+		zarT6OUD9CHvmExdb3LCnxx7rXY=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Tc8N4GWmR59fbKPZnT6fewYLPdA=
+		Jv1wo5t0MBdhhtt++AoLN/nu3vo=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/U+T373adjVMB5QzLh3HfKVnQfE=
+		lxudsXQoyplMU+lNSIw4xjwChXk=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		02FkOYdjpRoS1EEfAYtjLcmn7QE=
+		wCYsRwqB8oseB7Tp2ih0Ffatsc4=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		Tc8N4GWmR59fbKPZnT6fewYLPdA=
+		Jv1wo5t0MBdhhtt++AoLN/nu3vo=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		/U+T373adjVMB5QzLh3HfKVnQfE=
+		lxudsXQoyplMU+lNSIw4xjwChXk=
 		</data>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		02FkOYdjpRoS1EEfAYtjLcmn7QE=
+		wCYsRwqB8oseB7Tp2ih0Ffatsc4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -99,235 +95,224 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/Hasher.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0vSwIn8sPNpInRWNPF6xqX7XhaQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			3dqEBEdnbvwFxg5qaP76VeXM0vDGHlNScSxkl0uUurM=
-			</data>
-		</dict>
 		<key>Headers/ReblazeSDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rImTT2TQ6+bCxudtasyOUpCNwLw=
+			5oWj+qvDl9CYf/IGPG+NDPn6vuk=
 			</data>
 			<key>hash2</key>
 			<data>
-			VSxA7oY/JIzzb6UMT1LmJ/7MAEjrlTrMb9cLSKcMSKk=
+			Q0/P4V0qP0nJdqpl/a9EJhrWGoP+sZhyTme4oiyeqRo=
 			</data>
 		</dict>
 		<key>Headers/ReblazeSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3qvJyBas2s4QOezicMeFLZY/SZo=
+			KxgGGpNrYTTok2Sd7LxZJKz/zTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			+WeiKmm8f6jx5JO4xsA8hbcxKg9uoLVL0oR4fv6PXlM=
+			sTX2MaHkm05gXPG+kyegMZdQ/7e7qNM7ynTgIP+PCSw=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			uyn62TmHESDKC7xhK2uwh1SUexk=
+			Nc2uABU4zJ68J/cPOHxFV1qTsME=
 			</data>
 			<key>hash2</key>
 			<data>
-			ut4BNtU+d84dyqY4uETRtzqU14mUY4vJCmbjWTKlMxo=
+			UCYeTaonGxQUZKHXuZ3N/uxG4EOD6m51IimOFIp9xF8=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			87npXgh1vqCzN3d/1mOdcPtNjHk=
+			KXwjPHLdLRZfcFq7lIBf8Xn+iRA=
 			</data>
 			<key>hash2</key>
 			<data>
-			iKpvOXVVmDStMfKp9wN9/yq0jzURMW4yTv/4VIRcWbQ=
+			CJLVtnjS7Ff+qkpSXA7LFB1EYEP7TrfFuhErDImG3xs=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qpK6N/IwLOLn+DppGcJ0wyR9zg8=
+			pGTYCS7cmH0Yno1fXPF67IpO+P8=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZbyLS3p/v0rNEq/Qu5MCQ/Od5pMyaZABkQKxj9A0C4Y=
+			iz6dkXN155DHFf7w5N2rxoWHlxOdfASg0PiRAQ6tNNg=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			uyn62TmHESDKC7xhK2uwh1SUexk=
+			Nc2uABU4zJ68J/cPOHxFV1qTsME=
 			</data>
 			<key>hash2</key>
 			<data>
-			ut4BNtU+d84dyqY4uETRtzqU14mUY4vJCmbjWTKlMxo=
+			UCYeTaonGxQUZKHXuZ3N/uxG4EOD6m51IimOFIp9xF8=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			87npXgh1vqCzN3d/1mOdcPtNjHk=
+			KXwjPHLdLRZfcFq7lIBf8Xn+iRA=
 			</data>
 			<key>hash2</key>
 			<data>
-			iKpvOXVVmDStMfKp9wN9/yq0jzURMW4yTv/4VIRcWbQ=
+			CJLVtnjS7Ff+qkpSXA7LFB1EYEP7TrfFuhErDImG3xs=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qpK6N/IwLOLn+DppGcJ0wyR9zg8=
+			pGTYCS7cmH0Yno1fXPF67IpO+P8=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZbyLS3p/v0rNEq/Qu5MCQ/Od5pMyaZABkQKxj9A0C4Y=
+			iz6dkXN155DHFf7w5N2rxoWHlxOdfASg0PiRAQ6tNNg=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CPQxlgqQUzx61YrPZUhUk6NlYkg=
+			mprnBiJk7lbFn9XJ9EwCm3mRzr4=
 			</data>
 			<key>hash2</key>
 			<data>
-			t0IdlGb8iu3Zb738PKPabV2Lvegk3BOz4JnFNGsh+cE=
+			1702HLE5rAgCnJO2P3z9ptIem+AY0Vl/PA3CW4mSo2I=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kw8fX4wxh7eVEpiIzi9X9nVeVY0=
+			kvB65HAws1P9PwUT/CxHwDEDc4U=
 			</data>
 			<key>hash2</key>
 			<data>
-			MIplb8qQhC9sYn8qyVAREJIPZ9LqK2OxtuDG/6c6n24=
+			bi0wBH53fS3CkLbN23hUNBZ4P/0hDVbAGc3b1vHw/lU=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8j3Revvg75C+Nj23kxnf7C7MzR8=
+			zarT6OUD9CHvmExdb3LCnxx7rXY=
 			</data>
 			<key>hash2</key>
 			<data>
-			WSluzA1NRIyzIY9TF9WRtBV7J5/kgLV2uLnuvWJSKCc=
+			/tnB57DWPmpmr0XtF/yxXxPInoOkNPriSGfSiVdjbjs=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/i386.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CPQxlgqQUzx61YrPZUhUk6NlYkg=
+			mprnBiJk7lbFn9XJ9EwCm3mRzr4=
 			</data>
 			<key>hash2</key>
 			<data>
-			t0IdlGb8iu3Zb738PKPabV2Lvegk3BOz4JnFNGsh+cE=
+			1702HLE5rAgCnJO2P3z9ptIem+AY0Vl/PA3CW4mSo2I=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/i386.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kw8fX4wxh7eVEpiIzi9X9nVeVY0=
+			kvB65HAws1P9PwUT/CxHwDEDc4U=
 			</data>
 			<key>hash2</key>
 			<data>
-			MIplb8qQhC9sYn8qyVAREJIPZ9LqK2OxtuDG/6c6n24=
+			bi0wBH53fS3CkLbN23hUNBZ4P/0hDVbAGc3b1vHw/lU=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8j3Revvg75C+Nj23kxnf7C7MzR8=
+			zarT6OUD9CHvmExdb3LCnxx7rXY=
 			</data>
 			<key>hash2</key>
 			<data>
-			WSluzA1NRIyzIY9TF9WRtBV7J5/kgLV2uLnuvWJSKCc=
+			/tnB57DWPmpmr0XtF/yxXxPInoOkNPriSGfSiVdjbjs=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Tc8N4GWmR59fbKPZnT6fewYLPdA=
+			Jv1wo5t0MBdhhtt++AoLN/nu3vo=
 			</data>
 			<key>hash2</key>
 			<data>
-			EQcQTpnNA7ukZndAry0tgRRqSA3OxcyAy9CE701ox3g=
+			abdJiYiWmeiW6GNhq2G40EN1RZCr4M6N0Z1GfCktM88=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/U+T373adjVMB5QzLh3HfKVnQfE=
+			lxudsXQoyplMU+lNSIw4xjwChXk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Nnfhbtuq4KUKcr2jt1C1p4MUR9JpnLZeiBmzyu5P51M=
+			QP0qZI1vQRj0QucjK7MCsNX65n0OovQGK+HGqYaltWY=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			02FkOYdjpRoS1EEfAYtjLcmn7QE=
+			wCYsRwqB8oseB7Tp2ih0Ffatsc4=
 			</data>
 			<key>hash2</key>
 			<data>
-			NhO7jfrDUmw0kWgJTq9pjbl2RC5/WLsIT0Z4jTho1RM=
+			FAAjxl+ucon1LS9gkjaQEtz+6bJA6dCICFMdUpOnsoE=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Tc8N4GWmR59fbKPZnT6fewYLPdA=
+			Jv1wo5t0MBdhhtt++AoLN/nu3vo=
 			</data>
 			<key>hash2</key>
 			<data>
-			EQcQTpnNA7ukZndAry0tgRRqSA3OxcyAy9CE701ox3g=
+			abdJiYiWmeiW6GNhq2G40EN1RZCr4M6N0Z1GfCktM88=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/U+T373adjVMB5QzLh3HfKVnQfE=
+			lxudsXQoyplMU+lNSIw4xjwChXk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Nnfhbtuq4KUKcr2jt1C1p4MUR9JpnLZeiBmzyu5P51M=
+			QP0qZI1vQRj0QucjK7MCsNX65n0OovQGK+HGqYaltWY=
 			</data>
 		</dict>
 		<key>Modules/ReblazeSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			02FkOYdjpRoS1EEfAYtjLcmn7QE=
+			wCYsRwqB8oseB7Tp2ih0Ffatsc4=
 			</data>
 			<key>hash2</key>
 			<data>
-			NhO7jfrDUmw0kWgJTq9pjbl2RC5/WLsIT0Z4jTho1RM=
+			FAAjxl+ucon1LS9gkjaQEtz+6bJA6dCICFMdUpOnsoE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
