@@ -1,30 +1,33 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
-// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name ReblazeSDK
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name ReblazeSDK
 import Foundation
 @_exported import ReblazeSDK
 import Swift
 import UIKit
 import _Concurrency
 @_hasMissingDesignatedInitializers public class ReblazeSDK_Report {
-  public static var SINCE: Swift.String
-  public static var CONNECTION_ERRORS: Swift.String
-  public static var TIME_IN_BACKGROUND: Swift.String
-  public static var SWITCH_ACTIVITY: Swift.String
-  public static var DEVICE_ORIENTATION: Swift.String
-  public static var BATTERY_LEVEL: Swift.String
-  public static var CHARGING_MODE: Swift.String
-  public static var MODE: Swift.String
-  public static var FG: Swift.String
-  public static var GENERATE_HASH: Swift.String
-  public static var TOUCH_MOVE: Swift.String
-  public static var TOUCH_UP: Swift.String
-  public static var TOUCH_DOWN: Swift.String
-  public static var KEY_DOWN: Swift.String
-  public static var KEY_PRESS: Swift.String
-  public static var KEY_UP: Swift.String
-  public static var GESTURE: Swift.String
-  public static var CLICK: Swift.String
+  public static let CONFIG_NAME: Swift.String
+  public static let SINCE: Swift.String
+  public static let CONNECTION_ERRORS: Swift.String
+  public static let TIME_IN_BACKGROUND: Swift.String
+  public static let SWITCH_ACTIVITY: Swift.String
+  public static let DEVICE_ORIENTATION: Swift.String
+  public static let BATTERY_LEVEL: Swift.String
+  public static let CHARGING_MODE: Swift.String
+  public static let MODE: Swift.String
+  public static let FG: Swift.String
+  public static let GENERATE_HASH: Swift.String
+  public static let TOUCH_MOVE: Swift.String
+  public static let TOUCH_UP: Swift.String
+  public static let TOUCH_DOWN: Swift.String
+  public static let KEY_DOWN: Swift.String
+  public static let KEY_PRESS: Swift.String
+  public static let KEY_UP: Swift.String
+  public static let GESTURE: Swift.String
+  public static let TAP: Swift.String
+  public static let CLICK: Swift.String
+  public static let HIT_TEST: Swift.String
   @objc deinit
 }
 extension ReblazeSDK.reblaze {
@@ -47,9 +50,15 @@ extension ReblazeSDK.reblaze {
     }
   }
 }
+extension UIKit.UIWindow {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func hitTest(_ point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+}
 @_inheritsConvenienceInitializers @objc public class reblaze : ObjectiveC.NSObject {
-  @objc public static var MINIMUM_INTERVAL: Swift.Int
-  @objc public static var DEFAULT_INTERVAL: Swift.Int
+  @objc public static let MINIMUM_INTERVAL: Swift.Int
+  @objc public static let DEFAULT_INTERVAL: Swift.Int
   @objc(ReblazeSDK_Kind) @frozen public enum Kind : Swift.Int, Swift.CustomStringConvertible {
     case VERBOSE
     case DEBUG
@@ -69,28 +78,28 @@ extension ReblazeSDK.reblaze {
   }
   @objc public static var backendUrl: Swift.String {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc public static var token: Swift.String
   @objc public static var tokenHeaderName: Swift.String {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc public static var userAgent: Swift.String? {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc public static var interval: Swift.Int {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc public static var timeslice: Swift.Int {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc public static var reportCounters: ReblazeSDK.reblaze.ReportCounters {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc public static var hashVariant: Swift.String {
     @objc get
@@ -98,7 +107,10 @@ extension ReblazeSDK.reblaze {
   @objc public static var configurationName: Swift.String? {
     @objc get
   }
-  @objc public static var autoSign: ReblazeSDK.reblaze.AutoSign
+  @objc public static var autoSign: ReblazeSDK.reblaze.AutoSign {
+    @objc get
+    @objc set
+  }
   @objc public static func generateHash() -> Swift.String
   @objc public static func sendEvent(_ eventName: Swift.String)
   @objc public static func enableMock()
@@ -109,9 +121,15 @@ extension ReblazeSDK.reblaze {
   @objc override dynamic public init()
   @objc deinit
 }
-extension UIKit.UIWindow {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func hitTest(_ point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
-}
+extension ReblazeSDK.reblaze.ReportCounters : Swift.Equatable {}
+extension ReblazeSDK.reblaze.ReportCounters : Swift.Hashable {}
+extension ReblazeSDK.reblaze.ReportCounters : Swift.RawRepresentable {}
+extension ReblazeSDK.reblaze.ReportCounters : Swift.Sendable {}
+extension ReblazeSDK.reblaze.AutoSign : Swift.Equatable {}
+extension ReblazeSDK.reblaze.AutoSign : Swift.Hashable {}
+extension ReblazeSDK.reblaze.AutoSign : Swift.RawRepresentable {}
+extension ReblazeSDK.reblaze.AutoSign : Swift.Sendable {}
+extension ReblazeSDK.reblaze.Kind : Swift.Equatable {}
+extension ReblazeSDK.reblaze.Kind : Swift.Hashable {}
+extension ReblazeSDK.reblaze.Kind : Swift.RawRepresentable {}
+extension ReblazeSDK.reblaze.Kind : Swift.Sendable {}

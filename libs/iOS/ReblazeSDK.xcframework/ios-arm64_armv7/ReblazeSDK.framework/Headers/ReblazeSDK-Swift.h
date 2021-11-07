@@ -259,10 +259,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (NSString * _Nonnull)hashVariant SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nullable configurationName;)
 + (NSString * _Nullable)configurationName SWIFT_WARN_UNUSED_RESULT;
-/// Set to sign all relevant https:// requests, including WKWebView requests
+/// Set to sign all relevant http:// and https:// requests, including WKWebView requests
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum ReblazeSDK_AutoSign autoSign;)
 + (enum ReblazeSDK_AutoSign)autoSign SWIFT_WARN_UNUSED_RESULT;
-+ (void)setAutoSign:(enum ReblazeSDK_AutoSign)value;
++ (void)setAutoSign:(enum ReblazeSDK_AutoSign)newValue;
 /// Calculates hash based on timestamp, deviceId, and possibly user id
 + (NSString * _Nonnull)generateHash SWIFT_WARN_UNUSED_RESULT;
 /// <ul>
@@ -580,10 +580,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (NSString * _Nonnull)hashVariant SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nullable configurationName;)
 + (NSString * _Nullable)configurationName SWIFT_WARN_UNUSED_RESULT;
-/// Set to sign all relevant https:// requests, including WKWebView requests
+/// Set to sign all relevant http:// and https:// requests, including WKWebView requests
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum ReblazeSDK_AutoSign autoSign;)
 + (enum ReblazeSDK_AutoSign)autoSign SWIFT_WARN_UNUSED_RESULT;
-+ (void)setAutoSign:(enum ReblazeSDK_AutoSign)value;
++ (void)setAutoSign:(enum ReblazeSDK_AutoSign)newValue;
 /// Calculates hash based on timestamp, deviceId, and possibly user id
 + (NSString * _Nonnull)generateHash SWIFT_WARN_UNUSED_RESULT;
 /// <ul>
