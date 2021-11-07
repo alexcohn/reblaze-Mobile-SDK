@@ -10,8 +10,7 @@ Pod::Spec.new do |s|
   s.source           = { :path => '.' }
 
   s.vendored_frameworks = 'ReblazeSDK.xcframework'
-  s.platform = :ios
+  s.platform            = :ios, '10.0'
   s.swift_version = '5.0'
-  s.ios.deployment_target = '10.0'
   s.frameworks = 'UIKit'
 end
