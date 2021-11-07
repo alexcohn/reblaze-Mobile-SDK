@@ -9,7 +9,7 @@ class reblaze {
   /// Generate the new value for RBZSDK header.
   static Future<String> generateHash() async {
     try {
-      return _methodChannel.invokeMethod('generateHash');
+      return await _methodChannel.invokeMethod('generateHash');
     } on PlatformException catch (e, stack) {
       print("Plugin generateHash error: ${e.message}");
       return Future.error("generateHash failed.", stack);
@@ -27,7 +27,7 @@ class reblaze {
 
   static Future<String> getBackendUrl() async {
     try {
-      return _methodChannel.invokeMethod('getBackendUrl');
+      return await _methodChannel.invokeMethod('getBackendUrl');
     } on PlatformException catch (e, stack) {
       print("Plugin getBackendUrl error: ${e.message}");
       return Future.error("getBackendUrl failed.", stack);
@@ -36,7 +36,7 @@ class reblaze {
 
   static Future<String> getUserAgent() async {
     try {
-      return _methodChannel.invokeMethod('getUserAgent');
+      return await _methodChannel.invokeMethod('getUserAgent');
     } on PlatformException catch (e, stack) {
       print("Plugin getUserAgent error: ${e.message}");
       return Future.error("getUserAgent failed.", stack);
@@ -45,7 +45,7 @@ class reblaze {
 
   static Future<String> getHashVariant() async {
     try {
-      return _methodChannel.invokeMethod('getHashVariant');
+      return await _methodChannel.invokeMethod('getHashVariant');
     } on PlatformException catch (e, stack) {
       print("Plugin getHashVariant error: ${e.message}");
       return Future.error("getHashVariant failed.", stack);
@@ -54,7 +54,7 @@ class reblaze {
 
   static Future<String> getConfigurationName() async {
     try {
-      return _methodChannel.invokeMethod('getConfigurationName');
+      return await _methodChannel.invokeMethod('getConfigurationName');
     } on PlatformException catch (e, stack) {
       print("Plugin getConfigurationName error: ${e.message}");
       return Future.error("getConfigurationName failed.", stack);
@@ -63,7 +63,7 @@ class reblaze {
 
   static Future<String> getToken() async {
     try {
-      return _methodChannel.invokeMethod('getToken');
+      return await _methodChannel.invokeMethod('getToken');
     } on PlatformException catch (e, stack) {
       print("Plugin getToken error: ${e.message}");
       return Future.error("getToken failed.", stack);
@@ -80,7 +80,7 @@ class reblaze {
 
   static Future<String> getTokenHeaderName() async {
     try {
-      return _methodChannel.invokeMethod('getTokenHeaderName');
+      return await _methodChannel.invokeMethod('getTokenHeaderName');
     } on PlatformException catch (e, stack) {
       print("Plugin getTokenHeaderName error: ${e.message}");
       return Future.error("getTokenHeaderName failed.", stack);
@@ -97,7 +97,7 @@ class reblaze {
 
   static Future<String> getReportCounters() async {
     try {
-      return _methodChannel.invokeMethod('getReportCounters');
+      return await _methodChannel.invokeMethod('getReportCounters');
     } on PlatformException catch (e, stack) {
       print("Plugin getReportCounters error: ${e.message}");
       return Future.error("getReportCounters failed.", stack);
@@ -114,9 +114,9 @@ class reblaze {
     }
   }
 
-  static Future getTimeslice() async {
+  static Future<int> getTimeslice() async {
     try {
-      return _methodChannel.invokeMethod('getTimeslice');
+      return await _methodChannel.invokeMethod('getTimeslice');
     } on PlatformException catch (e, stack) {
       print("Plugin getTimeslice error: ${e.message}");
       return Future.error("getTimeslice failed.", stack);
@@ -132,9 +132,9 @@ class reblaze {
     }
   }
 
-  static Future getInterval() async {
+  static Future<int> getInterval() async {
     try {
-      return _methodChannel.invokeMethod('getInterval');
+      return await _methodChannel.invokeMethod('getInterval');
     } on PlatformException catch (e, stack) {
       print("Plugin getInterval error: ${e.message}");
       return Future.error("getInterval failed.", stack);
@@ -166,12 +166,20 @@ class reblaze {
     }
   }
 
-  static void setMockResponse(int code, String remoteConfig) async {
+  static Future<bool> isMockEnabled() async {
     try {
-      _methodChannel.invokeMethod('setMockResponse', );
+      return await _methodChannel.invokeMethod('isMockEnabled');
+    } on PlatformException catch (e, stack) {
+      print("Plugin isMockEnabled error: ${e.message}");
+      return Future.error("isMockEnabled failed.", stack);
+    }
+  }
+
+  static void setMockResponse(int code, String remoteConfig, [int delay=-1]) async {
+    try {
+      _methodChannel.invokeMethod('setMockResponse', [code, remoteConfig, delay]);
     } on PlatformException catch (e, stack) {
       print("Plugin enableMock error: ${e.message}");
     }
   }
-
 }

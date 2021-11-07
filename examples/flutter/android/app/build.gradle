@@ -34,8 +34,8 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.reblaze.reblaze_example"
-        minSdkVersion 16
+        applicationId "com.reblaze.flutter_example"
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -52,8 +52,4 @@ android {
 
 flutter {
     source '../..'
-}
-
-dependencies {
-    implementation 'com.reblaze.sdk:mobile-sdk:2.0'
 }

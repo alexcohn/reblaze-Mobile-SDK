@@ -1,136 +1,126 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:html/parser.dart' show parse;
 
-import 'reblaze.dart';
+import 'package:flutter/services.dart';
+import 'package:reblaze/reblaze.dart';
 
 void main() {
-  runApp(ReblazeExampleApp());
+  runApp(const MyApp());
 }
 
-final client = http.Client();
-
-Future<String> fetch(String path) async {
-  final response = await client.get('${await reblaze.getBackendUrl()}/flutter/$path',
-      headers: {
-        HttpHeaders.acceptHeader: "text/html",                     // to get ISHUMAN header back from our echo server
-        HttpHeaders.authorizationHeader: "alex",                   // must be same as reblaze.getToken()
-        HttpHeaders.userAgentHeader: await reblaze.getUserAgent(), // better keep it same as the UA that the SDK sends
-        reblaze.reblazeHeader: await reblaze.generateHash(),       // must be generated for every request
-      }
-  );
-  if (response.statusCode == 200) {
-    final html_doc = parse(response.body);
-    final h3 = html_doc.getElementsByTagName('h3');
-    if (h3 != null && h3.isNotEmpty && h3[0].innerHtml == 'Request headers') {
-      final headers = html_doc.getElementsByTagName('pre')[0].innerHtml.split(
-          '\n');
-      return headers.firstWhere(
-            (header) => header.startsWith('HTTP_ISHUMAN'),
-        orElse: () => 'HTTP_ISHUMAN =&gt; ### FALSE ###',
-      )
-          .split('_')[1]
-          .replaceFirst('&gt;', '>') + ' [$path]';
-    }
-    else {
-      final headers = html_doc.body.innerHtml.split('\n');
-      return headers.firstWhere((header) => header.startsWith('Ishuman:'),
-          orElse: () => 'ishuman: ### FALSE ###',
-      );
-    }
-  } else {
-    return '${response.statusCode}: ${response.body}';
-  }
-}
-
-class ReblazeExampleApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    reblaze.setInterval(30);
-    reblaze.setToken('alex');
-    reblaze.setTimeslice(1000);
-    reblaze.setBackendUrl('https://fire-gcp-lb.rbzdevsdk001.dev.rbzdns.com');
-    return MaterialApp(
-      title: 'Reblaze Example',
-      home: ReblazeExamplePage(title: 'Reblaze Example Page'),
-    );
-  }
-}
-
-class ReblazeExamplePage extends StatefulWidget {
-  ReblazeExamplePage({Key key, this.title}) : super(key: key);
-
-  final String title;
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
-  _ReblazeExamplePageState createState() => _ReblazeExamplePageState();
+  State<MyApp> createState() => _MyAppState();
 }
 
-class _ReblazeExamplePageState extends State<ReblazeExamplePage> {
+class _MyAppState extends State<MyApp> {
+  String _rbzSdk = 'Unknown';
+  Future<String>? _futureResponse;
   int _counter = 0;
-  Future<String> futureResponse;
+  static const String _token = 'Bearer cn389ncoiwuencr';
 
   @override
   void initState() {
     super.initState();
-    futureResponse = fetch('init');
+    initHash();
+    initReblazeSdk();
     reblaze.getBackendUrl().then( (backendUrl) => print('BackendUrl: $backendUrl') );
   }
 
-  void _incrementCounter() {
+  // Platform messages are asynchronous, so we initialize in an async method.
+  Future<void> initHash() async {
+    String rbzSdk;
+    // Platform messages may fail, so we use a try/catch PlatformException.
+    // We also handle the message potentially returning null.
+    try {
+      rbzSdk = await reblaze.generateHash();
+    } on PlatformException {
+      rbzSdk = 'Failed to generate hash.';
+    }
+
+    // If the widget was removed from the tree while the asynchronous platform
+    // message was in flight, we want to discard the reply rather than calling
+    // setState to update our non-existent appearance.
+    if (!mounted) return;
+
     setState(() {
-      _counter++;
-      futureResponse = fetch(_counter.toString());
-      reblaze.sendEvent('counter');
+      _rbzSdk = rbzSdk;
+      _futureResponse = fetch();
+    });
+  }
+
+  Future<void> initReblazeSdk() async {
+    reblaze.setInterval(20);
+    reblaze.setToken(_token);
+    reblaze.setTimeslice(500);
+    reblaze.enableMock();
+    reblaze.setMockResponse(200, '{"name":"mock", "interval":12}');
+    reblaze.setBackendUrl('https://example.com');
+  }
+
+  Future<void> onPlusButtonPressed() async {
+    reblaze.sendEvent('+button');
+    _counter++;
+    _rbzSdk = await reblaze.generateHash();
+    _futureResponse = fetch();
+    setState(() {
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Request updates:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            FutureBuilder<String>(
-              future: futureResponse,
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  return Text(snapshot.data);
-                }
-                return const CircularProgressIndicator();
-              },
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 50.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'type here',
-                  border: OutlineInputBorder(),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Reblaze Flutter example app'),
+        ),
+        body: Center(
+          child: Padding(padding: EdgeInsets.all(10),
+            child: Column (
+              children: [
+                Text('${reblaze.reblazeHeader}: $_rbzSdk\n'),
+                FutureBuilder<String>(
+                  future: _futureResponse,
+                  builder: (context, snapshot) {
+                    if (snapshot.hasData) {
+                      return Text(snapshot.data!);
+                    }
+                    return const CircularProgressIndicator();
+                  },
                 ),
-              ),
-
-            ),
-          ],
+            ]),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: onPlusButtonPressed,
+          tooltip: 'post',
+          child: Icon(Icons.add),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
     );
+  }
+
+  final client = http.Client();
+
+  Future<String> fetch() async {
+    final path = _counter > 0 ? _counter : "init";
+    final response = await client.get(Uri.parse('${await reblaze.getBackendUrl()}/flutter/$path'),
+        headers: {
+          HttpHeaders.authorizationHeader: _token,              // must be same as reblaze.getToken()
+          reblaze.reblazeHeader: _rbzSdk,                       // must be generated for every request
+        }
+    );
+    if (response.statusCode == 200) {
+      final html_doc = parse(response.body);
+      return html_doc.body!.innerHtml;
+    } else {
+      return '${response.statusCode}: ${response.body}';
+    }
   }
 }
