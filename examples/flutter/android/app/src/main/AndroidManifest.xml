@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.reblaze_flutter">
+    package="com.reblaze.flutter_example">
    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="reblaze_flutter"
