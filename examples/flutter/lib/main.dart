@@ -67,7 +67,6 @@ class _MyAppState extends State<MyApp> {
   Future<void> onPlusButtonPressed() async {
     reblaze.sendEvent('+button');
     _counter++;
-    _rbzSdk = await reblaze.generateHash();
     _futureResponse = fetch();
     setState(() {
     });
@@ -113,7 +112,7 @@ class _MyAppState extends State<MyApp> {
     final response = await client.get(Uri.parse('${await reblaze.getBackendUrl()}/flutter/$path'),
         headers: {
           HttpHeaders.authorizationHeader: _token,              // must be same as reblaze.getToken()
-          reblaze.reblazeHeader: _rbzSdk,                       // must be generated for every request
+          reblaze.reblazeHeader: await reblaze.generateHash(),  // must be generated for every request
         }
     );
     if (response.statusCode == 200) {
