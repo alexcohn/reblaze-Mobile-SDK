@@ -25,6 +25,9 @@ public class App extends Application implements SdkEventListener {
 
         reblaze.setToken("123456789");
         reblaze.setInterval(Interval.MINIMUM_INTERVAL);
+        reblaze.enableMock();
+        reblaze.setMockResponse(200, "{\"name\":\"mock\", \"interval\":12}");
+        reblaze.setBackendUrl("https://example.com");
 
         Log.d("rbzsdk", reblaze.generateHash());
     }
